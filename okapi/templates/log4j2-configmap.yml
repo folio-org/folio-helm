@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: okapi-log4j2-configmap
+data:
+  log4j2.xml: |
+    <Configuration status="WARN" monitorInterval="30">
+      <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+          <!-- date, log level, class, message, exception -->
+          <PatternLayout alwaysWriteExceptions="false" pattern="%d{ISO8601}\t%p\t%C{1}\t%replace{%replace{%m}{\r?\n}{ \| }}{\t}{  }\t%replace{%replace{%xEx{short}}{\r?\n}{ \| }}{\t}{  }%n"/>
+        </Console>
+      </Appenders>
+      <Loggers>
+        <Root level="INFO">
+          <AppenderRef ref="Console"/>
+        </Root>
+      </Loggers>
+    </Configuration>
