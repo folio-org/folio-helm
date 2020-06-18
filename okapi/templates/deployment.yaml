@@ -36,23 +36,28 @@ spec:
           args:
             - dev
           env:
+            - name: OKAPI_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: db-connect-modules
+                  key: DB_HOST
             - name: OKAPI_DB
               valueFrom:
                 secretKeyRef:
-                  name: okapi-db-secrets
-                  key: okapi-db-name
+                  name: db-connect-modules
+                  key: DB_DATABASE
             - name: OKAPI_DB_USER
               valueFrom:
                 secretKeyRef:
-                  name: okapi-db-secrets
-                  key: okapi-db-user
+                  name: db-connect-modules
+                  key: DB_USERNAME
             - name: OKAPI_DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: okapi-db-secrets
-                  key: okapi-db-password
+                  name: db-connect-modules
+                  key: DB_PASSWORD
             - name: JAVA_OPTIONS
-              value: "-Djava.awt.headless=true -Dstorage=postgres -Dpostgres_host=postgresql -Dpostgres_port=5432 -Dpostgres_username=$(OKAPI_DB_USER) -Dpostgres_password=$(OKAPI_DB_PASSWORD) -Dpostgres_database=$(OKAPI_DB) -Dlog4j.configurationFile=/etc/log4j2.xml -Dhost=okapi -Dokapiurl=http://okapi:9130"
+              value: "-Djava.awt.headless=true -Dstorage=postgres -Dpostgres_host=$(OKAPI_HOST) -Dpostgres_port=5432 -Dpostgres_username=$(OKAPI_DB_USER) -Dpostgres_password=$(OKAPI_DB_PASSWORD) -Dpostgres_database=$(OKAPI_DB) -Dlog4j.configurationFile=/etc/log4j2.xml -Dhost=okapi -Dokapiurl=http://okapi:9130"
           ports:
             - name: http
               containerPort: 9130
@@ -62,14 +67,6 @@ spec:
             readOnly: true
             mountPath: "/etc/log4j2.xml"
             subPath: "log4j2.xml"
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
