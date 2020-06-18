@@ -1,11 +1,11 @@
-# Default values for mod-authtoken.
+# Default values for mod-circulation.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: folioorg/mod-authtoken
+  repository: folioorg/mod-circulation
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -38,7 +38,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 8081
+  port: 9801
 
 ingress:
   enabled: false
