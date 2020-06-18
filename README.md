@@ -5,7 +5,7 @@
 FOLIO Helm charts modules repository.
 
 Contains Helm sources and Helm packages repository.
-Repository URL https://folio-org.github.io/folio-helm/charts/
+Repository URL https://folio-org.github.io/folio-helm/
 Master branch is configured as GitHub pages.
 
 ## Creating Helm package from source
