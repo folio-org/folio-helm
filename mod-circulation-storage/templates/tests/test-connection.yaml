@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "mod-circulation-storage.fullname" . }}-test-connection"
+  labels:
+    {{- include "mod-circulation-storage.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "mod-circulation-storage.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

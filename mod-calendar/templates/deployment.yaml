@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "mod-authtoken.fullname" . }}
+  name: {{ include "mod-calendar.fullname" . }}
   labels:
-    {{- include "mod-authtoken.labels" . | nindent 4 }}
+    {{- include "mod-calendar.labels" . | nindent 4 }}
 spec:
 {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
   selector:
     matchLabels:
-      {{- include "mod-authtoken.selectorLabels" . | nindent 6 }}
+      {{- include "mod-calendar.selectorLabels" . | nindent 6 }}
   template:
     metadata:
     {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       labels:
-        {{- include "mod-authtoken.selectorLabels" . | nindent 8 }}
+        {{- include "mod-calendar.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "mod-authtoken.serviceAccountName" . }}
+      serviceAccountName: {{ include "mod-calendar.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -37,14 +37,6 @@ spec:
             - name: http
               containerPort: 8081
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: 8081
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 8081
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
