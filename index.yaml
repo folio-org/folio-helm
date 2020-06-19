@@ -3,7 +3,7 @@ entries:
   mod-authtoken:
   - apiVersion: v1
     appVersion: 2.5.0
-    created: "2020-06-19T17:06:47.436605776+03:00"
+    created: "2020-06-19T17:27:17.924618532+03:00"
     description: A Helm chart for Folio mod-authtoken
     digest: ae7bce274ff6dc44c756ac54606d768fbf2d267aeecbf748da2e7cfb1d6b16ee
     name: mod-authtoken
@@ -14,7 +14,7 @@ entries:
   mod-calendar:
   - apiVersion: v1
     appVersion: 1.8.2
-    created: "2020-06-19T17:06:47.436970598+03:00"
+    created: "2020-06-19T17:27:17.924989028+03:00"
     description: A Helm chart for Kubernetes
     digest: bc13a9d69a101342873c8048ce94f4461024243977508ec13fe220a0bfc16472
     name: mod-calendar
@@ -25,7 +25,17 @@ entries:
   okapi:
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-06-19T17:06:47.43823404+03:00"
+    created: "2020-06-19T17:27:17.926683179+03:00"
+    description: A Helm chart OKAPI for Kubernetes
+    digest: dbb7bf8bc241e47006506ae2abb7151de8089c7a6eceac97749e1e980a856b13
+    name: okapi
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/okapi-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v1
+    appVersion: 2.40.0
+    created: "2020-06-19T17:27:17.926256626+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: 6c7e4ddf0c12fd7cca81c26467ba17f9476aa1a33191a05777854ce45dcc051d
     name: okapi
@@ -35,7 +45,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-06-19T17:06:47.437806745+03:00"
+    created: "2020-06-19T17:27:17.925834504+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: 3aa94147893388a0123927717286d52d65e148dad1b8ba8d464b004ae8e3bdeb
     name: okapi
@@ -45,7 +55,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-06-19T17:06:47.43737296+03:00"
+    created: "2020-06-19T17:27:17.925400567+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: a4475aafaff670b1ec15d0a1fc6959515202b6e0ff4075e344448b1f4d02812d
     name: okapi
@@ -53,4 +63,4 @@ entries:
     urls:
     - https://folio-org.github.io/folio-helm/charts/okapi-0.1.0.tgz
     version: 0.1.0
-generated: "2020-06-19T17:06:47.436134682+03:00"
+generated: "2020-06-19T17:27:17.924149777+03:00"
