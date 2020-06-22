@@ -37,6 +37,27 @@ spec:
             - name: http
               containerPort: 8081
               protocol: TCP
+          env:
+            - name: OKAPI_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: db-connect-modules
+                  key: DB_HOST
+            - name: OKAPI_DB
+              valueFrom:
+                secretKeyRef:
+                  name: db-connect-modules
+                  key: DB_DATABASE
+            - name: OKAPI_DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: db-connect-modules
+                  key: DB_USERNAME
+            - name: OKAPI_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-connect-modules
+                  key: DB_PASSWORD
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

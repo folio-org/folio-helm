@@ -8,8 +8,8 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.port }}
+      targetPort: http
       protocol: TCP
-      name: {{ .Values.service.port }}
+      name: http
   selector:
     {{- include "mod-configuration.selectorLabels" . | nindent 4 }}
