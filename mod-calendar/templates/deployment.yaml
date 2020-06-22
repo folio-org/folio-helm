@@ -38,26 +38,38 @@ spec:
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
           env:
-            - name: OKAPI_HOST
+            - name: DB_DATABASE
               valueFrom:
                 secretKeyRef:
-                  name: db-connect-modules
-                  key: DB_HOST
-            - name: OKAPI_DB
-              valueFrom:
-                secretKeyRef:
-                  name: db-connect-modules
                   key: DB_DATABASE
-            - name: OKAPI_DB_USER
+                  name: db-connect-modules
+            - name: DB_HOST
               valueFrom:
                 secretKeyRef:
+                  key: DB_HOST
                   name: db-connect-modules
-                  key: DB_USERNAME
-            - name: OKAPI_DB_PASSWORD
+            - name: DB_MAXPOOLSIZE
               valueFrom:
                 secretKeyRef:
+                  key: DB_MAXPOOLSIZE
                   name: db-connect-modules
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
                   key: DB_PASSWORD
+                  name: db-connect-modules
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  key: DB_PORT
+                  name: db-connect-modules
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  key: DB_USERNAME
+                  name: db-connect-modules
+            - name: JAVA_OPTIONS
+              value: -Xmx256m
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
