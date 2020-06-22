@@ -8,8 +8,9 @@ metadata:
     "helm.sh/hook": test-success
 spec:
   containers:
-    - name: wget
-      image: busybox
-      command: ['wget']
-      args: ['{{ include "mod-calendar.fullname" . }}:{{ .Values.service.port }}']
+    - name: folio-okapi-registration
+      image: celticmask/folio-okapi-registration:latest
+      env:
+        - name: MODULE_NAME
+          value: {{ include "mod-calendar.fullname" . }}
   restartPolicy: Never
