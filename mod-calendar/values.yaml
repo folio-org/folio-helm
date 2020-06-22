@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: folioorg/mod-calendar
+  repository: folioci/mod-calendar
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -38,7 +38,8 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 8081
+  port: 80
+  containerPort: 8081
 
 ingress:
   enabled: false
