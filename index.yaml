@@ -3,7 +3,7 @@ entries:
   mod-authtoken:
   - apiVersion: v1
     appVersion: 2.5.0
-    created: "2020-06-22T23:06:43.042026996+03:00"
+    created: "2020-06-22T23:16:41.316921098+03:00"
     description: A Helm chart for Folio mod-authtoken
     digest: ae7bce274ff6dc44c756ac54606d768fbf2d267aeecbf748da2e7cfb1d6b16ee
     name: mod-authtoken
@@ -14,7 +14,17 @@ entries:
   mod-calendar:
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-06-22T23:06:43.044809655+03:00"
+    created: "2020-06-22T23:16:41.320134865+03:00"
+    description: A Helm chart mod-calendar for Kubernetes
+    digest: b68d73f44ab9b44af1a9fc552ff1c580924afaf018fae4ed25e14f700f5d61b1
+    name: mod-calendar
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-calendar-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v1
+    appVersion: 5.4.0
+    created: "2020-06-22T23:16:41.319700526+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 676419bb5a6c31d911b9cf76ef5fbf249ab447c74a284161246e904423ce11e4
     name: mod-calendar
@@ -24,7 +34,7 @@ entries:
     version: 0.1.7
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-06-22T23:06:43.044392117+03:00"
+    created: "2020-06-22T23:16:41.319295209+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 0077c86a41391e9a3f1ecdaa402c1ba6c3f203d8286e9ac583d64f36a1d8b015
     name: mod-calendar
@@ -34,7 +44,7 @@ entries:
     version: 0.1.6
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-06-22T23:06:43.043978493+03:00"
+    created: "2020-06-22T23:16:41.318883529+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 497abd0875dcd4f441fe1f6706b1e26e233f3553868f0afb5d3c4ee9321ff363
     name: mod-calendar
@@ -44,7 +54,7 @@ entries:
     version: 0.1.5
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-06-22T23:06:43.043581909+03:00"
+    created: "2020-06-22T23:16:41.318481993+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 7b62aa97afa9503de1ba67fb0d0637f320ed1fb82cceb226d7c3be6155b7503e
     name: mod-calendar
@@ -54,7 +64,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-06-22T23:06:43.043162591+03:00"
+    created: "2020-06-22T23:16:41.318097573+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 365ea7482b6c1af8da7f20ea8e7f5ce8bb496d5ebd35101d0d481e8712980ec4
     name: mod-calendar
@@ -64,7 +74,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-06-22T23:06:43.042773407+03:00"
+    created: "2020-06-22T23:16:41.317681598+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 357a28f35fc59e187c7f04a3b177d11fcd5760bd165b6fe4bbb80d9e81bda58f
     name: mod-calendar
@@ -74,7 +84,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 1.8.2
-    created: "2020-06-22T23:06:43.042394197+03:00"
+    created: "2020-06-22T23:16:41.317299324+03:00"
     description: A Helm chart for Kubernetes
     digest: bc13a9d69a101342873c8048ce94f4461024243977508ec13fe220a0bfc16472
     name: mod-calendar
@@ -85,7 +95,7 @@ entries:
   mod-configuration:
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-06-22T23:06:43.045213559+03:00"
+    created: "2020-06-22T23:16:41.320793659+03:00"
     description: A Helm chart mod-configuration for Kubernetes
     digest: cf6e0a0307c1b8f732ea4f37c1c7cdd4f673a5044c38112ce6c7292e94268456
     name: mod-configuration
@@ -96,7 +106,7 @@ entries:
   okapi:
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-06-22T23:06:43.055400846+03:00"
+    created: "2020-06-22T23:16:41.322721586+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: dbb7bf8bc241e47006506ae2abb7151de8089c7a6eceac97749e1e980a856b13
     name: okapi
@@ -106,7 +116,7 @@ entries:
     version: 0.3.1
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-06-22T23:06:43.054991934+03:00"
+    created: "2020-06-22T23:16:41.322315072+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: 6c7e4ddf0c12fd7cca81c26467ba17f9476aa1a33191a05777854ce45dcc051d
     name: okapi
@@ -116,7 +126,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-06-22T23:06:43.054593109+03:00"
+    created: "2020-06-22T23:16:41.321922207+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: 3aa94147893388a0123927717286d52d65e148dad1b8ba8d464b004ae8e3bdeb
     name: okapi
@@ -126,7 +136,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-06-22T23:06:43.054029886+03:00"
+    created: "2020-06-22T23:16:41.32150735+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: a4475aafaff670b1ec15d0a1fc6959515202b6e0ff4075e344448b1f4d02812d
     name: okapi
@@ -134,4 +144,4 @@ entries:
     urls:
     - https://folio-org.github.io/folio-helm/charts/okapi-0.1.0.tgz
     version: 0.1.0
-generated: "2020-06-22T23:06:43.041548682+03:00"
+generated: "2020-06-22T23:16:41.316442637+03:00"
