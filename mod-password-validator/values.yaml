@@ -8,7 +8,7 @@ image:
   repository: folioorg/mod-password-validator
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -39,6 +39,7 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
+  containerPort: 8081
 
 ingress:
   enabled: false

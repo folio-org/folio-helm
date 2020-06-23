@@ -1,8 +1,15 @@
 #!/bin/sh
 
-echo Pushing module descriptor
+echo Getting descriptor
 curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq '.[0]' > /tmp/descriptor.json
 MODULE_NAME_VERSION=$(curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq '.[0].id');
+
+echo Clearning module
+curl -L -w '\n' -D - -X DELETE $OKAPI_URL/_/proxy/tenants/$TENANT_ID/modules/$MODULE_NAME_VERSION
+curl -L -w '\n' -D - -X DELETE $OKAPI_URL/_/discovery/modules/$MODULE_NAME_VERSION
+curl -L -w '\n' -D - -X DELETE $OKAPI_URL/_/proxy/modules/$MODULE_NAME_VERSION
+
+echo Pushing module descriptor
 curl -L -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/descriptor.json $OKAPI_URL/_/proxy/modules
 
 echo Pushing module deployment
