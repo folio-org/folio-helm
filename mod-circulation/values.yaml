@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: folioorg/mod-circulation
+  repository: folioci/mod-circulation
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -38,7 +38,8 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 9801
+  port: 80
+  containerPort: 9801
 
 ingress:
   enabled: false
