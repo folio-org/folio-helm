@@ -35,16 +35,41 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 8081
+              containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: 8081
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 8081
+          env:
+            - name: DB_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  key: DB_DATABASE
+                  name: db-connect-modules
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: DB_HOST
+                  name: db-connect-modules
+            - name: DB_MAXPOOLSIZE
+              valueFrom:
+                secretKeyRef:
+                  key: DB_MAXPOOLSIZE
+                  name: db-connect-modules
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: DB_PASSWORD
+                  name: db-connect-modules
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  key: DB_PORT
+                  name: db-connect-modules
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  key: DB_USERNAME
+                  name: db-connect-modules
+            - name: JAVA_OPTIONS
+              value: -Xmx256m
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
