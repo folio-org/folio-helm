@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: folioorg/mod-notes
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
