@@ -1,4 +1,4 @@
-apiVersion: v2
+apiVersion: v1
 name: mod-inventory
 description: A Helm chart mod-invertory for Kubernetes
 

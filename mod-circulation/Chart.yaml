@@ -1,4 +1,4 @@
-apiVersion: v2
+apiVersion: v1
 name: mod-circulation
 description: A Helm chart Folio mod-circulation for Kubernetes
 
