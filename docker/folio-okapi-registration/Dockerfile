@@ -1,9 +1,7 @@
 FROM alpine:3.8
 
 #Prerequisites
-RUN apk add --no-cache curl perl perl-app-cpanminus perl-json perl-libwww python py-pip jq
-RUN pip install --upgrade pip
-RUN pip install requests
+RUN apk add --no-cache curl jq
 
 #Create folders in container
 RUN mkdir -p /usr/local/bin/folio/install

@@ -1,18 +1,18 @@
 #!/bin/sh
 
-echo Getting descriptor
+echo ------------------ Getting descriptor ------------------
 curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq '.[0]' > /tmp/descriptor.json
 MODULE_NAME_VERSION=$(curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq '.[0].id');
 
-echo Clearning module
-curl -L -w '\n' -D - -X DELETE $OKAPI_URL/_/proxy/tenants/$TENANT_ID/modules/$MODULE_NAME_VERSION
-curl -L -w '\n' -D - -X DELETE $OKAPI_URL/_/discovery/modules/$MODULE_NAME_VERSION
-curl -L -w '\n' -D - -X DELETE $OKAPI_URL/_/proxy/modules/$MODULE_NAME_VERSION
+echo ------------------ Clearning module ------------------
+curl -sL -w '\n' -D - -X DELETE $OKAPI_URL/_/proxy/tenants/$TENANT_ID/modules/$MODULE_NAME_VERSION
+curl -sL -w '\n' -D - -X DELETE $OKAPI_URL/_/discovery/modules/$MODULE_NAME_VERSION
+curl -sL -w '\n' -D - -X DELETE $OKAPI_URL/_/proxy/modules/$MODULE_NAME_VERSION
 
-echo Pushing module descriptor
-curl -L -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/descriptor.json $OKAPI_URL/_/proxy/modules
+echo ------------------ Pushing module descriptor ------------------
+curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/descriptor.json $OKAPI_URL/_/proxy/modules
 
-echo Pushing module deployment
+echo ------------------ Pushing module deployment ------------------
 cat > /tmp/deployment.json <<END
 {
   "srvcId": $MODULE_NAME_VERSION,
@@ -20,9 +20,9 @@ cat > /tmp/deployment.json <<END
   "url": "http://$MODULE_NAME"
 }
 END
-curl -L -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/deployment.json $OKAPI_URL/_/discovery/modules
+curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/deployment.json $OKAPI_URL/_/discovery/modules
 
-echo Creating tenant
+echo ------------------ Creating tenant ------------------
 cat > /tmp/tenant.json <<END
 {
   "id": "$TENANT_ID",
@@ -30,17 +30,15 @@ cat > /tmp/tenant.json <<END
   "description" : "Default tenant"
 }
 END
-curl -L -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/tenant.json $OKAPI_URL/_/proxy/tenants
+curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/tenant.json $OKAPI_URL/_/proxy/tenants
 
-echo Enabling tenant
+echo ------------------ Enabling module for tenant ------------------
 cat > /tmp/tenant-enable.json <<END
 {
   "id": $MODULE_NAME_VERSION,
   "action" : "enable"
 }
 END
-curl -L -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/tenant-enable.json $OKAPI_URL/_/proxy/tenants/$TENANT_ID/modules
+curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/tenant-enable.json $OKAPI_URL/_/proxy/tenants/$TENANT_ID/modules
 
 echo Done!
-
-sleep 3m;
