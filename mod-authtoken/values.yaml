@@ -83,5 +83,5 @@ affinity: {}
 postJob:
   okapiUrl: http://okapi:9130
   tenantId: diku
-  sampleData: yes
-  referenceData: yes
+  sampleData: true
+  referenceData: true

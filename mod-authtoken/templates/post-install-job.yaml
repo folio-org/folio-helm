@@ -30,10 +30,10 @@ spec:
           - name: MODULE_NAME
             value: {{ .Chart.Name }}
           - name: OKAPI_URL
-            value: {{ .Values.postJob.okapiUrl }}
+            value: {{ .Values.postJob.okapiUrl | quote }}
           - name: TENANT_ID
-            value: {{ .Values.postJob.tenantId }}
+            value: {{ .Values.postJob.tenantId | quote }}
           - name: SAMPLE_DATA
-            value: {{ .Values.postJob.sampleData }}
+            value: {{ .Values.postJob.sampleData | quote }}
           - name: REF_DATA
-            value: {{ .Values.postJob.referenceData }}
+            value: {{ .Values.postJob.referenceData | quote }}
