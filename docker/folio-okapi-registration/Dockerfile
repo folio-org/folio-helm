@@ -16,6 +16,8 @@ COPY create-deploy.sh /usr/local/bin/folio
 ENV OKAPI_URL='http://okapi:9130'
 ENV MODULE_NAME=''
 ENV TENANT_ID='diku'
+ENV SAMPLE_DATA='false'
+ENV REF_DATA='false'
 
 #Execute the script on container runtime
 CMD ["/usr/local/bin/folio/create-deploy.sh"]
