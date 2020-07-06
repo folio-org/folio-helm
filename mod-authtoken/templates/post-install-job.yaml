@@ -26,7 +26,6 @@ spec:
       containers:
       - name: post-install-job
         image: celticmask/folio-okapi-registration:latest
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
           - name: MODULE_NAME
             value: {{ .Chart.Name }}

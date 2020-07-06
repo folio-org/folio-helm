@@ -4,7 +4,7 @@
 
 ### Linux console run command
 
-`docker run --rm -d --name folio-okapi-registration -h folio-okapi-registration -e TENANT_ID=diku -e OKAPI_URL=http://localhost:9130 -e MODULE_NAME=mod-calendar folio-okapi-registration`
+`docker run --rm -d --name folio-okapi-registration -h folio-okapi-registration -e TENANT_ID=diku -e OKAPI_URL=http://okapi:9130 -e MODULE_NAME=mod-calendar folio-okapi-registration`
 
 ### What to deploy
 
