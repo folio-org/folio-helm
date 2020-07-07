@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: celticmask/platform-complete
+  repository: docker.dev.folio.org/platform-complete
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
