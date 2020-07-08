@@ -1,7 +1,7 @@
 FROM alpine:3.8
 
 #Prerequisites
-RUN apk add --no-cache make curl perl perl-app-cpanminus perl-json perl-libwww
+RUN apk add --no-cache make curl perl perl-app-cpanminus perl-json perl-libwww perl-lwp-protocol-https
 RUN cpanm UUID::Tiny
 
 #Create working directory
@@ -19,6 +19,7 @@ ENV TENANT_ID='diku'
 ENV ADMIN_USER='diku_admin'
 ENV ADMIN_PASSWORD='admin'
 ENV OKAPI_URL='http://okapi:9130'
+ENV ONLY_PERMS='--onlyperms'
 
 #Execute the script on container runtime
 CMD ["/usr/local/bin/folio/create-superuser.sh"]

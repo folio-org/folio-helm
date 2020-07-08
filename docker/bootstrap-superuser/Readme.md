@@ -1,10 +1,10 @@
 ## Build Docker image
 
-`docker build -t bootstrap-superuser .`
+`sudo docker build -t bootstrap-superuser .`
 
 ### Linux console run command
 
-`docker run --rm -d --name bootstrap-superuser -h bootstrap-superuser -e TENANT_ID=diku -e ADMIN_USER=diku_admin -e ADMIN_PASSWORD=admin -e OKAPI_URL=http://okapi:9130 bootstrap-superuser`
+`sudo docker run --rm -it --name bootstrap-superuser -e TENANT_ID=diku -e ADMIN_USER=diku_admin -e ADMIN_PASSWORD=admin -e OKAPI_URL=http://okapi:9130 bootstrap-superuser`
 
 ## Environment variables
 
@@ -25,3 +25,7 @@ Password to set for the Folio superuser. Defaults to `admin`.
 ### OKAPI_URL
 
 Internal OKAPI URL to use. Defaults to `http://okapi:9130`.
+
+### ONLY_PERMS
+
+Use to set up permissions for existing admin user. Add -e ONLY_PERMS='' to docker parameters. Defaults to `--onlyperms`.

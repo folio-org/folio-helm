@@ -11,13 +11,15 @@ WORKDIR /usr/local/bin/folio
 
 #Copy in scripts and files
 COPY create-deploy.sh /usr/local/bin/folio
+COPY init.sh /usr/local/bin/folio
+COPY platform-complete.json /usr/local/bin/folio
 
 #Set environment variables for script
 ENV OKAPI_URL='http://okapi:9130'
 ENV MODULE_NAME=''
 ENV TENANT_ID='diku'
-ENV SAMPLE_DATA='false'
-ENV REF_DATA='false'
+ENV SAMPLE_DATA='true'
+ENV REF_DATA='true'
 
 #Execute the script on container runtime
-CMD ["/usr/local/bin/folio/create-deploy.sh"]
+CMD ["/usr/local/bin/folio/init.sh"]
