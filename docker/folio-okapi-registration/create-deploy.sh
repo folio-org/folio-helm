@@ -34,11 +34,11 @@ curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/tenan
 
 echo ------------------ Enabling module for tenant ------------------
 cat > /tmp/tenant-enable.json <<END
-{
+[{
   "id": "$MODULE_NAME_VERSION",
   "action" : "enable"
-}
+}]
 END
-curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/tenant-enable.json $OKAPI_URL/_/proxy/tenants/$TENANT_ID/modules?deploy=false\&preRelease=false\&tenantParameters=loadSample%3D$SAMPLE_DATA%2CloadReference%3D$REF_DATA
+curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/tenant-enable.json $OKAPI_URL/_/proxy/tenants/$TENANT_ID/install?deploy=false\&preRelease=true\&tenantParameters=loadSample%3D$SAMPLE_DATA%2CloadReference%3D$REF_DATA
 
 echo Done!
