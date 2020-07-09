@@ -1,13 +1,14 @@
 ## Build Docker image
 
-`sudo docker build -t folio-okapi-registration .`
+`docker build -t folio-okapi-registration .`
 
 ### Linux console run command
 
-`sudo docker run --rm -it --name folio-okapi-registration -e TENANT_ID=diku -e OKAPI_URL=http://okapi:9130 -e MODULE_NAME=mod-calendar folio-okapi-registration`
+`docker run --rm --name folio-okapi-registration -e TENANT_ID=diku -e OKAPI_URL=http://okapi:9130 -e MODULE_NAME=mod-calendar folio-okapi-registration`
 
-### What to deploy
+## Alternative runnig image without compiling
 
+`docker run --rm --name folio-okapi-registration -e TENANT_ID=diku -e OKAPI_URL=http://okapi:9130 -e MODULE_NAME=mod-calendar docker.dev.folio.org/folio-okapi-registration`
 
 ## Environment variables
 

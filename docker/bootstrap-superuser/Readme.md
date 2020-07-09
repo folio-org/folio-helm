@@ -1,10 +1,14 @@
 ## Build Docker image
 
-`sudo docker build -t bootstrap-superuser .`
+`docker build -t bootstrap-superuser .`
 
 ### Linux console run command
 
-`sudo docker run --rm -it --name bootstrap-superuser -e TENANT_ID=diku -e ADMIN_USER=diku_admin -e ADMIN_PASSWORD=admin -e OKAPI_URL=http://okapi:9130 bootstrap-superuser`
+`docker run --rm --name bootstrap-superuser -e TENANT_ID=diku -e ADMIN_USER=diku_admin -e ADMIN_PASSWORD=admin -e OKAPI_URL=http://okapi:9130 bootstrap-superuser`
+
+## Alternative runnig image without compiling
+
+`docker run --rm --name bootstrap-superuser -e TENANT_ID=diku -e ADMIN_USER=diku_admin -e ADMIN_PASSWORD=admin -e OKAPI_URL=http://okapi:9130 docker.dev.folio.org/bootstrap-superuser`
 
 ## Environment variables
 
