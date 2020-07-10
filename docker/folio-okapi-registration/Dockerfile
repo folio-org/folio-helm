@@ -1,7 +1,7 @@
 FROM alpine:3.8
 
 #Prerequisites
-RUN apk add --no-cache curl jq
+RUN apk add --no-cache curl jq bash && rm -rf /var/cache/apk/*
 
 #Create folders in container
 RUN mkdir -p /usr/local/bin/folio/install
@@ -13,6 +13,7 @@ WORKDIR /usr/local/bin/folio
 COPY create-deploy.sh /usr/local/bin/folio
 COPY init.sh /usr/local/bin/folio
 COPY platform-complete.json /usr/local/bin/folio
+COPY stripes.json /usr/local/bin/folio
 
 #Set environment variables for script
 ENV OKAPI_URL='http://okapi:9130'
