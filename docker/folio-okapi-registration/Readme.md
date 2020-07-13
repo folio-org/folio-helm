@@ -17,7 +17,7 @@ When you deploy the `folio-okapi-registration` image, you can adjust the configu
 ### MODULE_NAME
 
 The name of the module. Defaults to ``. If empty script does register all modules from `platform-complete.json` file.
-If `deployStripes` script register all UI modules.
+If `platform-complete` script register all UI modules.
 
 ### OKAPI_URL
 

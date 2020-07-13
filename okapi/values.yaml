@@ -79,6 +79,7 @@ tolerations: []
 affinity: {}
 
 # Folio specific
+args: dev
 postJob:
   okapiUrl: http://okapi:9130
   tenantId: diku

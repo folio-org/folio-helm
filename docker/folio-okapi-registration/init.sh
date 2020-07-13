@@ -6,7 +6,7 @@ if [ -z "$MODULE_NAME" ]; then
     export MODULE_NAME=${id}
     ./create-deploy.sh
   done
-elif [ "$MODULE_NAME" == "deployStripes" ]; then
+elif [ "$MODULE_NAME" == "platform-complete" ]; then
   cat ./stripes.json | while read id ; do
     export MODULE_NAME=${id}
     ./create-deploy.sh
