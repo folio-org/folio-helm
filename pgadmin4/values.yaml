@@ -143,7 +143,7 @@ existingSecret: ""
 ## Needed chart reinstall for apply changes
 env:
   # can be email or nickname
-  email: chart@example.local
+  email: user@folio.org
   password: SuperSecret
   # pgpassfile: /var/lib/pgadmin/storage/pgadmin/file.pgpass
 
