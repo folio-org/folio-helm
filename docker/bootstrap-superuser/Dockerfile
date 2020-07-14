@@ -19,7 +19,7 @@ ENV TENANT_ID='diku'
 ENV ADMIN_USER='diku_admin'
 ENV ADMIN_PASSWORD='admin'
 ENV OKAPI_URL='http://okapi:9130'
-ENV ONLY_PERMS='--onlyperms'
+ENV FLAGS='--onlyperms'
 
 #Execute the script on container runtime
 CMD ["/usr/local/bin/folio/create-superuser.sh"]

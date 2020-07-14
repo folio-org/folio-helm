@@ -30,6 +30,6 @@ Password to set for the Folio superuser. Defaults to `admin`.
 
 Internal OKAPI URL to use. Defaults to `http://okapi:9130`.
 
-### ONLY_PERMS
+### FLAGS
 
-Use to set up permissions for existing admin user. Add -e ONLY_PERMS='' to docker parameters. Defaults to `--onlyperms`.
+Use to set up flags to apply permissions. Add -e FLAGS='' to create admin user and apply perrmisions. Defaults to `--onlyperms`.

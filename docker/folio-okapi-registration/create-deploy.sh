@@ -1,13 +1,13 @@
 #!/bin/sh
 
-echo ------------------ Getting descriptor ------------------
+echo ------------------ [$MODULE_NAME] Getting descriptor ------------------
 curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq '.[0]' > /tmp/descriptor.json
 MODULE_NAME_VERSION=$(curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq -r '.[0].id');
 
 echo ------------------ Pushing module descriptor ------------------
 curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/descriptor.json $OKAPI_URL/_/proxy/modules
 
-echo ------------------ Pushing module deployment ------------------
+echo ------------------ [$MODULE_NAME_VERSION] Pushing module deployment ------------------
 cat > /tmp/deployment.json <<END
 {
   "srvcId": "$MODULE_NAME_VERSION",
@@ -17,7 +17,7 @@ cat > /tmp/deployment.json <<END
 END
 curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/deployment.json $OKAPI_URL/_/discovery/modules
 
-echo ------------------ Creating tenant ------------------
+echo ------------------ [$MODULE_NAME_VERSION] Creating tenant ------------------
 cat > /tmp/tenant.json <<END
 {
   "id": "$TENANT_ID",
@@ -27,7 +27,7 @@ cat > /tmp/tenant.json <<END
 END
 curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/tenant.json $OKAPI_URL/_/proxy/tenants
 
-echo ------------------ Enabling module for tenant ------------------
+echo ------------------ [$MODULE_NAME_VERSION] Enabling module for tenant ------------------
 cat > /tmp/tenant-enable.json <<END
 [{
   "id": "$MODULE_NAME_VERSION",
