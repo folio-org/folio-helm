@@ -39,7 +39,7 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
-  containerPort: 8081
+  containerPort: 9701
 
 ingress:
   enabled: false
@@ -78,10 +78,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
-# Folio specific
-postJob:
-  okapiUrl: http://okapi:9130
-  tenantId: diku
-  sampleData: true
-  referenceData: true
