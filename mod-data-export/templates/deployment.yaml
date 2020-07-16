@@ -70,6 +70,14 @@ spec:
                   name: db-connect-modules
             - name: JAVA_OPTIONS
               value: -XX:MaxRAMPercentage=66.0
+            - name: aws.region
+              value: {{ .Values.aws.region | quote }}
+            - name: aws.accessKeyId
+              value: {{ .Values.aws.accessKeyId | quote }}
+            - name: aws.secretKey
+              value: {{ .Values.aws.secretKey | quote }}
+            - name: bucket.name
+              value: {{ .Values.bucket.name | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

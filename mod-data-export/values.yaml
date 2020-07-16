@@ -85,3 +85,11 @@ postJob:
   tenantId: diku
   sampleData: true
   referenceData: true
+
+aws:
+  region: us-east-2
+  accessKeyId: testAccessKey
+  secretKey: testSecretKey
+
+bucket:
+  name: test-bucket
