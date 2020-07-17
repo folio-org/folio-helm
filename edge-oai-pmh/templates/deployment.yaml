@@ -68,8 +68,18 @@ spec:
                 secretKeyRef:
                   key: DB_USERNAME
                   name: db-connect-modules
+            - name: OKAPI_URL
+              valueFrom:
+                secretKeyRef:
+                  name: tenant-config
+                  key: OKAPI_URL
+            - name: SECURE_STORE_PROPS
+              valueFrom:
+                secretKeyRef:
+                  name: 	ephemeral-properties
+                  key: 	edge-oai-pmh-ephemeral.properties
             - name: JAVA_OPTIONS
-              value: -XX:MaxRAMPercentage=66.0
+              value: "-XX:MaxRAMPercentage=80.0 -XX:+UseG1GC -Dokapi_url=$(OKAPI_URL) -Dsecure_store_props=$(SECURE_STORE_PROPS)"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
