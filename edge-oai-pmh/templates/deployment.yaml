@@ -37,6 +37,10 @@ spec:
             - name: http
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
+          volumeMounts:
+            - name: SECURE_STORE_PROPS
+              mountPath: "/etc/edge"
+              readOnly: true
           env:
             - name: DB_DATABASE
               valueFrom:
@@ -73,15 +77,14 @@ spec:
                 secretKeyRef:
                   name: tenant-config
                   key: OKAPI_URL
-            - name: SECURE_STORE_PROPS
-              valueFrom:
-                secretKeyRef:
-                  name: 	ephemeral-properties
-                  key: 	edge-oai-pmh-ephemeral.properties
             - name: JAVA_OPTIONS
-              value: "-XX:MaxRAMPercentage=80.0 -XX:+UseG1GC -Dokapi_url=$(OKAPI_URL) -Dsecure_store_props=$(SECURE_STORE_PROPS)"
+              value: "-XX:MaxRAMPercentage=80.0 -XX:+UseG1GC -Dokapi_url=$(OKAPI_URL) -Dsecure_store_props=/etc/edge/ephemeral.properties"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+      - name: SECURE_STORE_PROPS
+        secret:
+          secretName: ephemeral-properties
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
