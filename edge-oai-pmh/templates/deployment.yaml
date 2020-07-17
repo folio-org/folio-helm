@@ -38,7 +38,7 @@ spec:
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
           volumeMounts:
-            - name: SECURE-STORE-PROPS
+            - name: secure-store-props
               mountPath: "/etc/edge"
               readOnly: true
           env:
@@ -82,7 +82,7 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
-      - name: SECURE-STORE-PROPS
+      - name: secure-store-props
         secret:
           secretName: ephemeral-properties
       {{- with .Values.nodeSelector }}
