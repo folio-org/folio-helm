@@ -78,3 +78,5 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+javaOptions: -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC

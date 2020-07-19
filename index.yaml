@@ -3,7 +3,17 @@ entries:
   edge-ncip:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.833310382+03:00"
+    created: "2020-07-19T23:12:05.949208068+03:00"
+    description: A Helm chart for Kubernetes
+    digest: ed09d6cbaf9b5d72454d138bb6b1c6b8329fd2105900c06b790211384d628ce9
+    name: edge-ncip
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/edge-ncip-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.948850273+03:00"
     description: A Helm chart for Kubernetes
     digest: 999c2182546f66ce0c6b93cf7603bf6505709ae5ab27f2841034708d2688f15e
     name: edge-ncip
@@ -13,7 +23,7 @@ entries:
     version: 0.1.10
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.833738734+03:00"
+    created: "2020-07-19T23:12:05.949563756+03:00"
     description: A Helm chart for Kubernetes
     digest: eaf81aa1398fa048c6b950cce6b0fa435ae6406cffd294236bbef649018c5b17
     name: edge-ncip
@@ -24,7 +34,17 @@ entries:
   edge-oai-pmh:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.836986758+03:00"
+    created: "2020-07-19T23:12:05.952759522+03:00"
+    description: A Helm chart for Kubernetes
+    digest: e56f8a7d1a3b350d48305dee28a22f2661695ba303f9e465f9c29350c4e5036d
+    name: edge-oai-pmh
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/edge-oai-pmh-0.1.17.tgz
+    version: 0.1.17
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.952426795+03:00"
     description: A Helm chart for Kubernetes
     digest: 76df7da92069b56632054447df4ef4ea0fce80daf4ad0a97bb0c882170bd3032
     name: edge-oai-pmh
@@ -34,7 +54,7 @@ entries:
     version: 0.1.16
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.836479974+03:00"
+    created: "2020-07-19T23:12:05.95207159+03:00"
     description: A Helm chart for Kubernetes
     digest: 3646a7dda930918d22c7fd0090b06ab997bf221a49c155496accf12541681cce
     name: edge-oai-pmh
@@ -44,7 +64,7 @@ entries:
     version: 0.1.15
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.835753679+03:00"
+    created: "2020-07-19T23:12:05.951751219+03:00"
     description: A Helm chart for Kubernetes
     digest: 5fb6ce09ba2d4446243fecfab707339f316fbc11754c8704a9751657fd649526
     name: edge-oai-pmh
@@ -54,7 +74,7 @@ entries:
     version: 0.1.14
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.835332003+03:00"
+    created: "2020-07-19T23:12:05.951430102+03:00"
     description: A Helm chart for Kubernetes
     digest: 702882629e2225c0731efdb3c01803a4398a844c8637141c19903e70a86dc435
     name: edge-oai-pmh
@@ -64,7 +84,7 @@ entries:
     version: 0.1.13
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.83492696+03:00"
+    created: "2020-07-19T23:12:05.951039787+03:00"
     description: A Helm chart for Kubernetes
     digest: 64ecad07000adfb8d81df429b14bb6885298c59ddc48cc3ae1a2c979f1b7697c
     name: edge-oai-pmh
@@ -74,7 +94,7 @@ entries:
     version: 0.1.12
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.834524424+03:00"
+    created: "2020-07-19T23:12:05.950411892+03:00"
     description: A Helm chart for Kubernetes
     digest: 6018ab3013217d277ea398cd2ad02818928d98adb57d7fbddec8122c68b87783
     name: edge-oai-pmh
@@ -84,7 +104,7 @@ entries:
     version: 0.1.11
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.834121884+03:00"
+    created: "2020-07-19T23:12:05.949898537+03:00"
     description: A Helm chart for Kubernetes
     digest: aa5489984cf6865bb16b36ddc99c6b6a89a3d2c4257a66d187394122036f06a3
     name: edge-oai-pmh
@@ -94,7 +114,7 @@ entries:
     version: 0.1.10
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.837435889+03:00"
+    created: "2020-07-19T23:12:05.953090632+03:00"
     description: A Helm chart for Kubernetes
     digest: b1ede8be395b84ca54bae08582dbe273b13f65aea4080bdd859346509e2caec6
     name: edge-oai-pmh
@@ -105,7 +125,17 @@ entries:
   edge-orders:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.837823739+03:00"
+    created: "2020-07-19T23:12:05.953754098+03:00"
+    description: A Helm chart for Kubernetes
+    digest: dcbab10dda6d39e2504cd2935a0da0f64f8342fe7357c6d3714647b22f7f2728
+    name: edge-orders
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/edge-orders-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.953428278+03:00"
     description: A Helm chart for Kubernetes
     digest: a02a12a85addecc29ead55d2a5e0472be369dbdf7765edefa78a7b627fc8b3b9
     name: edge-orders
@@ -115,7 +145,7 @@ entries:
     version: 0.1.10
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.838240333+03:00"
+    created: "2020-07-19T23:12:05.954105724+03:00"
     description: A Helm chart for Kubernetes
     digest: 5193a94c505736aa116fbc458261074543edf253e622a1a5348fe604ffeb74be
     name: edge-orders
@@ -126,7 +156,17 @@ entries:
   edge-patron:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.838675538+03:00"
+    created: "2020-07-19T23:12:05.954774757+03:00"
+    description: A Helm chart for Kubernetes
+    digest: c5d7eb524e86ad310e463ce05819a48a6a50652d41b3e0ad2687c3a238d41283
+    name: edge-patron
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/edge-patron-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.954441032+03:00"
     description: A Helm chart for Kubernetes
     digest: 9821e92229298d46144b2077981f0eb9c22798f98df205f456da17d8dac1cc4c
     name: edge-patron
@@ -136,7 +176,7 @@ entries:
     version: 0.1.10
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.839072364+03:00"
+    created: "2020-07-19T23:12:05.955199967+03:00"
     description: A Helm chart for Kubernetes
     digest: 71517ba951dc7f81589be5efe8623ec8a74438ccb26b6f9008102c6a5c622ea3
     name: edge-patron
@@ -147,7 +187,17 @@ entries:
   edge-rtac:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.840269581+03:00"
+    created: "2020-07-19T23:12:05.957206754+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 9fa287d985812be8c0562c8d064fc053644c0de2426cf53cb07bc8e0f784e150
+    name: edge-rtac
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/edge-rtac-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.956365987+03:00"
     description: A Helm chart for Kubernetes
     digest: 500dc4fb381e07883b0aa5e2a193184a0d70e7e1038df70c82d0ada08e421ae6
     name: edge-rtac
@@ -157,7 +207,7 @@ entries:
     version: 0.1.12
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.839863526+03:00"
+    created: "2020-07-19T23:12:05.956009601+03:00"
     description: A Helm chart for Kubernetes
     digest: 25e599be9025a4d258818dfbf73776e2d14697d8964b672193d6c38cfe5146b7
     name: edge-rtac
@@ -167,7 +217,7 @@ entries:
     version: 0.1.11
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.839477232+03:00"
+    created: "2020-07-19T23:12:05.955575179+03:00"
     description: A Helm chart for Kubernetes
     digest: 5e930697538c68cbe923e1a6058f9301534b28e1759795e5b476970ff0d52938
     name: edge-rtac
@@ -177,7 +227,7 @@ entries:
     version: 0.1.10
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.840676666+03:00"
+    created: "2020-07-19T23:12:05.957550345+03:00"
     description: A Helm chart for Kubernetes
     digest: 712965aeda296f5a33b02970368f2c98ced061c7ff578a2114ab6a4464b808d1
     name: edge-rtac
@@ -188,7 +238,17 @@ entries:
   edge-sip2:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.841066507+03:00"
+    created: "2020-07-19T23:12:05.958196067+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 7061425bd12fe0432b830e558f711cf133f3d36487cbce4caf4945b8b450c9dc
+    name: edge-sip2
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/edge-sip2-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.957872747+03:00"
     description: A Helm chart for Kubernetes
     digest: b95d5c806127080fcb33bb136d8dc5beb211697ea7d85a42286836bdc51df30c
     name: edge-sip2
@@ -198,7 +258,7 @@ entries:
     version: 0.1.10
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.841512159+03:00"
+    created: "2020-07-19T23:12:05.958524575+03:00"
     description: A Helm chart for Kubernetes
     digest: 5fcc4e7521cf438e3ca6f8b45e5f5d8d463df11706c962db009fb8468104b4a5
     name: edge-sip2
@@ -209,7 +269,17 @@ entries:
   mod-agreements:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.84275482+03:00"
+    created: "2020-07-19T23:12:05.959913477+03:00"
+    description: A Helm chart for Kubernetes
+    digest: bd1fe71cfd5950c1c4165a55eacc3769955ed6d252f6632b541386e11997e801
+    name: mod-agreements
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-agreements-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.959573743+03:00"
     description: A Helm chart for Kubernetes
     digest: b8c8780d37fbb9bce274658fda5d410bc1defb1326c703e94a04f9fcd4904623
     name: mod-agreements
@@ -219,7 +289,7 @@ entries:
     version: 0.1.11
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.842324124+03:00"
+    created: "2020-07-19T23:12:05.959179893+03:00"
     description: A Helm chart for Kubernetes
     digest: fe3d2f75ad1a46ca49f1706e93e74ad66d94f81469501d8daee48838857ef477
     name: mod-agreements
@@ -229,7 +299,7 @@ entries:
     version: 0.1.10
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.843203837+03:00"
+    created: "2020-07-19T23:12:05.960240967+03:00"
     description: A Helm chart for Kubernetes
     digest: d713031a62e1c7bcc9b59caf72a1b262a5e1d1572f571556c9a5e675fa529632
     name: mod-agreements
@@ -239,7 +309,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.841896798+03:00"
+    created: "2020-07-19T23:12:05.958847702+03:00"
     description: A Helm chart for Kubernetes
     digest: 58d567cda7e44c869cd7ab1eda85699eee724690a9eb6371a9220ee5e235d456
     name: mod-agreements
@@ -250,7 +320,17 @@ entries:
   mod-authtoken:
   - apiVersion: v1
     appVersion: 2.5.0
-    created: "2020-07-17T15:53:04.847262393+03:00"
+    created: "2020-07-19T23:12:05.961197665+03:00"
+    description: A Helm chart for Folio mod-authtoken
+    digest: d659a5d056464d4de6e3d38a045bf471b65d6517c9eeda02e38551342d0ea6c1
+    name: mod-authtoken
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-authtoken-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 2.5.0
+    created: "2020-07-19T23:12:05.964045774+03:00"
     description: A Helm chart for Folio mod-authtoken
     digest: 36edea1c82116b9c38a4d42dee15fa36d89b274d3817e90836b846f382e27f73
     name: mod-authtoken
@@ -260,7 +340,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 2.5.0
-    created: "2020-07-17T15:53:04.84687039+03:00"
+    created: "2020-07-19T23:12:05.963705393+03:00"
     description: A Helm chart for Folio mod-authtoken
     digest: 753c32399d610699b72b2b52f26ee31d0e7bb4a35b87fe58a3f7e63db4920e62
     name: mod-authtoken
@@ -270,7 +350,7 @@ entries:
     version: 0.1.8
   - apiVersion: v1
     appVersion: 2.5.0
-    created: "2020-07-17T15:53:04.846473524+03:00"
+    created: "2020-07-19T23:12:05.963357445+03:00"
     description: A Helm chart for Folio mod-authtoken
     digest: a994fe8b72d0cfbe258765abb1a4771e83436d0bceb87ad9c6e4fa2cb62c44d5
     name: mod-authtoken
@@ -280,7 +360,7 @@ entries:
     version: 0.1.7
   - apiVersion: v1
     appVersion: 2.5.0
-    created: "2020-07-17T15:53:04.846060444+03:00"
+    created: "2020-07-19T23:12:05.962660451+03:00"
     description: A Helm chart for Folio mod-authtoken
     digest: b290729d6fb0ea9cab13922e23b541b1defae3ff0d510b6f791afa938875a351
     name: mod-authtoken
@@ -290,7 +370,7 @@ entries:
     version: 0.1.6
   - apiVersion: v1
     appVersion: 2.5.0
-    created: "2020-07-17T15:53:04.845659717+03:00"
+    created: "2020-07-19T23:12:05.962165128+03:00"
     description: A Helm chart for Folio mod-authtoken
     digest: 14752b02b71370f17dce3535746fc2ce6865b8b4d15857e9af64c1f97bb5fbcd
     name: mod-authtoken
@@ -300,7 +380,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 2.5.0
-    created: "2020-07-17T15:53:04.845267573+03:00"
+    created: "2020-07-19T23:12:05.96183987+03:00"
     description: A Helm chart for Folio mod-authtoken
     digest: df9aa142861391d467166855b38f3b5f704979b055a52c221a0375526f6fa879
     name: mod-authtoken
@@ -310,7 +390,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 2.5.0
-    created: "2020-07-17T15:53:04.844888078+03:00"
+    created: "2020-07-19T23:12:05.961514012+03:00"
     description: A Helm chart for Folio mod-authtoken
     digest: 8b6eef76c42eea4ac7e28210933fa94c38b786937ebbc1dc45c740f6b8711234
     name: mod-authtoken
@@ -320,7 +400,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: 2.5.0
-    created: "2020-07-17T15:53:04.844502525+03:00"
+    created: "2020-07-19T23:12:05.960856308+03:00"
     description: A Helm chart for Folio mod-authtoken
     digest: 6354ed4e379d123c069fa07448273aad61aa59018e1b3d9c0657b309b9e114ff
     name: mod-authtoken
@@ -330,7 +410,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 2.5.0
-    created: "2020-07-17T15:53:04.843936185+03:00"
+    created: "2020-07-19T23:12:05.960542037+03:00"
     description: A Helm chart for Folio mod-authtoken
     digest: ae7bce274ff6dc44c756ac54606d768fbf2d267aeecbf748da2e7cfb1d6b16ee
     name: mod-authtoken
@@ -341,7 +421,17 @@ entries:
   mod-calendar:
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.848418003+03:00"
+    created: "2020-07-19T23:12:05.965352483+03:00"
+    description: A Helm chart mod-calendar for Kubernetes
+    digest: a867e64baab2ec790d8a225aa134dbec7cc306326d03671ba75bd999fb5e420d
+    name: mod-calendar
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-calendar-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 5.4.0
+    created: "2020-07-19T23:12:05.96499787+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 3c6bbeb5ca4d369ef03c3c7932e71b1ad3e3175e200383c132ace62bd3647a3a
     name: mod-calendar
@@ -351,7 +441,7 @@ entries:
     version: 0.1.10
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.849939827+03:00"
+    created: "2020-07-19T23:12:05.966639358+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 7c2845f8b2c4f308a9947a18aa62c0b65a3ef06eba1e35cf0e6dbaced1e1c666
     name: mod-calendar
@@ -361,7 +451,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.849526601+03:00"
+    created: "2020-07-19T23:12:05.966304138+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 8ffb5fee869b3147d751b4239d24283a7b51f12a0844de7429ed9a76bb16782e
     name: mod-calendar
@@ -371,7 +461,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.849153955+03:00"
+    created: "2020-07-19T23:12:05.965979767+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 078eb61600769094529edbc92eb8f62401c5e5a25003e5615862e9c507a06116
     name: mod-calendar
@@ -381,7 +471,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.848778539+03:00"
+    created: "2020-07-19T23:12:05.965654972+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 365ea7482b6c1af8da7f20ea8e7f5ce8bb496d5ebd35101d0d481e8712980ec4
     name: mod-calendar
@@ -391,7 +481,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.848015406+03:00"
+    created: "2020-07-19T23:12:05.964666083+03:00"
     description: A Helm chart mod-calendar for Kubernetes
     digest: 357a28f35fc59e187c7f04a3b177d11fcd5760bd165b6fe4bbb80d9e81bda58f
     name: mod-calendar
@@ -401,7 +491,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 1.8.2
-    created: "2020-07-17T15:53:04.847625254+03:00"
+    created: "2020-07-19T23:12:05.964353218+03:00"
     description: A Helm chart for Kubernetes
     digest: bc13a9d69a101342873c8048ce94f4461024243977508ec13fe220a0bfc16472
     name: mod-calendar
@@ -412,7 +502,17 @@ entries:
   mod-circulation:
   - apiVersion: v1
     appVersion: 19.0.0
-    created: "2020-07-17T15:53:04.852313094+03:00"
+    created: "2020-07-19T23:12:05.967366211+03:00"
+    description: A Helm chart Folio mod-circulation for Kubernetes
+    digest: 22238f403de05b819b7b67a69916b41a083d824ba068e2cc0aeb5703a5ee8e24
+    name: mod-circulation
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-circulation-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 19.0.0
+    created: "2020-07-19T23:12:05.96866192+03:00"
     description: A Helm chart Folio mod-circulation for Kubernetes
     digest: f56ab393306b532c8581760777ffb6be7e7ea997f940f49cba0721deadd2a9ed
     name: mod-circulation
@@ -422,7 +522,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 19.0.0
-    created: "2020-07-17T15:53:04.851903127+03:00"
+    created: "2020-07-19T23:12:05.968324039+03:00"
     description: A Helm chart Folio mod-circulation for Kubernetes
     digest: 54f5225deaf243e04f4f5aba3ed6823b99ab9d7c1bfc8a39c3c44b1377733557
     name: mod-circulation
@@ -432,7 +532,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 19.0.0
-    created: "2020-07-17T15:53:04.851449822+03:00"
+    created: "2020-07-19T23:12:05.968010305+03:00"
     description: A Helm chart Folio mod-circulation for Kubernetes
     digest: 735f16036f264b802b91c6bddb62f7941d594e56859444adde031f2f61692556
     name: mod-circulation
@@ -442,7 +542,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 19.0.0
-    created: "2020-07-17T15:53:04.850740409+03:00"
+    created: "2020-07-19T23:12:05.967691958+03:00"
     description: A Helm chart Folio mod-circulation for Kubernetes
     digest: 1609fe24f9ab061f56c1ae2183820571a3d511e3b0604984a769c6b4b46fb5a3
     name: mod-circulation
@@ -452,7 +552,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: 19.0.0
-    created: "2020-07-17T15:53:04.850345493+03:00"
+    created: "2020-07-19T23:12:05.966966125+03:00"
     description: A Helm chart Folio mod-circulation for Kubernetes
     digest: 016a453b61f3556bb03c5dc7137d56cbf5d95c6298382b5881d526b920ba7e4e
     name: mod-circulation
@@ -463,7 +563,17 @@ entries:
   mod-circulation-storage:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.854226591+03:00"
+    created: "2020-07-19T23:12:05.969784335+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 43388fc20cd3e5215ecfacab1e20483ed5e0edd76a4297728d222c8a105eeb6e
+    name: mod-circulation-storage
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-circulation-storage-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.971085545+03:00"
     description: A Helm chart for Kubernetes
     digest: 6fe63c0c217e546b4d1c3a300d05611d7df195d0c1af38edb15b2025ede9b676
     name: mod-circulation-storage
@@ -473,7 +583,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.853831131+03:00"
+    created: "2020-07-19T23:12:05.970755551+03:00"
     description: A Helm chart for Kubernetes
     digest: e5d3a2c6c5e4b016830f0af49f42cc9e423e73441fab4e13133f196897d048ae
     name: mod-circulation-storage
@@ -483,7 +593,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.853453906+03:00"
+    created: "2020-07-19T23:12:05.970437294+03:00"
     description: A Helm chart for Kubernetes
     digest: 4607d85d42196efc954fd81beb4998cf5067616c83bdba4113c6a26dc3fae1b3
     name: mod-circulation-storage
@@ -493,7 +603,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.853078847+03:00"
+    created: "2020-07-19T23:12:05.970115119+03:00"
     description: A Helm chart for Kubernetes
     digest: b381b7b62e86a1cf48de53ca28b2b745906c32658be62524285c9a820980a88e
     name: mod-circulation-storage
@@ -503,7 +613,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.852693177+03:00"
+    created: "2020-07-19T23:12:05.969422522+03:00"
     description: A Helm chart for Kubernetes
     digest: da2cf9d5508679ae847af3c8a4af40d2d9d52790037d12950ee458d91b60bd52
     name: mod-circulation-storage
@@ -514,7 +624,17 @@ entries:
   mod-codex-ekb:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.854621305+03:00"
+    created: "2020-07-19T23:12:05.971533238+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 9d8810a773ad7453223f0b035d94190ea9a26f2e17caac5c4b2488c4a6229c00
+    name: mod-codex-ekb
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-codex-ekb-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.971872445+03:00"
     description: A Helm chart for Kubernetes
     digest: 39b1373944f8cadc566e85ded48613bb6255623f899a76c6f12f41662bc7c980
     name: mod-codex-ekb
@@ -525,7 +645,17 @@ entries:
   mod-codex-inventory:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.856163643+03:00"
+    created: "2020-07-19T23:12:05.972536243+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 60c50f6fb86b4c3c2af41023edf5e4bf5380fea23e7cfcb103f8091d51730002
+    name: mod-codex-inventory
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-codex-inventory-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.973590068+03:00"
     description: A Helm chart for Kubernetes
     digest: 88ba81c85c0e8a0a0cf528e687b42a4520c7f1849909c992494e1a883d021b31
     name: mod-codex-inventory
@@ -535,7 +665,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.855762073+03:00"
+    created: "2020-07-19T23:12:05.973177956+03:00"
     description: A Helm chart for Kubernetes
     digest: a978d2f92b81c890a9fbc3bbeb949460ff813b835e045fc68fc02fcbc9e81471
     name: mod-codex-inventory
@@ -545,7 +675,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.855390643+03:00"
+    created: "2020-07-19T23:12:05.972861601+03:00"
     description: A Helm chart for Kubernetes
     digest: 6baf76d378c8d49c8828be10801518072dccd1745c083c8aec4b251aed70ae96
     name: mod-codex-inventory
@@ -555,7 +685,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.855000507+03:00"
+    created: "2020-07-19T23:12:05.972187221+03:00"
     description: A Helm chart for Kubernetes
     digest: c6b1ca8006cb16bef773e686281e45ae2ed5fc20c35031b03611976db6b99e19
     name: mod-codex-inventory
@@ -566,7 +696,17 @@ entries:
   mod-codex-mux:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.858279536+03:00"
+    created: "2020-07-19T23:12:05.974549839+03:00"
+    description: A Helm chart for Kubernetes
+    digest: f5d2153aeff2a33e830e47d2284a2617399c634eef29b4aa9d947eece13fa189
+    name: mod-codex-mux
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-codex-mux-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.976112926+03:00"
     description: A Helm chart for Kubernetes
     digest: 39a7b9cab1bb56c8197f6a6254fcbef48bddd78d2b677f54df6d3fa70fcf42b9
     name: mod-codex-mux
@@ -576,7 +716,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.85764977+03:00"
+    created: "2020-07-19T23:12:05.975763923+03:00"
     description: A Helm chart for Kubernetes
     digest: 0f3e23c60e728420151cbffbf96c7810921709f9ee19475e970d797a6950b663
     name: mod-codex-mux
@@ -586,7 +726,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.857277267+03:00"
+    created: "2020-07-19T23:12:05.974866077+03:00"
     description: A Helm chart for Kubernetes
     digest: 68fad0d8169a717ff70fffda1f25fb0fa26259b125be25db46aeed261d253906
     name: mod-codex-mux
@@ -596,7 +736,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.856887723+03:00"
+    created: "2020-07-19T23:12:05.974212948+03:00"
     description: A Helm chart for Kubernetes
     digest: 4df786476e28a50b480726cfa725a35f0932c35578bc91cf2f4a98104f196fd3
     name: mod-codex-mux
@@ -606,7 +746,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.856527038+03:00"
+    created: "2020-07-19T23:12:05.97390395+03:00"
     description: A Helm chart for Kubernetes
     digest: 3f646a1f31259766e37009cfd55433b517caf54fa7bbb3e9a32a6a3335ee8e84
     name: mod-codex-mux
@@ -617,7 +757,17 @@ entries:
   mod-configuration:
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.860892016+03:00"
+    created: "2020-07-19T23:12:05.977079709+03:00"
+    description: A Helm chart mod-configuration for Kubernetes
+    digest: d2a8026e62b09a72bc6322e3fa067d3759a0964e95b8d676ce8297678df9ccb5
+    name: mod-configuration
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-configuration-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 5.4.0
+    created: "2020-07-19T23:12:05.978384719+03:00"
     description: A Helm chart mod-configuration for Kubernetes
     digest: 087b57bb95bec3b548d1994c3bb2b6c474b2717c6e12ecdf89ce68c2a0257419
     name: mod-configuration
@@ -627,7 +777,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.860478884+03:00"
+    created: "2020-07-19T23:12:05.978054633+03:00"
     description: A Helm chart mod-configuration for Kubernetes
     digest: 20f119fe91ff65af742e5d090e7b55d3ecae1b337f197dc29cb5fa315f509790
     name: mod-configuration
@@ -637,7 +787,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.860097957+03:00"
+    created: "2020-07-19T23:12:05.977736389+03:00"
     description: A Helm chart mod-configuration for Kubernetes
     digest: 3b76fd3835089d44e58da917d749bcfae8e8148854daa4443da1fbc7fde1be6f
     name: mod-configuration
@@ -647,7 +797,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.859677671+03:00"
+    created: "2020-07-19T23:12:05.977393458+03:00"
     description: A Helm chart mod-configuration for Kubernetes
     digest: 940713a316b67cef4ebc18b6051b461667925cad1a6aa6a9e378094bb8290fb2
     name: mod-configuration
@@ -657,7 +807,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.859298781+03:00"
+    created: "2020-07-19T23:12:05.97673507+03:00"
     description: A Helm chart mod-configuration for Kubernetes
     digest: 8106c05c76da5e68db48888b03818ee3f96603e1a441e2b691484e55784ada8d
     name: mod-configuration
@@ -667,7 +817,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 5.4.0
-    created: "2020-07-17T15:53:04.858904248+03:00"
+    created: "2020-07-19T23:12:05.97641872+03:00"
     description: A Helm chart mod-configuration for Kubernetes
     digest: cf6e0a0307c1b8f732ea4f37c1c7cdd4f673a5044c38112ce6c7292e94268456
     name: mod-configuration
@@ -678,7 +828,17 @@ entries:
   mod-courses:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.861286306+03:00"
+    created: "2020-07-19T23:12:05.978723353+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 31aea3057463296f3bffae28dd1ad909d4550f36b2e501c1177927260b061f50
+    name: mod-courses
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-courses-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.979050736+03:00"
     description: A Helm chart for Kubernetes
     digest: 37dc22e18a4a586a64f50cc7477d67e9d95bfb86c5cb3a4e8d73b1170352ff01
     name: mod-courses
@@ -689,7 +849,17 @@ entries:
   mod-data-export:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.861716733+03:00"
+    created: "2020-07-19T23:12:05.979807737+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 58f001c225bf4acd2159979c059c1418f8cf2e7022d8561350410dd789f289ef
+    name: mod-data-export
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-data-export-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.979449073+03:00"
     description: A Helm chart for Kubernetes
     digest: db023ebbc68951b94e4bbd03be2f0c215b1d635d6fa57c0898af81ebd15a3cb6
     name: mod-data-export
@@ -699,7 +869,7 @@ entries:
     version: 0.1.10
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.862108035+03:00"
+    created: "2020-07-19T23:12:05.980145069+03:00"
     description: A Helm chart for Kubernetes
     digest: f8483884375835426083eaacb368655052e9f1c39825174c99c383a37689e5e6
     name: mod-data-export
@@ -710,7 +880,17 @@ entries:
   mod-data-import:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.862887521+03:00"
+    created: "2020-07-19T23:12:05.980800837+03:00"
+    description: A Helm chart for Kubernetes
+    digest: b29e374c37267cfd54d9a9d7ff453c1b1b6984f8e226259229049a22dfe92f64
+    name: mod-data-import
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-data-import-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.981128912+03:00"
     description: A Helm chart for Kubernetes
     digest: 21069a1dc0cbfe819cbf82fa09cd2479e0c680bcf80fe39dd36c5213407094ad
     name: mod-data-import
@@ -720,7 +900,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.862487937+03:00"
+    created: "2020-07-19T23:12:05.98046285+03:00"
     description: A Helm chart for Kubernetes
     digest: 38ac54bf6012d36137df0ab420a527e16eda911c850181a58299ef2a9c582e51
     name: mod-data-import
@@ -731,7 +911,17 @@ entries:
   mod-data-import-converter-storage:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.863680494+03:00"
+    created: "2020-07-19T23:12:05.982346278+03:00"
+    description: A Helm chart for Kubernetes
+    digest: cac7d83370438746db006bd0bd6f0e0aaa97bf27d6a30f83fe35964b6723d1ec
+    name: mod-data-import-converter-storage
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-data-import-converter-storage-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.982685671+03:00"
     description: A Helm chart for Kubernetes
     digest: b38b6ca55b6066a37537849282c874379618fe93e1d7f91fdf3d4fef7f673eca
     name: mod-data-import-converter-storage
@@ -741,7 +931,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.863281151+03:00"
+    created: "2020-07-19T23:12:05.981990412+03:00"
     description: A Helm chart for Kubernetes
     digest: cb8be7b3c8912004b9b369a9e10decaefb40b8f7cd79aae316d5b58c4c191038
     name: mod-data-import-converter-storage
@@ -752,7 +942,17 @@ entries:
   mod-email:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.86523511+03:00"
+    created: "2020-07-19T23:12:05.983395165+03:00"
+    description: A Helm chart mod-email for Kubernetes
+    digest: c01fbca0072eeb7ea9608e74a39ba9b3c99e8d8c18c3be7e00c7805a4728c194
+    name: mod-email
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-email-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.984357402+03:00"
     description: A Helm chart mod-email for Kubernetes
     digest: 05ae0df7ef4c2a97cc885ccbac15095165a7bc6f602d205b6f5a8f02caff9672
     name: mod-email
@@ -762,7 +962,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.864803271+03:00"
+    created: "2020-07-19T23:12:05.984029812+03:00"
     description: A Helm chart mod-email for Kubernetes
     digest: dde9f91e8cb5f22d184ea13f6a1ea9da2a4628b3a8a0f2f42411be03a064479e
     name: mod-email
@@ -772,7 +972,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.864435455+03:00"
+    created: "2020-07-19T23:12:05.983709232+03:00"
     description: A Helm chart mod-email for Kubernetes
     digest: c027fecd2880fb6ef4edf8f5797ae8fd22b8afb448ff2c04a5679b667d3c033e
     name: mod-email
@@ -782,7 +982,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.864062354+03:00"
+    created: "2020-07-19T23:12:05.983000336+03:00"
     description: A Helm chart mod-email for Kubernetes
     digest: 517ef198c3ba9efd95a1fb89548fac637d772c7eca9330bc7501f29ed462761f
     name: mod-email
@@ -793,7 +993,17 @@ entries:
   mod-erm-usage:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.865985802+03:00"
+    created: "2020-07-19T23:12:05.984710024+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 0e8f3134cd967e0456c4a6bf61123b0eb8c6a03e253d94dc2bc9dd1f642a377c
+    name: mod-erm-usage
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-erm-usage-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.985047118+03:00"
     description: A Helm chart for Kubernetes
     digest: a30b5e3148dcb7b23e13e5049f7851e4a9188ce03866bb7ecaa77b47bc33b4ed
     name: mod-erm-usage
@@ -804,7 +1014,17 @@ entries:
   mod-erm-usage-harvester:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.866560975+03:00"
+    created: "2020-07-19T23:12:05.985383595+03:00"
+    description: A Helm chart for Kubernetes
+    digest: f4bbe011ee2b0a631d61d6d363c64311021791fce2a25e9545a6f9d82cc638e3
+    name: mod-erm-usage-harvester
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-erm-usage-harvester-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.985713105+03:00"
     description: A Helm chart for Kubernetes
     digest: e7d5939508270c7fe6e449285a23ecb1d4c9628ccd54862350367eecb86d487a
     name: mod-erm-usage-harvester
@@ -815,7 +1035,17 @@ entries:
   mod-event-config:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.86810198+03:00"
+    created: "2020-07-19T23:12:05.986366289+03:00"
+    description: A Helm chart mod-event-config for Kubernetes
+    digest: cc1fcd0a8daf54b13e88e3359cba8bbddd5cdacd57f9037a08fcc7d15f2fdc2b
+    name: mod-event-config
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-event-config-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.987380112+03:00"
     description: A Helm chart mod-event-config for Kubernetes
     digest: 16f7fa7a7e9532c2a3470c46d2fa9d79ddf0b68a6b9917cf534105eb90cb72f5
     name: mod-event-config
@@ -825,7 +1055,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.867703473+03:00"
+    created: "2020-07-19T23:12:05.986997606+03:00"
     description: A Helm chart mod-event-config for Kubernetes
     digest: a4c5d47223bb1f479f1b0d988f74af6028a225cd5ac8b8d022a1de7eda1b8ee9
     name: mod-event-config
@@ -835,7 +1065,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.867329186+03:00"
+    created: "2020-07-19T23:12:05.986678798+03:00"
     description: A Helm chart mod-event-config for Kubernetes
     digest: 65ef3fb2bcc87ded5b572dceaa6445587e39062e9642397535bc4681ac3f4ca6
     name: mod-event-config
@@ -845,7 +1075,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.866947675+03:00"
+    created: "2020-07-19T23:12:05.986028287+03:00"
     description: A Helm chart mod-event-config for Kubernetes
     digest: 6f18dda671feded498b1e088eec1e1421228c8b73e040f41ccd8c08b63ee3296
     name: mod-event-config
@@ -856,7 +1086,17 @@ entries:
   mod-feesfines:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.869753172+03:00"
+    created: "2020-07-19T23:12:05.98854055+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 8999431d2a99e036167cefbc46224fc3530b6d83b87f2c11b3e671e0c0fc53bb
+    name: mod-feesfines
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-feesfines-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.989523646+03:00"
     description: A Helm chart for Kubernetes
     digest: 81eb2fd26043da5fd9f186c05ba824eebd60e3c7bddbfd73cbe092a70b57cb34
     name: mod-feesfines
@@ -866,7 +1106,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.869349273+03:00"
+    created: "2020-07-19T23:12:05.989189713+03:00"
     description: A Helm chart for Kubernetes
     digest: f4986ae7c4dd5470ed7b5a08a7b193b5b2634a85a6d416582efdf16c2b1ac54d
     name: mod-feesfines
@@ -876,7 +1116,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.868970257+03:00"
+    created: "2020-07-19T23:12:05.988873769+03:00"
     description: A Helm chart for Kubernetes
     digest: ba5bdb2dbeda0e1c8851dc2f7b2b0092b180d8697fc8aa74fc66a20080a37b72
     name: mod-feesfines
@@ -886,7 +1126,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.868591419+03:00"
+    created: "2020-07-19T23:12:05.988110121+03:00"
     description: A Helm chart for Kubernetes
     digest: 35438c3487d61356105b98a2e596d51f2b50659cd8baa93c659f314783500720
     name: mod-feesfines
@@ -897,7 +1137,17 @@ entries:
   mod-finance:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.870178345+03:00"
+    created: "2020-07-19T23:12:05.989872937+03:00"
+    description: A Helm chart for Kubernetes
+    digest: e4cfe64452d00fb7b15152cf2e5703333563050dd84a4e562aa3294dbc382804
+    name: mod-finance
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-finance-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.99021133+03:00"
     description: A Helm chart for Kubernetes
     digest: bcc6052fca6064e379ab286e7b9c07beff750063bf6731e9f412c160b8b93790
     name: mod-finance
@@ -908,7 +1158,17 @@ entries:
   mod-finance-storage:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.870571001+03:00"
+    created: "2020-07-19T23:12:05.990552891+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 4a153dfd982bb7d438c0fddd82c9dea95592d0909dda4156d0f46cd8a557168b
+    name: mod-finance-storage
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-finance-storage-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.990884964+03:00"
     description: A Helm chart for Kubernetes
     digest: 4d097baf5cc4e075d09272a0872018acd6d0ffdb7b175d7bee5dc91e85381c90
     name: mod-finance-storage
@@ -919,7 +1179,17 @@ entries:
   mod-gobi:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.870961925+03:00"
+    created: "2020-07-19T23:12:05.991233751+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 65a59a5302e4630ac256ca6d4d9df98a5d6c0c76e940f939527ec99f17426658
+    name: mod-gobi
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-gobi-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.991610094+03:00"
     description: A Helm chart for Kubernetes
     digest: f0aade282169bab5e9805f6f0a01880a059e6a31301b31463ac062f80b304b70
     name: mod-gobi
@@ -930,7 +1200,17 @@ entries:
   mod-inventory:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.873445324+03:00"
+    created: "2020-07-19T23:12:05.992278611+03:00"
+    description: A Helm chart mod-invertory for Kubernetes
+    digest: 92fcfad766331c50851daae7cc53ff68c733d6642e3028360eb52a164a56150f
+    name: mod-inventory
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-inventory-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.994312383+03:00"
     description: A Helm chart mod-invertory for Kubernetes
     digest: 0c96f8fe36bd85c32a52f18e4edf2cacdd60ed84c1c067ab97ba432d12ef7375
     name: mod-inventory
@@ -940,7 +1220,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.872861037+03:00"
+    created: "2020-07-19T23:12:05.993545544+03:00"
     description: A Helm chart mod-invertory for Kubernetes
     digest: 6f58e00f8833472b7ee6e5e8f66d391eb48f6e820ccac37d55a604bc68035d8d
     name: mod-inventory
@@ -950,7 +1230,7 @@ entries:
     version: 0.1.5
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.872475343+03:00"
+    created: "2020-07-19T23:12:05.993231624+03:00"
     description: A Helm chart mod-invertory for Kubernetes
     digest: 3d31e5a58a373ff5cde531beef93f016e5cb9ed14fbcac6f63cd839a1e3118de
     name: mod-inventory
@@ -960,7 +1240,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.872103151+03:00"
+    created: "2020-07-19T23:12:05.99291489+03:00"
     description: A Helm chart mod-invertory for Kubernetes
     digest: ee71dca09c3c811067f1bc1129a8fd77ce74385aadcaeaf7d49e3a081e6338bc
     name: mod-inventory
@@ -970,7 +1250,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.871722015+03:00"
+    created: "2020-07-19T23:12:05.992596153+03:00"
     description: A Helm chart mod-invertory for Kubernetes
     digest: 7210fbd42bc6d925a2d1b0f401ea091ce0e38f13833f4705ded44e32a20082fb
     name: mod-inventory
@@ -980,7 +1260,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.871342262+03:00"
+    created: "2020-07-19T23:12:05.991933043+03:00"
     description: A Helm chart mod-invertory for Kubernetes
     digest: 1a5c855895fda292bbae6bdfd6a9112a84981c7447c641d00b724486a33d4a04
     name: mod-inventory
@@ -991,7 +1271,17 @@ entries:
   mod-inventory-storage:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.875415391+03:00"
+    created: "2020-07-19T23:12:05.994978206+03:00"
+    description: A Helm chart mod-inventory-storage for Kubernetes
+    digest: 435c487f02389f640c6665469cfd6cbcd260d8630eae95f8301575c8883f7d21
+    name: mod-inventory-storage
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-inventory-storage-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.996029978+03:00"
     description: A Helm chart mod-inventory-storage for Kubernetes
     digest: 8921290222c526df92d6bcd7b081d8eb180c26da30d9cd94cfd49bf89d0bbf9f
     name: mod-inventory-storage
@@ -1001,7 +1291,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.875017682+03:00"
+    created: "2020-07-19T23:12:05.995698208+03:00"
     description: A Helm chart mod-inventory-storage for Kubernetes
     digest: 3c10db726be51a616c823dafb8fbca3b9e3765f01e228b01cbe4c56b63758f1c
     name: mod-inventory-storage
@@ -1011,7 +1301,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.874633585+03:00"
+    created: "2020-07-19T23:12:05.995377178+03:00"
     description: A Helm chart mod-inventory-storage for Kubernetes
     digest: 1cf6c63376a4d87b36b28626a7d2e3b712965ff2fc04a3bf6823c6eaeddafb17
     name: mod-inventory-storage
@@ -1021,7 +1311,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.874224242+03:00"
+    created: "2020-07-19T23:12:05.994634538+03:00"
     description: A Helm chart mod-inventory-storage for Kubernetes
     digest: 9becc0821083050f870d5c9b55f1382750e40f04065cdd96bd8fb42f36f91af7
     name: mod-inventory-storage
@@ -1032,7 +1322,17 @@ entries:
   mod-invoice:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.875803731+03:00"
+    created: "2020-07-19T23:12:05.996445125+03:00"
+    description: A Helm chart for Kubernetes
+    digest: e9256fa0676188560d5b42003e5808d0d88c639d0ac7e1517b45c26a9484409f
+    name: mod-invoice
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-invoice-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.996784745+03:00"
     description: A Helm chart for Kubernetes
     digest: 8bf2a5742b7ea94354d7b5c28175d62f8250c55bdb40cf9fc6e86f341dcf8b45
     name: mod-invoice
@@ -1043,7 +1343,17 @@ entries:
   mod-invoice-storage:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.876203785+03:00"
+    created: "2020-07-19T23:12:05.997138989+03:00"
+    description: A Helm chart for Kubernetes
+    digest: a862e69dd81878672926e8ba8bb6b968f483259b7e4cc1b3ba1c3ebf25462178
+    name: mod-invoice-storage
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-invoice-storage-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.997493139+03:00"
     description: A Helm chart for Kubernetes
     digest: bc701d797c80f8635046d8f59970c9cdc08c2104a79be18fecc2d3b731d1c6ab
     name: mod-invoice-storage
@@ -1054,7 +1364,17 @@ entries:
   mod-kb-ebsco-java:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.876593954+03:00"
+    created: "2020-07-19T23:12:05.997847769+03:00"
+    description: A Helm chart for Kubernetes
+    digest: d14a1979ac5217b52aa0b723a87e28c9953e8b22b4f75ed787314b8e8409c627
+    name: mod-kb-ebsco-java
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-kb-ebsco-java-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.998222418+03:00"
     description: A Helm chart for Kubernetes
     digest: 1b7b289c7c625e6ec036bf0f10da9d3587046bb1cd2f62f10cbac479627aa24e
     name: mod-kb-ebsco-java
@@ -1065,7 +1385,17 @@ entries:
   mod-licenses:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.876988318+03:00"
+    created: "2020-07-19T23:12:05.998958981+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 39d526ed5398b2a8a472e221d1ab8d8717a431dc7c0613e079f37a67aa42dc40
+    name: mod-licenses
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-licenses-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:05.99861225+03:00"
     description: A Helm chart for Kubernetes
     digest: d5b996219f432fe872546ac76e123d6bc362820c322d928df9d46a1d6aa09bac
     name: mod-licenses
@@ -1075,7 +1405,7 @@ entries:
     version: 0.1.10
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.877377829+03:00"
+    created: "2020-07-19T23:12:05.999372308+03:00"
     description: A Helm chart for Kubernetes
     digest: b265c1dfc7927c8cb0c108bbe369b2cc442031c1867aec3996b5ede6ad0057cc
     name: mod-licenses
@@ -1086,7 +1416,17 @@ entries:
   mod-login:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.878953738+03:00"
+    created: "2020-07-19T23:12:06.000052353+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 0e30ee2d84c0f2157e116d46dd4a44d411aa05029d2f07f0f0087732306981a1
+    name: mod-login
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-login-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.001642125+03:00"
     description: A Helm chart for Kubernetes
     digest: ee9e1a29b2d6fbd7e7bec5e272db3d727c4f6eb91c2e80c63d9f8248f2e63ede
     name: mod-login
@@ -1096,7 +1436,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.878558875+03:00"
+    created: "2020-07-19T23:12:06.00130525+03:00"
     description: A Helm chart for Kubernetes
     digest: f2c6909e9fd31cf5be8fe8177a35bae4119bca5eda6bab27585e88df5a171110
     name: mod-login
@@ -1106,7 +1446,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.878160022+03:00"
+    created: "2020-07-19T23:12:06.000963138+03:00"
     description: A Helm chart for Kubernetes
     digest: ef78e05489cd6922f13ef55819f3177f2dbdc53ba3a36d203f49d70a9e17003c
     name: mod-login
@@ -1116,7 +1456,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.877760564+03:00"
+    created: "2020-07-19T23:12:05.999707103+03:00"
     description: A Helm chart for Kubernetes
     digest: 851e05f114351646bd1b05e5066bc0a8c11665cd0b90ff16628eb4474adb655e
     name: mod-login
@@ -1127,7 +1467,17 @@ entries:
   mod-login-saml:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.880480029+03:00"
+    created: "2020-07-19T23:12:06.002306117+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 706dcab75a309a71d7077775f9f8f18a8ce7ecfbd931fee02bc6be8b6953a5a2
+    name: mod-login-saml
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-login-saml-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.003344575+03:00"
     description: A Helm chart for Kubernetes
     digest: 9ca05f01a66f194c749f03248aa5640e31c94c5171663f8f6a0348ec25bbcdf7
     name: mod-login-saml
@@ -1137,7 +1487,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.880083986+03:00"
+    created: "2020-07-19T23:12:06.00295863+03:00"
     description: A Helm chart for Kubernetes
     digest: 7f8ea88ef39dffdf0f312b8ca3eb333251e6869c552bc1bbb57014712fa8300e
     name: mod-login-saml
@@ -1147,7 +1497,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.879700358+03:00"
+    created: "2020-07-19T23:12:06.002632037+03:00"
     description: A Helm chart for Kubernetes
     digest: 9e9f176e409a0d7cdd8e28e2501c6dee899ad4075cd466df7b4e0178cc9a2a6d
     name: mod-login-saml
@@ -1157,7 +1507,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.879329762+03:00"
+    created: "2020-07-19T23:12:06.001960559+03:00"
     description: A Helm chart for Kubernetes
     digest: ff2b05306232bf30c093740ae86ffd16f203ef03cc7661809de4fb596053fbc3
     name: mod-login-saml
@@ -1168,7 +1518,17 @@ entries:
   mod-ncip:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.881193259+03:00"
+    created: "2020-07-19T23:12:06.003687886+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 0caad345f241724fcd81be311dd7aa550375b2ce31000b34e7e599506467b906
+    name: mod-ncip
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-ncip-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.004018727+03:00"
     description: A Helm chart for Kubernetes
     digest: e306164002b559d38418f90247f9c8891e613b160d86f45cd42c32e3c3eefb40
     name: mod-ncip
@@ -1179,7 +1539,17 @@ entries:
   mod-notes:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.882914716+03:00"
+    created: "2020-07-19T23:12:06.004680927+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 40e52d170ff156b760c152d2e8457011909d4f212093a2de58720222c1fbd40b
+    name: mod-notes
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-notes-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.005697402+03:00"
     description: A Helm chart for Kubernetes
     digest: 7b4935c133cb41c2605fbcfd631ac8ef2b80756f7221adb7d9af284e602377a9
     name: mod-notes
@@ -1189,7 +1559,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.882524753+03:00"
+    created: "2020-07-19T23:12:06.00536515+03:00"
     description: A Helm chart for Kubernetes
     digest: 520f23078b0e01fc5861733d3c044d6085e3444fd28a45e2e6ccb0fd3ecfeb43
     name: mod-notes
@@ -1199,7 +1569,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.882146701+03:00"
+    created: "2020-07-19T23:12:06.005036247+03:00"
     description: A Helm chart for Kubernetes
     digest: 0cf3d889e8857d1ba684d087b9fc44ecbaf011a684f2355f5e2914c1a32f466b
     name: mod-notes
@@ -1209,7 +1579,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.88173756+03:00"
+    created: "2020-07-19T23:12:06.004343835+03:00"
     description: A Helm chart for Kubernetes
     digest: 51af46c45fc065b462e4804ad973e9c617617c583cbaa29bc18b7de90a0f450b
     name: mod-notes
@@ -1220,7 +1590,17 @@ entries:
   mod-notify:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.884823438+03:00"
+    created: "2020-07-19T23:12:06.007028214+03:00"
+    description: A Helm chart for Kubernetes
+    digest: ed0cebbdae46c15451315845519eb14d1b1b42daf4a41d933f772fadb52b08df
+    name: mod-notify
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-notify-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.008160131+03:00"
     description: A Helm chart for Kubernetes
     digest: 95d6faf4e72314f2427146b775bc798cc462acaec21edbf4f38b76d02a466cac
     name: mod-notify
@@ -1230,7 +1610,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.884424857+03:00"
+    created: "2020-07-19T23:12:06.007821346+03:00"
     description: A Helm chart for Kubernetes
     digest: cd41c324fc5bb1cfb1f032cdd111761c30d723af4d6539de0e6b990b8fbccd0f
     name: mod-notify
@@ -1240,7 +1620,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.884051968+03:00"
+    created: "2020-07-19T23:12:06.007487944+03:00"
     description: A Helm chart for Kubernetes
     digest: c8f5cfdf0c835591a492556faa4c4b7dab8b1982a9c5ffa38303f11d87b34d03
     name: mod-notify
@@ -1250,7 +1630,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.883670806+03:00"
+    created: "2020-07-19T23:12:06.006410134+03:00"
     description: A Helm chart for Kubernetes
     digest: fef4093f1a3c4a9f584ccfcd75420c947890a5a717576500eba9804a1046da2f
     name: mod-notify
@@ -1260,7 +1640,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.883294937+03:00"
+    created: "2020-07-19T23:12:06.006074079+03:00"
     description: A Helm chart for Kubernetes
     digest: 097849d7b1c071cd66a026efdb4cac1381167a2c18c59668d78a207745b72e56
     name: mod-notify
@@ -1271,7 +1651,17 @@ entries:
   mod-oai-pmh:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.885215455+03:00"
+    created: "2020-07-19T23:12:06.008504919+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 7b706ee5c96bfba26a29f14d67d06bcab862ca2eebcb77d98681cc8e44f6378d
+    name: mod-oai-pmh
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-oai-pmh-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.00883366+03:00"
     description: A Helm chart for Kubernetes
     digest: 64f1e01b8b84a787f98463b067b06e8e59b32063165690964f5a4e0ffe1b7269
     name: mod-oai-pmh
@@ -1282,7 +1672,17 @@ entries:
   mod-orders:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.885617124+03:00"
+    created: "2020-07-19T23:12:06.009172492+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 56c003d0e76e0d982148426b577a0c970eedf9ed45042049ada951c8f165f891
+    name: mod-orders
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-orders-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.009548534+03:00"
     description: A Helm chart for Kubernetes
     digest: 4704584118328da0bda2cff0d890aae300cd39e936ae1f698f7a63250e7e18fc
     name: mod-orders
@@ -1293,7 +1693,17 @@ entries:
   mod-orders-storage:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.886008272+03:00"
+    created: "2020-07-19T23:12:06.00989111+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 7caaa0efd1574a8ba1fee145d994dfde197a5f86fbcbaad09d8d3d3ae4cb0651
+    name: mod-orders-storage
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-orders-storage-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.010222134+03:00"
     description: A Helm chart for Kubernetes
     digest: d2a27d4706701aeb4814297140fe6749bf393949149f8801a19e299b27f633c9
     name: mod-orders-storage
@@ -1304,7 +1714,17 @@ entries:
   mod-organizations:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.886399847+03:00"
+    created: "2020-07-19T23:12:06.010559969+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 0d17233bfa4baed1a1f2484d454d513c57def4b40cf92a3d922b588444a2bb7c
+    name: mod-organizations
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-organizations-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.010889069+03:00"
     description: A Helm chart for Kubernetes
     digest: eca278f34c5332938a585aa94870008b3fe0eae1d3f4edf0d57897b05bee3b0e
     name: mod-organizations
@@ -1315,7 +1735,17 @@ entries:
   mod-organizations-storage:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.886789275+03:00"
+    created: "2020-07-19T23:12:06.011276226+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 8c8a456a3a7c3ad957c16e227fd6abc99342635bcdd0c2edaa14812db6f1d869
+    name: mod-organizations-storage
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-organizations-storage-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.011625163+03:00"
     description: A Helm chart for Kubernetes
     digest: 35fca66d75798c8979d8757d17930cfe89ac8a4fce58237bf09637763d316323
     name: mod-organizations-storage
@@ -1326,7 +1756,17 @@ entries:
   mod-password-validator:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.888364088+03:00"
+    created: "2020-07-19T23:12:06.012280807+03:00"
+    description: A Helm chart for Kubernetes
+    digest: ec0872ba47b6a2195146ee08398d8656c750c0d984b138448fcb292b86223149
+    name: mod-password-validator
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-password-validator-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.013812893+03:00"
     description: A Helm chart for Kubernetes
     digest: b012fa91136796aabb4622659b0271b1408fe3fcf6b0c5c50d75b81725594bd7
     name: mod-password-validator
@@ -1336,7 +1776,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.887966068+03:00"
+    created: "2020-07-19T23:12:06.012906395+03:00"
     description: A Helm chart for Kubernetes
     digest: bc3f1852ad52f5923192d85d6302400b7be9e9bb5af30ae7263f850e060ad156
     name: mod-password-validator
@@ -1346,7 +1786,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.887559314+03:00"
+    created: "2020-07-19T23:12:06.012593159+03:00"
     description: A Helm chart for Kubernetes
     digest: 39df268b7910fa9ca7cf231554d31a112bfcf4faacf899ce3f6cbbd8be97a65f
     name: mod-password-validator
@@ -1356,7 +1796,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.887163008+03:00"
+    created: "2020-07-19T23:12:06.011944042+03:00"
     description: A Helm chart for Kubernetes
     digest: 7ba20d658357d42f4a3ed34d39e9fd3fa03689fbd129c0c48ed9d8ae6c7eab53
     name: mod-password-validator
@@ -1367,7 +1807,17 @@ entries:
   mod-patron:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.889184441+03:00"
+    created: "2020-07-19T23:12:06.014185956+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 8eb893ff4be2b74b77c727620a1014a756b4620da211a1b8f0be2b70a4ba321c
+    name: mod-patron
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-patron-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.01451952+03:00"
     description: A Helm chart for Kubernetes
     digest: 26c4c2e0774717b548e2899ee04cefe61eba059a1ca3e2152f00e6825ead5443
     name: mod-patron
@@ -1378,7 +1828,17 @@ entries:
   mod-patron-blocks:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.890072178+03:00"
+    created: "2020-07-19T23:12:06.014861098+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 8d42d81c0a088d7fd6e698a31fb1e0f8604d864afb65e9f85e3a83b412712a7f
+    name: mod-patron-blocks
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-patron-blocks-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.015567214+03:00"
     description: A Helm chart for Kubernetes
     digest: d8cbbf420e399b7e0fec80e797d853c8cba95a80383b4a8cdb49d33f057b02b5
     name: mod-patron-blocks
@@ -1388,7 +1848,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.889669673+03:00"
+    created: "2020-07-19T23:12:06.015184227+03:00"
     description: A Helm chart for Kubernetes
     digest: 1139c269a399be26b31e29d1da46b64b3348a8125bd9128c4478c60e8ab4d1f7
     name: mod-patron-blocks
@@ -1399,7 +1859,17 @@ entries:
   mod-permissions:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.891617061+03:00"
+    created: "2020-07-19T23:12:06.016224707+03:00"
+    description: A Helm chart mod-permissions for Kubernetes
+    digest: eb4f5d7d755d9c3e2d03531ed0fcf2d0a695f1638eadc371a73d1f6bdbbcc188
+    name: mod-permissions
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-permissions-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.017233971+03:00"
     description: A Helm chart mod-permissions for Kubernetes
     digest: fab900c31697da8c06f9a9bb974d734a25e728f87cf132409b7b2c744d9312ab
     name: mod-permissions
@@ -1409,7 +1879,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.891211747+03:00"
+    created: "2020-07-19T23:12:06.016890084+03:00"
     description: A Helm chart mod-permissions for Kubernetes
     digest: 281f53892180384a4960cee82878b913dad5293ab0c63c26b72f65bbfbb9a684
     name: mod-permissions
@@ -1419,7 +1889,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.890834258+03:00"
+    created: "2020-07-19T23:12:06.016563043+03:00"
     description: A Helm chart mod-permissions for Kubernetes
     digest: e9865b16923d090964a360d2f4ac87009250e679994ac8270abbe9de8da49480
     name: mod-permissions
@@ -1429,7 +1899,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.890459039+03:00"
+    created: "2020-07-19T23:12:06.015884241+03:00"
     description: A Helm chart mod-permissions for Kubernetes
     digest: c57e2e3bf9dfb15d942c7faa1883cf62f3eaf28a6eee92ebdc36aa9de9720a83
     name: mod-permissions
@@ -1440,7 +1910,17 @@ entries:
   mod-pubsub:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.893146521+03:00"
+    created: "2020-07-19T23:12:06.01789878+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 0fe6643d1806f3750aee2f31f03804217c12228d6685aaf6d5c021a1524b11d7
+    name: mod-pubsub
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-pubsub-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.018904768+03:00"
     description: A Helm chart for Kubernetes
     digest: 5c47f6a0a6f339d14eebbc25f90863cfcef001e7b41cef32f29dcc04feb3ee14
     name: mod-pubsub
@@ -1450,7 +1930,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.892758243+03:00"
+    created: "2020-07-19T23:12:06.018540814+03:00"
     description: A Helm chart for Kubernetes
     digest: 1318ade599cb55f647676ea2dd62d61c8c4062d79b963b6112b8c010caab54cd
     name: mod-pubsub
@@ -1460,7 +1940,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.892385659+03:00"
+    created: "2020-07-19T23:12:06.018213124+03:00"
     description: A Helm chart for Kubernetes
     digest: 4dc00fe629727ec6e0437d2b242c2d01844d836e553175ea08eb2c2afec899c8
     name: mod-pubsub
@@ -1470,7 +1950,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.892013631+03:00"
+    created: "2020-07-19T23:12:06.017558855+03:00"
     description: A Helm chart for Kubernetes
     digest: eb3dbde28c9486a6ab9dbd9f73637ed37a7bea3e58043b3f1771bff8bfd81f09
     name: mod-pubsub
@@ -1481,7 +1961,17 @@ entries:
   mod-quick-marc:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.893536988+03:00"
+    created: "2020-07-19T23:12:06.019844101+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 9942e4195a07e932e4f1e9145a451233cbf590d76b109a198abfd148e522569d
+    name: mod-quick-marc
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-quick-marc-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.019265786+03:00"
     description: A Helm chart for Kubernetes
     digest: 3fdecb2c5597f7d4ec69d9068a58768fbe01ad06167ec53ce954ce92370e687a
     name: mod-quick-marc
@@ -1491,7 +1981,7 @@ entries:
     version: 0.1.10
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.893926184+03:00"
+    created: "2020-07-19T23:12:06.020420656+03:00"
     description: A Helm chart for Kubernetes
     digest: 33b3052d9b88fbd321234369b2c6995138f1ebb1ce295b36d9ae711faa2e29b4
     name: mod-quick-marc
@@ -1502,7 +1992,17 @@ entries:
   mod-rtac:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.894319485+03:00"
+    created: "2020-07-19T23:12:06.020769473+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 814344359f43332099c06c327adaa63f1b17e1f6360b31cf32af16b4a690b408
+    name: mod-rtac
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-rtac-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.021121804+03:00"
     description: A Helm chart for Kubernetes
     digest: 62820f6fe1a8b869cf41078cf4b2f797a41c0fd90248acad013abb6ac6ab78e9
     name: mod-rtac
@@ -1513,7 +2013,17 @@ entries:
   mod-sender:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.89597837+03:00"
+    created: "2020-07-19T23:12:06.021788665+03:00"
+    description: A Helm chart for Kubernetes
+    digest: d51ba4a82f322e69740369057d44043ddc12e1b3266bab332dc0eb76115089f7
+    name: mod-sender
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-sender-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.02283942+03:00"
     description: A Helm chart for Kubernetes
     digest: 199fe9b8a8980ebc5c13d111da28e15f417eb49142dc5ae47fc93102f76d0bc6
     name: mod-sender
@@ -1523,7 +2033,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.895448114+03:00"
+    created: "2020-07-19T23:12:06.022472981+03:00"
     description: A Helm chart for Kubernetes
     digest: a4122b582798d2f961d4da2f4cdf768cef58c9f74803b66e073eefaa35ba2c55
     name: mod-sender
@@ -1533,7 +2043,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.895067467+03:00"
+    created: "2020-07-19T23:12:06.022113398+03:00"
     description: A Helm chart for Kubernetes
     digest: 7ae583694b095a8c9501931ee09768f4c74d5039da31e400445ed5f29dea0006
     name: mod-sender
@@ -1543,7 +2053,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.894696557+03:00"
+    created: "2020-07-19T23:12:06.021444213+03:00"
     description: A Helm chart for Kubernetes
     digest: 9ef1fd1cc0796c10f959adf192d388545d98e0302234d391e7b7feb7d0511784
     name: mod-sender
@@ -1554,7 +2064,17 @@ entries:
   mod-source-record-manager:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.897435097+03:00"
+    created: "2020-07-19T23:12:06.02351672+03:00"
+    description: A Helm chart for Kubernetes
+    digest: bfaf0fb916d7d1e37109cdb0a4f860bc618a1aaaf444106f34ac193eece54231
+    name: mod-source-record-manager
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-source-record-manager-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.024189522+03:00"
     description: A Helm chart for Kubernetes
     digest: e8d68795be83f2c4c0c53cc288c1390fb023483a925448778f4b0f5907b137eb
     name: mod-source-record-manager
@@ -1564,7 +2084,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.89701202+03:00"
+    created: "2020-07-19T23:12:06.023839843+03:00"
     description: A Helm chart for Kubernetes
     digest: 1f4c80c1b42a6f6d9fe7ee124f96e07f0de15cb06076dc049076baac3d914a4d
     name: mod-source-record-manager
@@ -1574,7 +2094,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.896510798+03:00"
+    created: "2020-07-19T23:12:06.023163175+03:00"
     description: A Helm chart for Kubernetes
     digest: 923e2f3fef9dcc90d0ea2fadaf48167f729e806b94858e0265bd311d054e8860
     name: mod-source-record-manager
@@ -1585,7 +2105,17 @@ entries:
   mod-source-record-storage:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.898602215+03:00"
+    created: "2020-07-19T23:12:06.024882499+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 709226d63494e98c640771146077fcb9e16f148f62d62ebbe8cfc72fe4a9ddbd
+    name: mod-source-record-storage
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-source-record-storage-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.025551734+03:00"
     description: A Helm chart for Kubernetes
     digest: 8af63e7fb527aa1f2b0858116beb866811da5d8c7668f519e582933ecea82dd8
     name: mod-source-record-storage
@@ -1595,7 +2125,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.898197816+03:00"
+    created: "2020-07-19T23:12:06.02521543+03:00"
     description: A Helm chart for Kubernetes
     digest: 67ce0aa1468b00d38490a3eb846858f0a867a9bcec900cb7fc68d680d6e1b547
     name: mod-source-record-storage
@@ -1605,7 +2135,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.897812452+03:00"
+    created: "2020-07-19T23:12:06.024530547+03:00"
     description: A Helm chart for Kubernetes
     digest: c5e42a4d40b9791f12129c8aeb854a8cdf1271e34ce9ca594e6e4b24dd896de8
     name: mod-source-record-storage
@@ -1616,7 +2146,17 @@ entries:
   mod-tags:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.900230264+03:00"
+    created: "2020-07-19T23:12:06.026668141+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 9a206ee8c5da78bde06bdd969ebb5668352f96d16f4391f1bea77d8dfa82f042
+    name: mod-tags
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-tags-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.027704861+03:00"
     description: A Helm chart for Kubernetes
     digest: 34077d0f849d52f54527d417edc062079735deaa24049ef7f84f8db208f70629
     name: mod-tags
@@ -1626,7 +2166,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.89982001+03:00"
+    created: "2020-07-19T23:12:06.027354005+03:00"
     description: A Helm chart for Kubernetes
     digest: 34838a6af42e8eaff86ee7fff0c074fd12a869a9cd7826541c6e329d742c4d9f
     name: mod-tags
@@ -1636,7 +2176,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.899446646+03:00"
+    created: "2020-07-19T23:12:06.027015632+03:00"
     description: A Helm chart for Kubernetes
     digest: f73f1d92228a85d11c5448156a62906f10f2e131af5b825c06fe052f65714a90
     name: mod-tags
@@ -1646,7 +2186,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.899046063+03:00"
+    created: "2020-07-19T23:12:06.025884511+03:00"
     description: A Helm chart for Kubernetes
     digest: 42e665f6828c15b9169fdcb0b566e4b8e739f8f21fd3887b826944770dbb959f
     name: mod-tags
@@ -1657,7 +2197,17 @@ entries:
   mod-template-engine:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.901768496+03:00"
+    created: "2020-07-19T23:12:06.028378504+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 7dcaacb1f87f0fe077d6be14900475a1a3bd650b44c653db3cc0b678c8d075ff
+    name: mod-template-engine
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-template-engine-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.029387792+03:00"
     description: A Helm chart for Kubernetes
     digest: 21c54154ea625bce15cb817e602b074ca3c2e797cd00184733dff7e6566fb16a
     name: mod-template-engine
@@ -1667,7 +2217,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.901373318+03:00"
+    created: "2020-07-19T23:12:06.02903818+03:00"
     description: A Helm chart for Kubernetes
     digest: 2a0eff40cfa5a74569c12228bf584dfc13d65211fb960f4a53c1a224e3f34f80
     name: mod-template-engine
@@ -1677,7 +2227,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.900985282+03:00"
+    created: "2020-07-19T23:12:06.028715657+03:00"
     description: A Helm chart for Kubernetes
     digest: 3b3f0520965408f0fdc1f84088e630d4ea886984ae0f6e580cb9d4938490f7ff
     name: mod-template-engine
@@ -1687,7 +2237,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.900610956+03:00"
+    created: "2020-07-19T23:12:06.028029765+03:00"
     description: A Helm chart for Kubernetes
     digest: 59abecc46944e39797f2ef2a3795be63efe819f6ca9c8520e679d4fc7d8116d1
     name: mod-template-engine
@@ -1698,7 +2248,17 @@ entries:
   mod-user-import:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.902165131+03:00"
+    created: "2020-07-19T23:12:06.02974521+03:00"
+    description: A Helm chart for Kubernetes
+    digest: a2e46fa686f1c48c2a640aee097ce5bb870009a35ab109c47a9c0af771cb8758
+    name: mod-user-import
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-user-import-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.030092511+03:00"
     description: A Helm chart for Kubernetes
     digest: 78535a0586790b3970c10c7ff1b8cc539e05efbd2488c1e94d0a900dc83963e6
     name: mod-user-import
@@ -1709,7 +2269,17 @@ entries:
   mod-users:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.904550444+03:00"
+    created: "2020-07-19T23:12:06.030762046+03:00"
+    description: A Helm chart Folio mod-users for Kubernetes
+    digest: 3daf0f2e4157cea3015f2374abaf189e5915cefb7cfc0836e3cfd65af4d491b6
+    name: mod-users
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-users-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.032075034+03:00"
     description: A Helm chart Folio mod-users for Kubernetes
     digest: 8495c50cf80836b54b20e5f807212ce5c6fe2b283cad90222872f6f0437b3a90
     name: mod-users
@@ -1719,7 +2289,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.904032063+03:00"
+    created: "2020-07-19T23:12:06.031739268+03:00"
     description: A Helm chart Folio mod-users for Kubernetes
     digest: 92dd89f64890191f3938ea314d16c62dd7ea888e9e6a1952be6cda364c1ea106
     name: mod-users
@@ -1729,7 +2299,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.903304063+03:00"
+    created: "2020-07-19T23:12:06.031417307+03:00"
     description: A Helm chart Folio mod-users for Kubernetes
     digest: b758ca92a4242271b7c554b9c11059d5506bc7955721f3a332409fd9694f137e
     name: mod-users
@@ -1739,7 +2309,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.902918117+03:00"
+    created: "2020-07-19T23:12:06.031084423+03:00"
     description: A Helm chart Folio mod-users for Kubernetes
     digest: 425e3cc14243dba04f53f791c04925d0791b3b1cd5f8534b2e6e81f0ce15a3ec
     name: mod-users
@@ -1749,7 +2319,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.902545053+03:00"
+    created: "2020-07-19T23:12:06.030414726+03:00"
     description: A Helm chart Folio mod-users for Kubernetes
     digest: f669180c1d2706117b94194cfb5d658e4e10092d699587293e2d2bb317d93077
     name: mod-users
@@ -1760,7 +2330,17 @@ entries:
   mod-users-bl:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.906137592+03:00"
+    created: "2020-07-19T23:12:06.033180366+03:00"
+    description: A Helm chart for Kubernetes
+    digest: ebec72d509967ab8b6eddc784de09efa459c4f2c2a8e1e78a70ab1fe7ddfefbb
+    name: mod-users-bl
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/mod-users-bl-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2020-07-19T23:12:06.034210188+03:00"
     description: A Helm chart for Kubernetes
     digest: e7f8212c5ad9b3163c5abdb51543ae792e0bb8a0a3ea536eb0a49fa24ecb8704
     name: mod-users-bl
@@ -1770,7 +2350,7 @@ entries:
     version: 0.1.9
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.905736966+03:00"
+    created: "2020-07-19T23:12:06.03385085+03:00"
     description: A Helm chart for Kubernetes
     digest: 9d45b0351e44a5ca7b0cc577ed2951d6fec9575fd2fcc9f34c8bf2f0e28d5687
     name: mod-users-bl
@@ -1780,7 +2360,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.905350806+03:00"
+    created: "2020-07-19T23:12:06.03352411+03:00"
     description: A Helm chart for Kubernetes
     digest: d75739201ab191bd00900309becba6002ac1e6d2388c02caa6e94a17f83b533e
     name: mod-users-bl
@@ -1790,7 +2370,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.90493614+03:00"
+    created: "2020-07-19T23:12:06.032794994+03:00"
     description: A Helm chart for Kubernetes
     digest: 4fb05f7c136e4ae5e338123cdcdfff0dacae5eceb22ee8d800e3256520f04b73
     name: mod-users-bl
@@ -1800,8 +2380,18 @@ entries:
     version: 0.1.0
   okapi:
   - apiVersion: v1
+    appVersion: 4.00.0
+    created: "2020-07-19T23:12:06.03859024+03:00"
+    description: A Helm chart OKAPI for Kubernetes
+    digest: 41be099a346de54e2bd3c8473110722a863d02b3cf5f7d5150304b3e0e182f8e
+    name: okapi
+    type: application
+    urls:
+    - https://folio-org.github.io/folio-helm/charts/okapi-0.3.9.tgz
+    version: 0.3.9
+  - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-07-17T15:53:04.910811615+03:00"
+    created: "2020-07-19T23:12:06.038203983+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: 547968c21436a4da24fd07f9c53607ae178754de3225284006d0ccf417a94bd1
     name: okapi
@@ -1811,7 +2401,7 @@ entries:
     version: 0.3.8
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-07-17T15:53:04.910391479+03:00"
+    created: "2020-07-19T23:12:06.037826406+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: 5b56e5133df9b64585d12ff0f3e6ee7e752518cdcf44c080904a319a029285f9
     name: okapi
@@ -1821,7 +2411,7 @@ entries:
     version: 0.3.7
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-07-17T15:53:04.909958374+03:00"
+    created: "2020-07-19T23:12:06.037466731+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: 3a542efc4eccf343956cb938278bbb143e4e66f4dbf51c698b8829e6521fe890
     name: okapi
@@ -1831,7 +2421,7 @@ entries:
     version: 0.3.6
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-07-17T15:53:04.909528129+03:00"
+    created: "2020-07-19T23:12:06.037086121+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: f51add050aa4112747fa4d3dca9d376b38004a1844f3a0113eb8b666cfbc8657
     name: okapi
@@ -1841,7 +2431,7 @@ entries:
     version: 0.3.5
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-07-17T15:53:04.909069527+03:00"
+    created: "2020-07-19T23:12:06.036711195+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: 828f45fcafef2be90885744b297a99e04871e70a38ca5e30f4fa9101520a48a6
     name: okapi
@@ -1851,7 +2441,7 @@ entries:
     version: 0.3.4
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-07-17T15:53:04.908623184+03:00"
+    created: "2020-07-19T23:12:06.036336376+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: a2fc35f14e94dd2f2e26d2a72dc6f3a430dce46bbbf42d96e331bb16c458ad95
     name: okapi
@@ -1861,7 +2451,7 @@ entries:
     version: 0.3.3
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-07-17T15:53:04.908200487+03:00"
+    created: "2020-07-19T23:12:06.035956752+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: e27a1339304866606e3bc5e471f6822f01c717b6e31d9c8afabae798b4e1d777
     name: okapi
@@ -1871,7 +2461,7 @@ entries:
     version: 0.3.2
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-07-17T15:53:04.907782989+03:00"
+    created: "2020-07-19T23:12:06.035603442+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: dbb7bf8bc241e47006506ae2abb7151de8089c7a6eceac97749e1e980a856b13
     name: okapi
@@ -1881,7 +2471,7 @@ entries:
     version: 0.3.1
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-07-17T15:53:04.907392846+03:00"
+    created: "2020-07-19T23:12:06.035267177+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: 6c7e4ddf0c12fd7cca81c26467ba17f9476aa1a33191a05777854ce45dcc051d
     name: okapi
@@ -1891,7 +2481,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-07-17T15:53:04.906982537+03:00"
+    created: "2020-07-19T23:12:06.034926671+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: 3aa94147893388a0123927717286d52d65e148dad1b8ba8d464b004ae8e3bdeb
     name: okapi
@@ -1901,7 +2491,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: 2.40.0
-    created: "2020-07-17T15:53:04.906589151+03:00"
+    created: "2020-07-19T23:12:06.03458157+03:00"
     description: A Helm chart OKAPI for Kubernetes
     digest: a4475aafaff670b1ec15d0a1fc6959515202b6e0ff4075e344448b1f4d02812d
     name: okapi
@@ -1912,7 +2502,7 @@ entries:
   pgadmin4:
   - apiVersion: v1
     appVersion: 4.22.0
-    created: "2020-07-17T15:53:04.912681668+03:00"
+    created: "2020-07-19T23:12:06.040214479+03:00"
     description: pgAdmin4 is a web based administration tool for PostgreSQL database
     digest: 6d56c348eed9ba02b63911650cfa16bfc9aa951cba2dfc14a1d522f292f9240c
     home: https://www.pgadmin.org/
@@ -1931,7 +2521,7 @@ entries:
     version: 1.2.28
   - apiVersion: v1
     appVersion: 4.22.0
-    created: "2020-07-17T15:53:04.911709283+03:00"
+    created: "2020-07-19T23:12:06.03959296+03:00"
     description: pgAdmin4 is a web based administration tool for PostgreSQL database
     digest: 88aac3c43631d9791bc06db05885bd257413cad787c264c14221caa7292d6eb4
     home: https://www.pgadmin.org/
@@ -1951,7 +2541,7 @@ entries:
   platform-complete:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.914977433+03:00"
+    created: "2020-07-19T23:12:06.042183923+03:00"
     description: A Helm chart Stripes Platform-complete for Kubernetes
     digest: 4efaf4566c4301161eca62b2873b9bf3fe8aa5f2634bef1799f07a582dd1cbb7
     name: platform-complete
@@ -1961,7 +2551,7 @@ entries:
     version: 0.1.6
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.91457862+03:00"
+    created: "2020-07-19T23:12:06.041843846+03:00"
     description: A Helm chart Stripes Platform-complete for Kubernetes
     digest: 1ddb6437f7a8030c1ee2b8ce9a7933a96a7de9c2e81f93e97ef271b310619699
     name: platform-complete
@@ -1971,7 +2561,7 @@ entries:
     version: 0.1.5
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.914203132+03:00"
+    created: "2020-07-19T23:12:06.041530659+03:00"
     description: A Helm chart Stripes Platform-complete for Kubernetes
     digest: 047751bb5216b0debe0c53ffc211335fdd634fa06bb4875964e8c37fbf74dee0
     name: platform-complete
@@ -1981,7 +2571,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.913821807+03:00"
+    created: "2020-07-19T23:12:06.041197488+03:00"
     description: A Helm chart Stripes Platform-complete for Kubernetes
     digest: 33ed049025bfc21d64084ec4399b40852d86a6e121df390dde7c04c2cd26fe55
     name: platform-complete
@@ -1991,7 +2581,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.913444379+03:00"
+    created: "2020-07-19T23:12:06.040848364+03:00"
     description: A Helm chart Stripes Platform-complete for Kubernetes
     digest: 87f614bb3fc52afe883e577888e0f5c3d6856311eef7bb107697dd2b9a1fe045
     name: platform-complete
@@ -2001,7 +2591,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2020-07-17T15:53:04.913072886+03:00"
+    created: "2020-07-19T23:12:06.040535618+03:00"
     description: A Helm chart Stripes Platform-complete for Kubernetes
     digest: ab0d2a9488904da33da7d50ff6804feb31611cbe389a056917c43a60172cc2cd
     name: platform-complete
@@ -2009,4 +2599,4 @@ entries:
     urls:
     - https://folio-org.github.io/folio-helm/charts/platform-complete-0.1.1.tgz
     version: 0.1.1
-generated: "2020-07-17T15:53:04.832817603+03:00"
+generated: "2020-07-19T23:12:05.948358987+03:00"

@@ -78,3 +78,5 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+javaOptions: -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC -Dokapi_url=$(OKAPI_URL) -Dsecure_store_props=/etc/edge/ephemeral.properties

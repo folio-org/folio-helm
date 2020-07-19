@@ -37,6 +37,14 @@ spec:
             - name: http
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.service.containerPort }}
+          readinessProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.service.containerPort }}
           env:
             - name: DB_DATABASE
               valueFrom:
@@ -69,7 +77,7 @@ spec:
                   key: DB_USERNAME
                   name: db-connect-modules
             - name: JAVA_OPTIONS
-              value: -Xmx256m
+              value: {{ .Values.javaOptions | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

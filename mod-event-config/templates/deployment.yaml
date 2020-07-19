@@ -37,6 +37,14 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.service.containerPort }}
+          readinessProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.service.containerPort }}
           env:
             - name: DB_DATABASE
               valueFrom:
@@ -69,7 +77,7 @@ spec:
                   key: DB_USERNAME
                   name: db-connect-modules
             - name: JAVA_OPTIONS
-              value: -XX:MaxRAMPercentage=66.0
+              value: {{ .Values.javaOptions | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
