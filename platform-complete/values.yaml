@@ -81,6 +81,7 @@ affinity: {}
 
 # Folio specific
 postJob:
+  enabled: true
   okapiUrl: http://okapi:9130
   tenantId: diku
   sampleData: true
