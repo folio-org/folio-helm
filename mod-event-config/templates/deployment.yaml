@@ -37,14 +37,6 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: {{ .Values.service.containerPort }}
-          readinessProbe:
-            httpGet:
-              path: /
-              port: {{ .Values.service.containerPort }}
           env:
             - name: DB_DATABASE
               valueFrom:

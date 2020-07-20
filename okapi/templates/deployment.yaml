@@ -35,14 +35,6 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
             - {{ .Values.args }}
-          livenessProbe:
-            httpGet:
-              path: /
-              port: {{ .Values.service.containerPort }}
-          readinessProbe:
-            httpGet:
-              path: /
-              port: {{ .Values.service.containerPort }}
           env:
             - name: OKAPI_HOST
               valueFrom:
