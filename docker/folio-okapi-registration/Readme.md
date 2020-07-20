@@ -25,7 +25,7 @@ Internal OKAPI URL to use. Defaults to `http://okapi:9130`.
 
 ### TENANT_ID
 
-The short name of the Tenant. Defaults to `diku`.
+The short name of the Tenant. Defaults to `diku`. If blank, script does pass tenant creating and enabling steps.
 
 ### SAMPLE_DATA
 

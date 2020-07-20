@@ -4,36 +4,23 @@ echo ------------------ [$MODULE_NAME] Getting descriptor ------------------
 curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq '.[0]' > /tmp/descriptor.json
 MODULE_NAME_VERSION=$(curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq -r '.[0].id');
 
-echo ------------------ Pushing module descriptor ------------------
+echo ------------------ [$MODULE_NAME_VERSION] Pushing module descriptor ------------------
 curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/descriptor.json $OKAPI_URL/_/proxy/modules
 
 echo ------------------ [$MODULE_NAME_VERSION] Pushing module deployment ------------------
-cat > /tmp/deployment.json <<END
-{
-  "srvcId": "$MODULE_NAME_VERSION",
-  "instId": "$MODULE_NAME_VERSION",
-  "url": "http://$MODULE_NAME"
-}
-END
-curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/deployment.json $OKAPI_URL/_/discovery/modules
+DEPLOYMENT_JSON='{ "srvcId": "$MODULE_NAME_VERSION", "instId": "$MODULE_NAME_VERSION", "url": "http://$MODULE_NAME"}'
+curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d $DEPLOYMENT_JSON $OKAPI_URL/_/discovery/modules
 
-echo ------------------ [$MODULE_NAME_VERSION] Creating tenant ------------------
-cat > /tmp/tenant.json <<END
-{
-  "id": "$TENANT_ID",
-  "name" : "$TENANT_ID",
-  "description" : "Default tenant"
-}
-END
-curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/tenant.json $OKAPI_URL/_/proxy/tenants
+if [ -n "$TENANT_ID" ]; then
 
-echo ------------------ [$MODULE_NAME_VERSION] Enabling module for tenant ------------------
-cat > /tmp/tenant-enable.json <<END
-[{
-  "id": "$MODULE_NAME_VERSION",
-  "action" : "enable"
-}]
-END
-curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/tenant-enable.json $OKAPI_URL/_/proxy/tenants/$TENANT_ID/install?deploy=false\&preRelease=true\&tenantParameters=loadSample%3D$SAMPLE_DATA%2CloadReference%3D$REF_DATA
+  echo ------------------ [$MODULE_NAME_VERSION] Creating tenant ------------------
+  TENANT_JSON='{ "id": "$TENANT_ID", "name" : "$TENANT_ID", "description" : "Default tenant" }'
+  curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d $TENANT_JSON $OKAPI_URL/_/proxy/tenants
+
+  echo ------------------ [$MODULE_NAME_VERSION] Enabling module for tenant ------------------
+  TENANT_ENABLE_JSON='[{ "id": "$MODULE_NAME_VERSION", "action" : "enable" }]'
+  curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d $TENANT_ENABLE_JSON $OKAPI_URL/_/proxy/tenants/$TENANT_ID/install?deploy=false\&preRelease=true\&tenantParameters=loadSample%3D$SAMPLE_DATA%2CloadReference%3D$REF_DATA
+
+fi
 
 echo Done!
