@@ -49,10 +49,7 @@ spec:
                   key: DB_HOST
                   name: db-connect-modules
             - name: DB_MAXPOOLSIZE
-              valueFrom:
-                secretKeyRef:
-                  key: DB_MAXPOOLSIZE
-                  name: db-connect-modules
+              value: {{ .Values.dbMaxPoolSize | quote }}
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
