@@ -72,11 +72,6 @@ spec:
                 secretKeyRef:
                   key: DB_USERNAME
                   name: db-connect-modules
-            - name: OKAPI_URL
-              valueFrom:
-                secretKeyRef:
-                  name: tenant-config
-                  key: OKAPI_URL
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
           resources:
