@@ -38,20 +38,17 @@ spec:
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
           livenessProbe:
-            httpGet:
-              path: /admin/health
+            tcpSocket:
               port: {{ .Values.service.containerPort }}
             periodSeconds: 60
             timeoutSeconds: 5
           readinessProbe:
-            httpGet:
-              path: /admin/health
+            tcpSocket:
               port: {{ .Values.service.containerPort }}
             periodSeconds: 60
             timeoutSeconds: 5
           startupProbe:
-            httpGet:
-              path: /admin/health
+            tcpSocket:
               port: {{ .Values.service.containerPort }}
             failureThreshold: 20
             periodSeconds: 60
