@@ -2,7 +2,7 @@
 
 echo ------------------ [$MODULE_NAME] Getting descriptor ------------------
 curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq '.[0]' > /tmp/descriptor.json
-MODULE_NAME_VERSION=$(curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq -r '.[0].id');
+MODULE_NAME_VERSION=$(curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=false'| jq -r '.[0].id');
 
 echo ------------------ [$MODULE_NAME_VERSION] Pushing module descriptor ------------------
 curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/descriptor.json $OKAPI_URL/_/proxy/modules
@@ -22,7 +22,7 @@ if [ -n "$TENANT_ID" ]; then
   curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d $TENANT_ENABLE_JSON $OKAPI_URL/_/proxy/tenants/$TENANT_ID/install?deploy=false\&preRelease=true\&tenantParameters=loadSample%3D$SAMPLE_DATA%2CloadReference%3D$REF_DATA
 
   echo ------------------ Upgrading modules ------------------
-  curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" $OKAPI_URL/_/proxy/tenants/$TENANT_ID/upgrade
+  curl --retry 5 --retry-delay 10 -sL -w '\n' -D - -X POST -H "Content-type: application/json" $OKAPI_URL/_/proxy/tenants/$TENANT_ID/upgrade
 
 fi
 
