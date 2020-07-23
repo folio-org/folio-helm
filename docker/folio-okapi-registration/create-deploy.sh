@@ -19,10 +19,10 @@ if [ -n "$TENANT_ID" ]; then
 
   echo ------------------ [$MODULE_NAME_VERSION] Enabling module for tenant ------------------
   TENANT_ENABLE_JSON="[{\"id\":\"$MODULE_NAME_VERSION\",\"action\":\"enable\"}]"
-  curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d $TENANT_ENABLE_JSON $OKAPI_URL/_/proxy/tenants/$TENANT_ID/install?deploy=false\&preRelease=true\&tenantParameters=loadSample%3D$SAMPLE_DATA%2CloadReference%3D$REF_DATA
+  curl -m 900 -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d $TENANT_ENABLE_JSON $OKAPI_URL/_/proxy/tenants/$TENANT_ID/install?deploy=false\&preRelease=true\&tenantParameters=loadSample%3D$SAMPLE_DATA%2CloadReference%3D$REF_DATA
 
   echo ------------------ Upgrading modules ------------------
-  curl --retry 5 --retry-delay 10 -sL -w '\n' -D - -X POST -H "Content-type: application/json" $OKAPI_URL/_/proxy/tenants/$TENANT_ID/upgrade
+  curl -m 900 -sL -w '\n' -D - -X POST -H "Content-type: application/json" $OKAPI_URL/_/proxy/tenants/$TENANT_ID/upgrade
 
 fi
 

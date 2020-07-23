@@ -37,16 +37,6 @@ spec:
             - name: http
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
-          livenessProbe:
-            tcpSocket:
-              port: {{ .Values.service.containerPort }}
-            periodSeconds: 60
-            timeoutSeconds: 5
-          readinessProbe:
-            tcpSocket:
-              port: {{ .Values.service.containerPort }}
-            periodSeconds: 60
-            timeoutSeconds: 5
           startupProbe:
             tcpSocket:
               port: {{ .Values.service.containerPort }}
