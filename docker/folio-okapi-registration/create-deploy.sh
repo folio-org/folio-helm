@@ -5,10 +5,15 @@ if [ "$MODULE_NAME" == "okapi" ]; then
   curl -s -S -w '\n' -X POST -H 'Content-type: application/json' -d '{"id":"okapi"}' $OKAPI_URL/_/proxy/tenants/$TENANT_ID/modules
 
 else
-
-  echo ------------------ [$MODULE_NAME] Getting descriptor ------------------
-  curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq '.[0]' > /tmp/descriptor.json
-  MODULE_NAME_VERSION=$(curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=false'| jq -r '.[0].id');
+  if [ "$MODULE_VERSION" != "latest" ]; then
+    echo ------------------ [$MODULE_NAME-$MODULE_VERSION] Getting descriptor ------------------
+    MODULE_NAME_VERSION=$MODULE_NAME-$MODULE_VERSION
+    curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME_VERSION'&latest=1&full=true'| jq '.[0]' > /tmp/descriptor.json
+  else
+    echo ------------------ [$MODULE_NAME] Getting descriptor ------------------
+    curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=true'| jq '.[0]' > /tmp/descriptor.json
+    MODULE_NAME_VERSION=$(curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME'&latest=1&full=false'| jq -r '.[0].id');
+  fi
 
   echo ------------------ [$MODULE_NAME_VERSION] Pushing module descriptor ------------------
   curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/descriptor.json $OKAPI_URL/_/proxy/modules

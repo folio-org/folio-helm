@@ -18,6 +18,7 @@ COPY stripes.json /usr/local/bin/folio
 #Set environment variables for script
 ENV OKAPI_URL='http://okapi:9130'
 ENV MODULE_NAME=''
+ENV MODULE_VERSION='latest'
 ENV TENANT_ID='diku'
 ENV SAMPLE_DATA='true'
 ENV REF_DATA='true'
