@@ -30,6 +30,8 @@ spec:
         env:
           - name: MODULE_NAME
             value: {{ .Chart.Name }}
+          - name: MODULE_VERSION
+            value: {{ .Values.image.tag | quote }}
           - name: OKAPI_URL
             value: {{ .Values.postJob.okapiUrl | quote }}
           - name: TENANT_ID
