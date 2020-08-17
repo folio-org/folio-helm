@@ -5,7 +5,8 @@ if [ "$MODULE_NAME" == "okapi" ]; then
   curl -s -S -w '\n' -X POST -H 'Content-type: application/json' -d '{"id":"okapi"}' $OKAPI_URL/_/proxy/tenants/$TENANT_ID/modules
 
 else
-  if [ "$MODULE_VERSION" != "latest" ]; then
+  # $MODULE_VERSION starts with digit
+  if [[ $MODULE_VERSION =~ ^[0-9] ]]; then
     echo ------------------ [$MODULE_NAME-$MODULE_VERSION] Getting descriptor ------------------
     MODULE_NAME_VERSION=$MODULE_NAME-$MODULE_VERSION
     curl -s -S -w'\n' 'http://folio-registry.aws.indexdata.com/_/proxy/modules?filter='$MODULE_NAME_VERSION'&latest=1&full=true'| jq '.[0]' > /tmp/descriptor.json
