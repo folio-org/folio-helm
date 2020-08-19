@@ -33,8 +33,8 @@ else
     TENANT_ENABLE_JSON="[{\"id\":\"$MODULE_NAME_VERSION\",\"action\":\"enable\"}]"
     curl -m 900 -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d $TENANT_ENABLE_JSON $OKAPI_URL/_/proxy/tenants/$TENANT_ID/install?deploy=false\&preRelease=true\&tenantParameters=loadSample%3D$SAMPLE_DATA%2CloadReference%3D$REF_DATA
 
-    echo ------------------ Upgrading modules ------------------
-    curl -m 900 -sL -w '\n' -D - -X POST -H "Content-type: application/json" $OKAPI_URL/_/proxy/tenants/$TENANT_ID/upgrade
+#    echo ------------------ Upgrading modules ------------------
+#    curl -m 900 -sL -w '\n' -D - -X POST -H "Content-type: application/json" $OKAPI_URL/_/proxy/tenants/$TENANT_ID/upgrade
 
   fi
 
