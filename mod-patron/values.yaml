@@ -38,6 +38,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
+  Port: 80
   containerPort: 8081
 
 ingress:
@@ -83,6 +84,7 @@ javaOptions: -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC
 dbMaxPoolSize: 5
 
 postJob:
+  enabled: true
   okapiUrl: http://okapi:9130
   tenantId: diku
   sampleData: true
