@@ -1,7 +1,7 @@
 #!/bin/bash
 
 for d in */; do
-  if [ "$d" == "pgadmin4/" ] || [ "$d" == "charts/" ] || [ "$d" == "terraform/" ]
+  if [ "$d" == "pgadmin4/" ] || [ "$d" == "charts/" ] || [ "$d" == "docker/" ] || [ "$d" == "terraform/" ]
   then
     continue
   fi
