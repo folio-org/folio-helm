@@ -84,6 +84,7 @@ javaOptions: -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC -Dcache.permissions=true
 dbMaxPoolSize: 5
 
 postJob:
+  enabled: false
   okapiUrl: http://okapi:9130
   tenantId: diku
   sampleData: true

@@ -1,3 +1,4 @@
+{{- if .Values.postJob.enabled }}
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -40,3 +41,4 @@ spec:
             value: {{ .Values.postJob.sampleData | quote }}
           - name: REF_DATA
             value: {{ .Values.postJob.referenceData | quote }}
+{{- end }}
