@@ -31,6 +31,8 @@ spec:
         env:
           - name: MODULE_NAME
             value: {{ .Chart.Name }}
+          - name: MODULE_URL
+            value: {{ .Release.Name }}
           - name: MODULE_VERSION
             value: {{ .Values.image.tag | quote }}
           - name: OKAPI_URL
