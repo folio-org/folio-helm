@@ -84,7 +84,7 @@ javaOptions: -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC -Dorg.folio.metadata.invento
 dbMaxPoolSize: 5
 
 postJob:
-  enabled: false
+  enabled: true
   okapiUrl: http://okapi:9130
   tenantId: diku
   sampleData: true

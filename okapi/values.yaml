@@ -84,7 +84,7 @@ args: dev
 javaOptions: -Djava.awt.headless=true -Dstorage=postgres -Dpostgres_host=$(OKAPI_HOST) -Dpostgres_port=5432 -Dpostgres_username=$(OKAPI_DB_USER) -Dpostgres_password=$(OKAPI_DB_PASSWORD) -Dpostgres_database=$(OKAPI_DB) -Dlog4j.configurationFile=/etc/log4j2.xml -Dhost=okapi -Dokapiurl=http://okapi:9130
 
 postJob:
-  enabled: false
+  enabled: true
   okapiUrl: http://okapi:9130
   tenantId: diku
   sampleData: true
