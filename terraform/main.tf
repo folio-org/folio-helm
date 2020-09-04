@@ -14,7 +14,7 @@ terraform {
 resource "rancher2_project" "project" {
   provider   = rancher2
   name       = var.rancher2_project_name
-  cluster_id = var.rancher2_cluster_id
+  cluster_id = local.rancher2_cluster_id
   container_resource_limit {
     limits_memory   = "900Mi"
     requests_cpu    = "50m"
@@ -29,11 +29,11 @@ resource "rancher2_project" "project" {
       "exporter-node.resources.limits.cpu"        = "200m"
       "exporter-node.resources.limits.memory"     = "200Mi"
       "grafana.persistence.enabled"               = false
-      "grafana.persistence.size"                  = "10Gi"
+      "grafana.persistence.size"                  = "5Gi"
       "grafana.persistence.storageClass"          = "default"
       "operator.resources.limits.memory"          = "500Mi"
       "prometheus.persistence.enabled"            = false
-      "prometheus.persistence.size"               = "50Gi"
+      "prometheus.persistence.size"               = "5Gi"
       "prometheus.persistence.storageClass"       = "default"
       "prometheus.persistent.useReleaseName"      = true
       "prometheus.resources.core.limits.cpu"      = "200m",
@@ -124,11 +124,10 @@ resource "rancher2_app" "kafka" {
   target_namespace = rancher2_namespace.project_namespace.name
   force_upgrade    = "true"
   answers = {
-    #"global.storageClass" = "gp2"
-    #"persistence.storageClass" = "gp2"
+    "global.storageClass"                 = "gp2"
     "metrics.kafka.enabled"               = "false"
     "persistence.enabled"                 = "true"
-    "persistence.size"                    = "10Gi"
+    "persistence.size"                    = "5Gi"
     "resources.limits.cpu"                = "500m"
     "resources.limits.memory"             = "1Gi"
     "resources.requests.cpu"              = "250m"
@@ -154,8 +153,8 @@ resource "rancher2_app" "postgres" {
     "fullnameOverride"                        = "pg-folio"
     "postgresqlDatabase"                      = "project_modules"
     "persistence.enabled"                     = "true"
+    "persistence.storageClass"                = "gp2"
     "persistence.size"                        = "10Gi"
-    #"persistence.storageClass" = "gp2"
     "postgresqlPassword"                      = "postgres_password"
     "postgresqlUsername"                      = "postgres"
     "resources.limits.cpu"                    = "1000m"
@@ -189,17 +188,17 @@ resource "rancher2_app" "okapi" {
     "postJob.enabled"           = "false"
     "image.repository"          = "folioorg/okapi"
     "image.tag"                 = "3.1.2"
-    "ingress.enabled"           = "true"
-    "ingress.annotations"       = ""
-    "ingress.hosts[0].host"     = join("", [rancher2_namespace.project_namespace.name, "-okapi.local"])
-    "ingress.hosts[0].paths[0]" = "/"
+#    "ingress.enabled"           = "true"
+#    "ingress.annotations"       = ""
+#    "ingress.hosts[0].host"     = join(".",["okapi", rancher2_namespace.project_namespace.name, "xip.io"])
+#    "ingress.hosts[0].paths[0]" = "/"
   }
 }
 
 # Create a new rancher2 Folio backend modules App in a default Project namespace
 resource "rancher2_app" "project-applications" {
   for_each         = var.backend-list-q1-2020
-  depends_on       = [rancher2_secret.db-connect-modules, rancher2_catalog.foliocharts, rancher2_app.okapi]
+  depends_on       = [rancher2_secret.db-connect-modules, rancher2_catalog.foliocharts]
   catalog_name     = join(":", [element(split(":", rancher2_project.project.id), 1), rancher2_catalog.foliocharts.name])
   name             = each.key
   description      = "Folio app."
@@ -232,10 +231,10 @@ resource "rancher2_app" "stripes" {
     "resources.limits.memory"   = "500Mi"
     "postJob.enabled"           = "false"
     "image.tag"                 = "latest"
-    "ingress.enabled"           = "true"
-    "ingress.annotations"       = ""
-    "ingress.hosts[0].host"     = join("", [rancher2_namespace.project_namespace.name, ".local"])
-    "ingress.hosts[0].paths[0]" = "/"
+#    "ingress.enabled"           = "true"
+#    "ingress.annotations"       = ""
+#    "ingress.hosts[0].host"     = join(".",["ui", rancher2_namespace.project_namespace.name, "xip.io"])
+#    "ingress.hosts[0].paths[0]" = "/"
   }
 }
 
@@ -252,10 +251,11 @@ resource "rancher2_app" "pgadmin4" {
     "env.email"                 = "user@folio.org"
     "env.password"              = "SuperSecret"
     "namespace"                 = var.rancher2_project_name
-    "ingress.enabled"           = "true"
-    "ingress.annotations"       = ""
-    "ingress.hosts[0].host"     = join("", [rancher2_namespace.project_namespace.name, "-pgadmin.local"])
-    "ingress.hosts[0].paths[0]" = "/"
+    "persistence.storageClass"  = "gp2"
+#    "ingress.enabled"           = "true"
+#    "ingress.annotations"       = ""
+#    "ingress.hosts[0].host"     = join(".",["pgadmin", rancher2_namespace.project_namespace.name, "xip.io"])
+#    "ingress.hosts[0].paths[0]" = "/"
   }
 }
 

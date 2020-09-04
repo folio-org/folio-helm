@@ -1,3 +1,8 @@
 *.tfvars
 .terraform
 tfstates/*
+id_rsa
+id_rsa.*
+kube_config*
+
+
