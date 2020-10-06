@@ -3,6 +3,10 @@
 tfstates/*
 id_rsa
 id_rsa.*
-kube_config*
+*.tfstate
+*.tfstate.*
+outputs/*
+dev
+
 
 

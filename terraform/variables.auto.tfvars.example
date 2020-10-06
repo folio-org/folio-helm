@@ -1,0 +1,25 @@
+# rke common
+aws_region        = "us-west-2"
+rancher_password  = "default"
+domain            = "my.domain"
+
+# networking variables
+cluster_name            = "demo-eks"
+iac_environment_tag     = "development"
+name_prefix             = "demo"
+main_network_block      = "10.0.0.0/16"
+subnet_prefix_extension = 4
+zone_offset             = 8
+
+# eks variables
+admin_users                              = ["admin"]
+developer_users                          = ["developer"]
+asg_instance_types                       = ["m5.large", "m5a.large", "m5d.large", "m5ad.large"]
+autoscaling_minimum_size_by_az           = 1
+autoscaling_maximum_size_by_az           = 2
+autoscaling_average_cpu                  = 70
+spot_termination_handler_chart_name      = "aws-node-termination-handler"
+spot_termination_handler_chart_repo      = "https://aws.github.io/eks-charts"
+spot_termination_handler_chart_version   = "0.9.1"
+spot_termination_handler_chart_namespace = "kube-system"
+
