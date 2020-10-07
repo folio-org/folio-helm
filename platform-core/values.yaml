@@ -84,5 +84,5 @@ postJob:
   enabled: false
   okapiUrl: http://okapi:9130
   tenantId: diku
-  sampleData: true
-  referenceData: true
+  sampleData: false
+  referenceData: false

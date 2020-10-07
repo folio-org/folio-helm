@@ -22,7 +22,7 @@ else
   fi
 
   echo ------------------ [$MODULE_NAME_VERSION] Pushing module descriptor ------------------
-  curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/descriptor.json $OKAPI_URL/_/proxy/modules
+  curl -sL -w '\n' -D - -X POST -H "Content-type: application/json" -d @/tmp/descriptor.json $OKAPI_URL/_/proxy/modules?check=false
 
   echo ------------------ [$MODULE_NAME_VERSION] Pushing module deployment descriptor ------------------
   DEPLOYMENT_JSON="{\"srvcId\":\"$MODULE_NAME_VERSION\",\"instId\":\"$MODULE_NAME_VERSION\",\"url\":\"http://$MODULE_URL\"}"
