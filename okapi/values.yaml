@@ -48,6 +48,8 @@ ingress:
     external-dns.alpha.kubernetes.io/target: "f2b6996c-kubesystem-albing-accc-1096161577.us-west-2.elb.amazonaws.com"
     nginx.ingress.kubernetes.io/proxy-body-size: 200m
     nginx.ingress.kubernetes.io/proxy-request-buffering: "off"    
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"    
   hosts:
     - host:
       paths: []
