@@ -21,8 +21,8 @@ ENV MODULE_NAME=''
 ENV MODULE_VERSION='latest'
 ENV MODULE_URL=
 ENV TENANT_ID='diku'
-ENV SAMPLE_DATA='true'
-ENV REF_DATA='true'
+ENV SAMPLE_DATA='false'
+ENV REF_DATA='false'
 
 #Execute the script on container runtime
 CMD ["/usr/local/bin/folio/init.sh"]

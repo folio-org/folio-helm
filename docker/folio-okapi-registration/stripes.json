@@ -4,6 +4,7 @@ folio_calendar
 folio_checkin
 folio_checkout
 folio_circulation
+folio_circulation-log
 folio_courses
 folio_data-export
 folio_data-import
