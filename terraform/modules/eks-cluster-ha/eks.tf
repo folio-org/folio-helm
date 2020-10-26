@@ -97,7 +97,7 @@ locals {
 # create EKS cluster
 module "eks-cluster" {
   source              = "github.com/terraform-aws-modules/terraform-aws-eks"
-  cluster_name        = "${var.cluster_name}"
+  cluster_name        = var.cluster_name
   cluster_version     = "1.17"
   write_kubeconfig    = true
   config_output_path  = "${path.root}/outputs/"
