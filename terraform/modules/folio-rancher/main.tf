@@ -50,6 +50,7 @@ resource "rancher2_catalog" "bitnamicharts" {
   name       = "bitnamicharts"
   url        = "https://charts.bitnami.com/bitnami"
   scope      = "global"
+  version    = "helm_v3"
   project_id = rancher2_project.project.id
 }
 
@@ -58,11 +59,12 @@ resource "rancher2_catalog" "foliocharts" {
   name       = "foliocharts"
   url        = "https://folio-org.github.io/folio-helm"
   scope      = "project"
+  version    = "helm_v3"
   project_id = rancher2_project.project.id
 }
 
 # Create a new rancher2 Namespace assigned to cluster project
-resource "rancher2_namespace" "project_namespace" {
+resource "rancher2_namespace" "project-namespace" {
   name        = var.rancher_project_name
   project_id  = rancher2_project.project.id
   description = "Deafult namespace"
@@ -76,7 +78,7 @@ resource "rancher2_namespace" "project_namespace" {
 resource "rancher2_secret" "db-connect-modules" {
   name         = "db-connect-modules"
   project_id   = rancher2_project.project.id
-  namespace_id = rancher2_namespace.project_namespace.name
+  namespace_id = rancher2_namespace.project-namespace.name
   data = {
     DB_HOST         = base64encode("pg-folio")
     DB_PORT         = base64encode("5432")
@@ -106,7 +108,7 @@ resource "rancher2_secret" "project-config" {
 # For edge* modules
 resource "rancher2_secret" "edge-props" {
   name         = "ephemeral-properties"
-  namespace_id = rancher2_namespace.project_namespace.name
+  namespace_id = rancher2_namespace.project-namespace.name
   description  = "For edge* modules"
   project_id   = rancher2_project.project.id
   data = {
@@ -121,7 +123,7 @@ resource "rancher2_app" "kafka" {
   name             = "kafka"
   project_id       = rancher2_project.project.id
   template_name    = "kafka"
-  target_namespace = rancher2_namespace.project_namespace.name
+  target_namespace = rancher2_namespace.project-namespace.name
   force_upgrade    = "true"
   answers = {
     "global.storageClass"                 = "gp2"
@@ -148,7 +150,7 @@ resource "rancher2_app" "postgres" {
   name             = "postgres"
   project_id       = rancher2_project.project.id
   template_name    = "postgresql"
-  target_namespace = rancher2_namespace.project_namespace.name
+  target_namespace = rancher2_namespace.project-namespace.name
   answers = {
     "fullnameOverride"                        = "pg-folio"
     "postgresqlDatabase"                      = "project_modules"
@@ -179,7 +181,7 @@ resource "rancher2_app" "okapi" {
   force_upgrade    = "true"
   project_id       = rancher2_project.project.id
   template_name    = "okapi"
-  target_namespace = rancher2_namespace.project_namespace.name
+  target_namespace = rancher2_namespace.project-namespace.name
   answers = {
     "resources.limits.cpu"      = "500m"
     "resources.limits.memory"   = "2048Mi"
@@ -196,7 +198,7 @@ resource "rancher2_app" "okapi" {
 }
 
 # Create a new rancher2 Folio backend modules App in a default Project namespace
-resource "rancher2_app" "project-applications" {
+resource "rancher2_app" "folio-backend" {
   for_each         = local.modules-map
   depends_on       = [rancher2_secret.db-connect-modules, rancher2_catalog.foliocharts]
   catalog_name     = join(":", [element(split(":", rancher2_project.project.id), 1), rancher2_catalog.foliocharts.name])
@@ -205,26 +207,23 @@ resource "rancher2_app" "project-applications" {
   force_upgrade    = "true"
   project_id       = rancher2_project.project.id
   template_name    = each.key
-  target_namespace = rancher2_namespace.project_namespace.name
+  target_namespace = rancher2_namespace.project-namespace.name
   answers = {
     "postJob.enabled"           = "false"
     "image.repository"          = join("/" ,[var.repository, each.key])
     "image.tag"                 = each.value
-    "resources.limits.memory"   = "900Mi"
-    "resources.requests.cpu"    = "50m"
-    "resources.requests.memory" = "400Mi"
   }
 }
 
 # Create a new rancher2 Stripes Bundle App in a default Project namespace
-resource "rancher2_app" "stripes" {
-  depends_on       = [rancher2_app.project-applications]
+resource "rancher2_app" "folio-frontend" {
+  depends_on       = [rancher2_app.folio-backend]
   catalog_name     = join(":", [element(split(":", rancher2_project.project.id), 1), rancher2_catalog.foliocharts.name])
   name             = "platform-complete"
   description      = "Stripes UI"
   project_id       = rancher2_project.project.id
   template_name    = "platform-complete"
-  target_namespace = rancher2_namespace.project_namespace.name
+  target_namespace = rancher2_namespace.project-namespace.name
   force_upgrade    = "true"
   answers = {
     "resources.limits.cpu"      = "200m"
@@ -246,7 +245,7 @@ resource "rancher2_app" "pgadmin4" {
   description      = "PgAdmin app"
   project_id       = rancher2_project.project.id
   template_name    = "pgadmin4"
-  target_namespace = rancher2_namespace.project_namespace.name
+  target_namespace = rancher2_namespace.project-namespace.name
   answers = {
     "env.email"                 = "user@folio.org"
     "env.password"              = "SuperSecret"
