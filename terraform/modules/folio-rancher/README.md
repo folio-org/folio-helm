@@ -4,7 +4,7 @@ Terraform module which installs stable version of Folio app. to Kubernetes clust
 
 ## Prepare Rancher and cluster
 
-Please use (this link)[https://rancher.com/docs/rancher/v2.x/en/installation/other-installation-methods/single-node-docker/] to install Rancher.
+Please use [this link](https://rancher.com/docs/rancher/v2.x/en/installation/other-installation-methods/single-node-docker/) to install Rancher.
 
 ## Requirements to Kubernetes Cluster
 
@@ -42,7 +42,7 @@ module "rancher" {
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | domain | Domain to apply ingress rules for UI, Okapi, Pgadmin | string | `""` | yes |
-| rancher_project_name | Project | string | `"demo"` | yes |
+| rancher_project_name | Project name | string | `"demo"` | yes |
 | rancher_cluster_id | Existing cluster in Rancher. Typically name is `c-xxxxxx` | string | `""` | yes |
 | rancher_server_url | Rancher server URL. It is recommended to use `https` protocol | string | `""` | yes |
 | rancher_server_token | Generated token of admin user | string | `""` | yes |
