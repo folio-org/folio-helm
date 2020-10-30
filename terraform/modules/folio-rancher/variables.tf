@@ -26,11 +26,11 @@ variable "rancher_server_token" {
 variable "repository" {
   type        = string
   default     = "folioorg"
-  description = "DockerHub repository. Could be 'folioorg' or 'folioci'"
+  description = "DockerHub repository. Could be 'folioorg' or 'folioci'. Should correspond to 'ref_environment' variable"
 }
 
 variable "ref_environment" {
   type        = string
-  default     = "https://folio-goldenrod.dev.folio.org"
-  description = "Reference environment need to be created"
+  default     = "https://raw.githubusercontent.com/folio-org/platform-complete/master"
+  description = "Modules's source list"
 }

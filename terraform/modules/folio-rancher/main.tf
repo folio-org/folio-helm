@@ -126,7 +126,7 @@ resource "rancher2_app" "kafka" {
   target_namespace = rancher2_namespace.project-namespace.name
   force_upgrade    = "true"
   answers = {
-    "global.storageClass"                 = "gp2"
+    "global.storageClass"                 = "default"
     "metrics.kafka.enabled"               = "false"
     "persistence.enabled"                 = "true"
     "persistence.size"                    = "5Gi"
@@ -155,7 +155,7 @@ resource "rancher2_app" "postgres" {
     "fullnameOverride"                        = "pg-folio"
     "postgresqlDatabase"                      = "project_modules"
     "persistence.enabled"                     = "true"
-    "persistence.storageClass"                = "gp2"
+    "persistence.storageClass"                = "default"
     "persistence.size"                        = "10Gi"
     "postgresqlPassword"                      = "postgres_password"
     "postgresqlUsername"                      = "postgres"
@@ -183,15 +183,10 @@ resource "rancher2_app" "okapi" {
   template_name    = "okapi"
   target_namespace = rancher2_namespace.project-namespace.name
   answers = {
-    "resources.limits.cpu"      = "500m"
-    "resources.limits.memory"   = "2048Mi"
-    "resources.requests.cpu"    = "300m"
-    "resources.requests.memory" = "500Mi"
     "postJob.enabled"           = "false"
-    "image.repository"          = "folioorg/okapi"
-    "image.tag"                 = "3.1.2"
+    "image.repository"          = join("/" ,[var.repository, "okapi"])
+    "image.tag"                 = "latest"
     "ingress.enabled"           = "true"
-    "ingress.annotations"       = ""
     "ingress.hosts[0].host"     = join(".",[join("-", [var.rancher_project_name, "okapi"]), var.domain])
     "ingress.hosts[0].paths[0]" = "/"
   }
@@ -250,7 +245,7 @@ resource "rancher2_app" "pgadmin4" {
     "env.email"                 = "user@folio.org"
     "env.password"              = "SuperSecret"
     "namespace"                 = var.rancher_project_name
-    "persistence.storageClass"  = "gp2"
+    "persistence.storageClass"  = "default"
     "ingress.enabled"           = "true"
     "ingress.annotations"       = ""
     "ingress.hosts[0].host"     = join(".",[join("-", [var.rancher_project_name, "pgadmin"]), var.domain])
