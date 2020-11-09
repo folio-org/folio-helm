@@ -1,6 +1,10 @@
 ######################
 # variables
 ######################
+variable "domain" {
+  description = "External-dns Domain filter"
+  type        = string
+}
 variable "name_prefix" {
   type        = string
   description = "Name prefix for cluster users"
@@ -92,13 +96,16 @@ locals {
       public_ip               = false
     },
   ]
+
+  oidc_url = replace(module.eks-cluster.cluster_oidc_issuer_url, "https://", "")
+
 }
 
 # create EKS cluster
 module "eks-cluster" {
   source              = "github.com/terraform-aws-modules/terraform-aws-eks"
   cluster_name        = var.cluster_name
-  cluster_version     = "1.17"
+  cluster_version     = "1.18"
   write_kubeconfig    = true
   config_output_path  = "${path.root}/outputs/"
 
@@ -109,6 +116,12 @@ module "eks-cluster" {
 
   # map developer & admin ARNs as kubernetes Users
   map_users = concat(local.admin_user_map_users, local.developer_user_map_users)
+
+  # Create OIDC provider
+  enable_irsa = true
+
+  # Not recommended
+  workers_additional_policies = [aws_iam_policy.alb-worker-policy.arn, aws_iam_policy.external-dns.arn]
 }
 
 # get EKS cluster info to configure Kubernetes and Helm providers
@@ -135,17 +148,20 @@ provider "helm" {
     token                  = data.aws_eks_cluster_auth.cluster.token
     load_config_file       = false
   }
-  version = "0.10.4"
+  version = "~> 0.10.0"
+  service_account = kubernetes_service_account.helm.metadata.0.name
+#  namespace       = kubernetes_service_account.tiller.metadata.0.namespace  
 }
 
 # deploy spot termination handler
-#resource "helm_release" "spot_termination_handler" {
-#  name       = var.spot_termination_handler_chart_name
-#  chart      = var.spot_termination_handler_chart_name
-#  repository = var.spot_termination_handler_chart_repo
-#  version    = var.spot_termination_handler_chart_version
-#  namespace  = var.spot_termination_handler_chart_namespace
-#}
+resource "helm_release" "spot_termination_handler" {
+  depends_on = [module.eks-cluster]
+  name       = var.spot_termination_handler_chart_name
+  chart      = var.spot_termination_handler_chart_name
+  repository = var.spot_termination_handler_chart_repo
+  version    = var.spot_termination_handler_chart_version
+  namespace  = var.spot_termination_handler_chart_namespace
+}
 
 # add spot fleet Autoscaling policy
 resource "aws_autoscaling_policy" "eks_autoscaling_policy" {
@@ -160,5 +176,80 @@ resource "aws_autoscaling_policy" "eks_autoscaling_policy" {
       predefined_metric_type = "ASGAverageCPUUtilization"
     }
     target_value = var.autoscaling_average_cpu
+  }
+}
+
+# add External DNS
+data "helm_repository" "bitnami" {
+  depends_on = [module.eks-cluster]
+  name = "bitnami"
+  url  = "https://charts.bitnami.com/bitnami"
+}
+
+resource "helm_release" "external-dns" {
+  name       = "external-dns"
+  namespace  = kubernetes_service_account.external-dns.metadata.0.namespace
+  wait       = true
+  repository = data.helm_repository.bitnami.metadata.0.name
+  chart      = "external-dns"
+  set {
+    name  = "rbac.create"
+    value = false
+  }
+  set {
+    name  = "serviceAccount.create"
+    value = false
+  }
+  set {
+    name  = "serviceAccount.name"
+    value = kubernetes_service_account.external-dns.metadata.0.name
+  }
+  set {
+    name  = "rbac.pspEnabled"
+    value = false
+  }
+  set {
+    name  = "name"
+    value = "${var.cluster_name}-external-dns"
+  }
+  set {
+    name  = "provider"
+    value = "aws"
+  }
+  set_string {
+    name  = "policy"
+    value = "sync"
+  }
+  set_string {
+    name  = "logLevel"
+    value = "debug"
+  }
+  set {
+    name  = "domainFilters[0]"
+    value = var.domain
+  }
+  set_string {
+    name  = "aws.region"
+    value = var.aws_region
+  }
+}
+
+resource "helm_release" "ingress" {
+  depends_on = [module.eks-cluster]
+  name       = "ingress"
+  namespace  = "kube-system"
+  chart      = "aws-alb-ingress-controller"
+  repository = "http://storage.googleapis.com/kubernetes-charts-incubator"
+  set {
+    name  = "autoDiscoverAwsRegion"
+    value = "true"
+  }
+  set {
+    name  = "autoDiscoverAwsVpcID"
+    value = "true"
+  }
+  set {
+    name  = "clusterName"
+    value = var.cluster_name
   }
 }

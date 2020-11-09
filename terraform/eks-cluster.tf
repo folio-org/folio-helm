@@ -40,7 +40,6 @@ variable "spot_termination_handler_chart_namespace" {
 }
 
 module "eks" {
-#    depends_on                                  = [module.vpc]
     source                                      = "./modules/eks-cluster-ha"
 
     name_prefix                                 = var.name_prefix
@@ -56,6 +55,7 @@ module "eks" {
     spot_termination_handler_chart_repo         = var.spot_termination_handler_chart_repo
     spot_termination_handler_chart_version      = var.spot_termination_handler_chart_version
     spot_termination_handler_chart_namespace    = var.spot_termination_handler_chart_namespace
+    external_dns_domain_filters                 = split(",", var.domain)
     private_subnets                             = module.vpc.private_subnets
     vpc_id                                      = module.vpc.vpc_id
 }
