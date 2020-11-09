@@ -4,6 +4,9 @@ metadata:
   name: {{ include "okapi.fullname" . }}
   labels:
     {{- include "okapi.labels" . | nindent 4 }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   type: {{ .Values.service.type }}
   ports:

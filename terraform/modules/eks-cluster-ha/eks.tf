@@ -222,7 +222,7 @@ resource "helm_release" "external-dns" {
   }
   set_string {
     name  = "logLevel"
-    value = "debug"
+    value = "warning"
   }
   set {
     name  = "domainFilters[0]"
