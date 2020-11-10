@@ -194,7 +194,7 @@ resource "rancher2_app" "okapi" {
 # Create a new rancher2 Folio backend modules App in a default Project namespace
 resource "rancher2_app" "folio-backend" {
   for_each         = local.modules-map
-  depends_on       = [rancher2_secret.db-connect-modules, rancher2_catalog.foliocharts, rancher2_app.kafka]
+  depends_on       = [rancher2_secret.db-connect-modules, rancher2_catalog.foliocharts, rancher2_app.kafka, rancher2_app.okapi]
   catalog_name     = join(":", [element(split(":", rancher2_project.project.id), 1), rancher2_catalog.foliocharts.name])
   name             = each.key
   description      = "Folio app."
