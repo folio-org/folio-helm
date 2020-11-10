@@ -188,21 +188,17 @@ data "helm_repository" "bitnami" {
 
 resource "helm_release" "external-dns" {
   name       = "external-dns"
-  namespace  = kubernetes_service_account.external-dns.metadata.0.namespace
+  namespace  = "kube-system"
   wait       = true
   repository = data.helm_repository.bitnami.metadata.0.name
   chart      = "external-dns"
   set {
     name  = "rbac.create"
-    value = false
+    value = true
   }
   set {
     name  = "serviceAccount.create"
     value = false
-  }
-  set {
-    name  = "serviceAccount.name"
-    value = kubernetes_service_account.external-dns.metadata.0.name
   }
   set {
     name  = "rbac.pspEnabled"
@@ -215,10 +211,6 @@ resource "helm_release" "external-dns" {
   set {
     name  = "provider"
     value = "aws"
-  }
-  set_string {
-    name  = "policy"
-    value = "sync"
   }
   set_string {
     name  = "logLevel"
@@ -234,22 +226,22 @@ resource "helm_release" "external-dns" {
   }
 }
 
-resource "helm_release" "ingress" {
-  depends_on = [module.eks-cluster]
-  name       = "ingress"
-  namespace  = "kube-system"
-  chart      = "aws-alb-ingress-controller"
-  repository = "http://storage.googleapis.com/kubernetes-charts-incubator"
-  set {
-    name  = "autoDiscoverAwsRegion"
-    value = "true"
-  }
-  set {
-    name  = "autoDiscoverAwsVpcID"
-    value = "true"
-  }
-  set {
-    name  = "clusterName"
-    value = var.cluster_name
-  }
-}
+#resource "helm_release" "ingress" {
+#  depends_on = [module.eks-cluster]
+#  name       = "ingress"
+#  namespace  = "kube-system"
+#  chart      = "aws-alb-ingress-controller"
+#  repository = "http://storage.googleapis.com/kubernetes-charts-incubator"
+#  set {
+#    name  = "autoDiscoverAwsRegion"
+#    value = "true"
+#  }
+#  set {
+#    name  = "autoDiscoverAwsVpcID"
+#    value = "true"
+#  }
+#  set {
+#    name  = "clusterName"
+#    value = var.cluster_name
+#  }
+#}
