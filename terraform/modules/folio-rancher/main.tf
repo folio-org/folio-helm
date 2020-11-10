@@ -186,16 +186,15 @@ resource "rancher2_app" "okapi" {
     "postJob.enabled"           = "false"
     "image.repository"          = join("/" ,[var.repository, "okapi"])
     "image.tag"                 = "latest"
-    "ingress.enabled"           = "true"
-    "ingress.hosts[0].host"     = join(".",[join("-", [var.rancher_project_name, "okapi"]), var.domain])
-    "ingress.hosts[0].paths[0]" = "/"
+    "service.type"              = "LoadBalancer"
+    "service.annotations.external-dns\\.alpha\\.kubernetes\\.io/hostname"   = join(".",[join("-", [var.rancher_project_name, "okapi"]), var.domain])
   }
 }
 
 # Create a new rancher2 Folio backend modules App in a default Project namespace
 resource "rancher2_app" "folio-backend" {
   for_each         = local.modules-map
-  depends_on       = [rancher2_secret.db-connect-modules, rancher2_catalog.foliocharts]
+  depends_on       = [rancher2_secret.db-connect-modules, rancher2_catalog.foliocharts, rancher2_app.kafka]
   catalog_name     = join(":", [element(split(":", rancher2_project.project.id), 1), rancher2_catalog.foliocharts.name])
   name             = each.key
   description      = "Folio app."
@@ -221,14 +220,10 @@ resource "rancher2_app" "folio-frontend" {
   target_namespace = rancher2_namespace.project-namespace.name
   force_upgrade    = "true"
   answers = {
-    "resources.limits.cpu"      = "200m"
-    "resources.limits.memory"   = "500Mi"
     "postJob.enabled"           = "false"
     "image.tag"                 = "latest"
-    "ingress.enabled"           = "true"
-    "ingress.annotations"       = ""
-    "ingress.hosts[0].host"     = join(".",[join("-", [var.rancher_project_name, "ui"]), var.domain])
-    "ingress.hosts[0].paths[0]" = "/"
+    "service.type"              = "LoadBalancer"
+    "service.annotations.external-dns\\.alpha\\.kubernetes\\.io/hostname"   = join(".",[join("-", [var.rancher_project_name, "ui"]), var.domain])
   }
 }
 
@@ -246,10 +241,8 @@ resource "rancher2_app" "pgadmin4" {
     "env.password"              = "SuperSecret"
     "namespace"                 = var.rancher_project_name
     "persistence.storageClass"  = "default"
-    "ingress.enabled"           = "true"
-    "ingress.annotations"       = ""
-    "ingress.hosts[0].host"     = join(".",[join("-", [var.rancher_project_name, "pgadmin"]), var.domain])
-    "ingress.hosts[0].paths[0]" = "/"
+    "service.type"              = "LoadBalancer"
+    "service.annotations.external-dns\\.alpha\\.kubernetes\\.io/hostname"   = join(".",[join("-", [var.rancher_project_name, "pgadmin"]), var.domain])
   }
 }
 
