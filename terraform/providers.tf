@@ -10,6 +10,5 @@ provider "random" {
 provider "rancher2" {
   api_url   = module.rke.rancher_url
   token_key = module.rke.rancher_token
-  version = "= 1.10.3"
 }
 
