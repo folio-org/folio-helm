@@ -150,6 +150,7 @@ provider "helm" {
   }
   version = "~> 0.10.0"
   service_account = kubernetes_service_account.helm.metadata.0.name
+  home            = "./.helm"
 #  namespace       = kubernetes_service_account.tiller.metadata.0.namespace  
 }
 
