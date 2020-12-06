@@ -18,8 +18,4 @@ asg_instance_types                       = ["m5.large", "m5a.large", "m5d.large"
 autoscaling_minimum_size_by_az           = 1
 autoscaling_maximum_size_by_az           = 2
 autoscaling_average_cpu                  = 70
-spot_termination_handler_chart_name      = "aws-node-termination-handler"
-spot_termination_handler_chart_repo      = "https://aws.github.io/eks-charts"
-spot_termination_handler_chart_version   = "0.9.1"
-spot_termination_handler_chart_namespace = "kube-system"
 

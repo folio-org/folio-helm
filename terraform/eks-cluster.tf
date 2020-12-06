@@ -22,22 +22,6 @@ variable "autoscaling_average_cpu" {
   type        = number
   description = "Average CPU threshold to autoscale EKS EC2 instances."
 }
-variable "spot_termination_handler_chart_name" {
-  type        = string
-  description = "EKS Spot termination handler Helm chart name."
-}
-variable "spot_termination_handler_chart_repo" {
-  type        = string
-  description = "EKS Spot termination handler Helm repository name."
-}
-variable "spot_termination_handler_chart_version" {
-  type        = string
-  description = "EKS Spot termination handler Helm chart version."
-}
-variable "spot_termination_handler_chart_namespace" {
-  type        = string
-  description = "Kubernetes namespace to deploy EKS Spot termination handler Helm chart."
-}
 
 module "eks" {
     source                                      = "./modules/eks-cluster-ha"
@@ -51,11 +35,7 @@ module "eks" {
     autoscaling_minimum_size_by_az              = var.autoscaling_minimum_size_by_az
     autoscaling_maximum_size_by_az              = var.autoscaling_maximum_size_by_az
     autoscaling_average_cpu                     = var.autoscaling_average_cpu
-    spot_termination_handler_chart_name         = var.spot_termination_handler_chart_name
-    spot_termination_handler_chart_repo         = var.spot_termination_handler_chart_repo
-    spot_termination_handler_chart_version      = var.spot_termination_handler_chart_version
-    spot_termination_handler_chart_namespace    = var.spot_termination_handler_chart_namespace
-    external_dns_domain_filters                 = split(",", var.domain)
+    domain                                      = var.domain
     private_subnets                             = module.vpc.private_subnets
     vpc_id                                      = module.vpc.vpc_id
 }

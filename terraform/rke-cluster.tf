@@ -13,18 +13,18 @@ variable "rancher_password" {
 }
 
 module "rke" {
-#    depends_on                  = [module.vpc]
-    source  = "./modules/rke-rancher-cluster"
-    
-    domain                      = var.domain
-    vpc_id                      = module.vpc.vpc_id
-    aws_elb_subnet_ids          = module.vpc.public_subnets
-    rancher2_master_subnet_ids  = module.vpc.public_subnets
-    rancher2_worker_subnet_ids  = module.vpc.public_subnets
-    name                        = var.name_prefix
-    rancher_password            = var.rancher_password
-    aws_region                  = var.aws_region
-    master_node_count           = 1
-    worker_node_count           = 1
-    creds_output_path           = "${path.root}/outputs"
+  source  = "./modules/rke-rancher-cluster"
+# source  = "github.com/rancher/terraform-rancher-server"
+
+  domain                      = var.domain
+  vpc_id                      = module.vpc.vpc_id
+  aws_elb_subnet_ids          = module.vpc.public_subnets
+  rancher2_master_subnet_ids  = module.vpc.public_subnets
+  rancher2_worker_subnet_ids  = module.vpc.public_subnets
+  name                        = var.name_prefix
+  rancher_password            = var.rancher_password
+  aws_region                  = var.aws_region
+  master_node_count           = 1
+  worker_node_count           = 1
+  creds_output_path           = "${path.root}/outputs"
 }

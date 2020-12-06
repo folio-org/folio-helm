@@ -12,5 +12,5 @@ provider "random" {
   version = "~> 2.2.1"
 }
 
- # used for accesing Account ID and ARN
+# used for accesing Account ID and ARN
 data "aws_caller_identity" "current" {}

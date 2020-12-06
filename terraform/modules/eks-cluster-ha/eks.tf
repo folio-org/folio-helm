@@ -45,22 +45,6 @@ variable "autoscaling_average_cpu" {
   type        = number
   description = "Average CPU threshold to autoscale EKS EC2 instances."
 }
-variable "spot_termination_handler_chart_name" {
-  type        = string
-  description = "EKS Spot termination handler Helm chart name."
-}
-variable "spot_termination_handler_chart_repo" {
-  type        = string
-  description = "EKS Spot termination handler Helm repository name."
-}
-variable "spot_termination_handler_chart_version" {
-  type        = string
-  description = "EKS Spot termination handler Helm chart version."
-}
-variable "spot_termination_handler_chart_namespace" {
-  type        = string
-  description = "Kubernetes namespace to deploy EKS Spot termination handler Helm chart."
-}
 
 # get all available AZs in our region
 data "aws_availability_zones" "available_azs" {
@@ -148,19 +132,16 @@ provider "helm" {
     token                  = data.aws_eks_cluster_auth.cluster.token
     load_config_file       = false
   }
-  version = "~> 0.10.0"
-  service_account = kubernetes_service_account.helm.metadata.0.name
-#  namespace       = kubernetes_service_account.tiller.metadata.0.namespace  
 }
 
 # deploy spot termination handler
 resource "helm_release" "spot_termination_handler" {
   depends_on = [module.eks-cluster]
-  name       = var.spot_termination_handler_chart_name
-  chart      = var.spot_termination_handler_chart_name
-  repository = var.spot_termination_handler_chart_repo
-  version    = var.spot_termination_handler_chart_version
-  namespace  = var.spot_termination_handler_chart_namespace
+  name       = "aws-node-termination-handler"
+  chart      = "aws-node-termination-handler"
+  repository = "https://aws.github.io/eks-charts"
+  version    = "0.9.1"
+  namespace  = "kube-system"
 }
 
 # add spot fleet Autoscaling policy
@@ -180,17 +161,11 @@ resource "aws_autoscaling_policy" "eks_autoscaling_policy" {
 }
 
 # add External DNS
-data "helm_repository" "bitnami" {
-  depends_on = [module.eks-cluster]
-  name = "bitnami"
-  url  = "https://charts.bitnami.com/bitnami"
-}
-
 resource "helm_release" "external-dns" {
   name       = "external-dns"
   namespace  = "kube-system"
   wait       = true
-  repository = data.helm_repository.bitnami.metadata.0.name
+  repository = "https://charts.bitnami.com/bitnami"
   chart      = "external-dns"
   set {
     name  = "rbac.create"
@@ -212,15 +187,15 @@ resource "helm_release" "external-dns" {
     name  = "provider"
     value = "aws"
   }
-  set_string {
+  set {
     name  = "logLevel"
-    value = "warning"
+    value = "debug"
   }
   set {
     name  = "domainFilters[0]"
     value = var.domain
   }
-  set_string {
+  set {
     name  = "aws.region"
     value = var.aws_region
   }
