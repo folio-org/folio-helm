@@ -47,7 +47,9 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: "nginx"
     external-dns.alpha.kubernetes.io/target: "f2b6996c-kubesystem-albing-accc-1096161577.us-west-2.elb.amazonaws.com"
-    kubernetes.io/proxy-read-timeout: "900"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "900"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "900"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "900"
   hosts:
     - host:
       paths: []
