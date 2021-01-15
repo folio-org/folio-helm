@@ -65,6 +65,26 @@ spec:
                 secretKeyRef:
                   key: DB_USERNAME
                   name: db-connect-modules
+            - name: KAFKA_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: KAFKA_HOST
+                  name: db-connect-modules
+            - name: KAFKA_PORT
+              valueFrom:
+                secretKeyRef:
+                  key: KAFKA_PORT
+                  name: db-connect-modules
+            - name: ELASTICSEARCH_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: ELASTICSEARCH_HOST
+                  name: db-connect-modules
+            - name: ELASTICSEARCH_PORT
+              valueFrom:
+                secretKeyRef:
+                  key: ELASTICSEARCH_PORT
+                  name: db-connect-modules
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
           resources:

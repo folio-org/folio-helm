@@ -12,7 +12,7 @@ Master branch is configured as GitHub pages.
 
 Build package with:
 ```
-   helm package <MODULE_NAME> -d ./charts
+  helm package <MODULE_NAME> -d ./charts
 ```
 Update repository index
 ```
