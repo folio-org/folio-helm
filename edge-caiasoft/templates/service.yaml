@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "edge-caiasoft.fullname" . }}
+  labels:
+    {{- include "edge-caiasoft.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.containerPort }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "edge-caiasoft.selectorLabels" . | nindent 4 }}
