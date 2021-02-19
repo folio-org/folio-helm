@@ -62,7 +62,7 @@ ingress:
 
   ## pgAdmin4 Ingress annotations
   ##
-  annotations:
+  annotations: {}
     ## Indicate that the ingress should be handled by NGINX controller
     # kubernetes.io/ingress.class: nginx
     #
