@@ -77,6 +77,9 @@ spec:
                   name: db-connect-modules
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
+          volumeMounts:
+          - name: /var/run/docker.sock
+            mountPath: /var/run/docker.sock
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
