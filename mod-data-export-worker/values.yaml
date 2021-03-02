@@ -89,3 +89,9 @@ postJob:
   tenantId: diku
   sampleData: false
   referenceData: false
+
+aws:
+  url: us-east-2
+
+bucket:
+  name: folio-scout
