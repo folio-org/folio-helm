@@ -75,11 +75,22 @@ spec:
                 secretKeyRef:
                   key: KAFKA_PORT
                   name: db-connect-modules
+            - name: AWS_URL
+              value: {{ .Values.aws.url | quote }}
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_ACCESS_KEY_ID
+                  name: s3-credentials
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_SECRET_ACCESS_KEY
+                  name: s3-credentials
+            - name: AWS_BUCKET
+              value: {{ .Values.bucket.name | quote }}
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
-          volumeMounts:
-          - name: /var/run/docker.sock
-            mountPath: /var/run/docker.sock
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
