@@ -76,7 +76,7 @@ spec:
                   key: KAFKA_PORT
                   name: db-connect-modules
             - name: AWS_URL
-              value: {{ .Values.aws.url | quote }}
+              value: "https://folio-scout.s3-us-west-2.amazonaws.com"
             - name: AWS_ACCESS_KEY_ID
               valueFrom:
                 secretKeyRef:
@@ -88,7 +88,7 @@ spec:
                   key: AWS_SECRET_ACCESS_KEY
                   name: s3-credentials
             - name: AWS_BUCKET
-              value: {{ .Values.bucket.name | quote }}
+              value: "folio-scout"
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
           resources:
