@@ -78,15 +78,9 @@ spec:
             - name: AWS_URL
               value: "https://folio-scout.s3-us-west-2.amazonaws.com"
             - name: AWS_ACCESS_KEY_ID
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_ACCESS_KEY_ID
-                  name: s3-credentials
+              value: ""
             - name: AWS_SECRET_ACCESS_KEY
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_SECRET_ACCESS_KEY
-                  name: s3-credentials
+              value: ""
             - name: AWS_BUCKET
               value: "folio-scout"
             - name: JAVA_OPTIONS
