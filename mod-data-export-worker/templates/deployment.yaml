@@ -1,101 +1,101 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "mod-data-export-worker.fullname" . }}
+  name: { { include "mod-data-export-worker.fullname" . } }
   labels:
-    {{- include "mod-data-export-worker.labels" . | nindent 4 }}
+    { { - include "mod-data-export-worker.labels" . | nindent 4 } }
 spec:
-{{- if not .Values.autoscaling.enabled }}
-  replicas: {{ .Values.replicaCount }}
-{{- end }}
-  selector:
-    matchLabels:
-      {{- include "mod-data-export-worker.selectorLabels" . | nindent 6 }}
-  template:
-    metadata:
-    {{- with .Values.podAnnotations }}
-      annotations:
-        {{- toYaml . | nindent 8 }}
-    {{- end }}
-      labels:
-        {{- include "mod-data-export-worker.selectorLabels" . | nindent 8 }}
-    spec:
-      {{- with .Values.imagePullSecrets }}
-      imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      serviceAccountName: {{ include "mod-data-export-worker.serviceAccountName" . }}
-      securityContext:
-        {{- toYaml .Values.podSecurityContext | nindent 8 }}
-      containers:
-        - name: {{ .Chart.Name }}
-          securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          ports:
-            - name: http
-              containerPort: {{ .Values.service.containerPort }}
-              protocol: TCP
-          env:
-            - name: DB_DATABASE
-              valueFrom:
-                secretKeyRef:
-                  key: DB_DATABASE
-                  name: db-connect-modules
-            - name: DB_HOST
-              valueFrom:
-                secretKeyRef:
-                  key: DB_HOST
-                  name: db-connect-modules
-            - name: DB_MAXPOOLSIZE
-              value: {{ .Values.dbMaxPoolSize | quote }}
-            - name: DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  key: DB_PASSWORD
-                  name: db-connect-modules
-            - name: DB_PORT
-              valueFrom:
-                secretKeyRef:
-                  key: DB_PORT
-                  name: db-connect-modules
-            - name: DB_USERNAME
-              valueFrom:
-                secretKeyRef:
-                  key: DB_USERNAME
-                  name: db-connect-modules
-            - name: KAFKA_HOST
-              valueFrom:
-                secretKeyRef:
-                  key: KAFKA_HOST
-                  name: db-connect-modules
-            - name: KAFKA_PORT
-              valueFrom:
-                secretKeyRef:
-                  key: KAFKA_PORT
-                  name: db-connect-modules
-            - name: AWS_URL
-              value: "https://folio-scout.s3-us-west-2.amazonaws.com"
-            - name: AWS_ACCESS_KEY_ID
-              value: ""
-            - name: AWS_SECRET_ACCESS_KEY
-              value: ""
-            - name: AWS_BUCKET
-              value: ""
-            - name: JAVA_OPTIONS
-              value: {{ .Values.javaOptions | quote }}
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
-      {{- with .Values.nodeSelector }}
-      nodeSelector:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.affinity }}
-      affinity:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.tolerations }}
-      tolerations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+  { { - if not .Values.autoscaling.enabled } }
+replicas: { { .Values.replicaCount } }
+  { { - end } }
+selector:
+  matchLabels:
+    { { - include "mod-data-export-worker.selectorLabels" . | nindent 6 } }
+template:
+  metadata:
+  { { - with .Values.podAnnotations } }
+  annotations:
+    { { - toYaml . | nindent 8 } }
+  { { - end } }
+  labels:
+    { { - include "mod-data-export-worker.selectorLabels" . | nindent 8 } }
+  spec:
+    { { - with .Values.imagePullSecrets } }
+    imagePullSecrets:
+      { { - toYaml . | nindent 8 } }
+    { { - end } }
+    serviceAccountName: { { include "mod-data-export-worker.serviceAccountName" . } }
+    securityContext:
+      { { - toYaml .Values.podSecurityContext | nindent 8 } }
+    containers:
+      - name: { { .Chart.Name } }
+        securityContext:
+          { { - toYaml .Values.securityContext | nindent 12 } }
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+        imagePullPolicy: { { .Values.image.pullPolicy } }
+        ports:
+          - name: http
+            containerPort: { { .Values.service.containerPort } }
+            protocol: TCP
+        env:
+          - name: DB_DATABASE
+            valueFrom:
+              secretKeyRef:
+                key: DB_DATABASE
+                name: db-connect-modules
+          - name: DB_HOST
+            valueFrom:
+              secretKeyRef:
+                key: DB_HOST
+                name: db-connect-modules
+          - name: DB_MAXPOOLSIZE
+            value: { { .Values.dbMaxPoolSize | quote } }
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: DB_PASSWORD
+                name: db-connect-modules
+          - name: DB_PORT
+            valueFrom:
+              secretKeyRef:
+                key: DB_PORT
+                name: db-connect-modules
+          - name: DB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                key: DB_USERNAME
+                name: db-connect-modules
+          - name: KAFKA_HOST
+            valueFrom:
+              secretKeyRef:
+                key: KAFKA_HOST
+                name: db-connect-modules
+          - name: KAFKA_PORT
+            valueFrom:
+              secretKeyRef:
+                key: KAFKA_PORT
+                name: db-connect-modules
+          - name: AWS_URL
+            value: "s3://folio-scout"
+          - name: AWS_ACCESS_KEY_ID
+            value: ""
+          - name: AWS_SECRET_ACCESS_KEY
+            value: ""
+          - name: AWS_BUCKET
+            value: "folio-scout"
+          - name: JAVA_OPTIONS
+            value: { { .Values.javaOptions | quote } }
+        resources:
+          { { - toYaml .Values.resources | nindent 12 } }
+    { { - with .Values.nodeSelector } }
+    nodeSelector:
+      { { - toYaml . | nindent 8 } }
+    { { - end } }
+    { { - with .Values.affinity } }
+    affinity:
+      { { - toYaml . | nindent 8 } }
+    { { - end } }
+    { { - with .Values.tolerations } }
+    tolerations:
+      { { - toYaml . | nindent 8 } }
+    { { - end } }
