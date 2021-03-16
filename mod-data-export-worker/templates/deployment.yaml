@@ -80,6 +80,11 @@ spec:
                 secretKeyRef:
                   key: AWS_URL
                   name: db-connect-modules
+            - name: AWS_REGION
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_REGION
+                  name: db-connect-modules
             - name: AWS_ACCESS_KEY_ID
               value: ""
             - name: AWS_SECRET_ACCESS_KEY
