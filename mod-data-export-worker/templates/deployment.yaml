@@ -86,9 +86,15 @@ spec:
                   key: AWS_REGION
                   name: db-connect-modules
             - name: AWS_ACCESS_KEY_ID
-              value: ""
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_ACCESS_KEY_ID
+                  name: s3-credentials
             - name: AWS_SECRET_ACCESS_KEY
-              value: ""
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_SECRET_ACCESS_KEY
+                  name: s3-credentials
             - name: AWS_BUCKET
               valueFrom:
                 secretKeyRef:
