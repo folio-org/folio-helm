@@ -37,6 +37,10 @@ spec:
             - name: http
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
+          volumeMounts:
+            - name: secure-store-props
+              mountPath: "/etc/edge"
+              readOnly: true
           env:
             - name: DB_DATABASE
               valueFrom:
