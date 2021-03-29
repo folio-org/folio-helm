@@ -39,7 +39,10 @@ spec:
               protocol: TCP
           volumeMounts:
             - name: secure-store-props
-              mountPath: "/etc/edge"
+              mountPath: "/etc/edge/ephemeral"
+              readOnly: true
+            - name: api-configuration
+              mountPath: "/etc/edge/api"
               readOnly: true
           env:
             - name: DB_DATABASE
@@ -77,6 +80,9 @@ spec:
       - name: secure-store-props
         secret:
           secretName: ephemeral-properties
+      - name: api-configuration
+        secret:
+          secretName: apiconfiguration
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
