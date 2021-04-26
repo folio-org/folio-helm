@@ -79,12 +79,12 @@ spec:
               valueFrom:
                 secretKeyRef:
                   key: AWS_URL
-                  name: db-connect-modules
+                  name: s3-credentials
             - name: AWS_REGION
               valueFrom:
                 secretKeyRef:
                   key: AWS_REGION
-                  name: db-connect-modules
+                  name: s3-credentials
             - name: AWS_ACCESS_KEY_ID
               valueFrom:
                 secretKeyRef:
@@ -99,7 +99,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   key: AWS_BUCKET
-                  name: db-connect-modules
+                  name: s3-credentials
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
           resources:
