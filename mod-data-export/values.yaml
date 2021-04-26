@@ -90,10 +90,3 @@ postJob:
   sampleData: false
   referenceData: false
 
-aws:
-  region: us-east-2
-  accessKeyId: testAccessKey
-  secretKey: testSecretKey
-
-bucket:
-  name: test-bucket

@@ -67,14 +67,31 @@ spec:
                   name: db-connect-modules
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
-            - name: aws.region
-              value: {{ .Values.aws.region | quote }}
-            - name: aws.accessKeyId
-              value: {{ .Values.aws.accessKeyId | quote }}
-            - name: aws.secretKey
-              value: {{ .Values.aws.secretKey | quote }}
-            - name: bucket.name
-              value: {{ .Values.bucket.name | quote }}
+            - name: AWS_URL
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_URL
+                  name: s3-credentials
+            - name: AWS_REGION
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_REGION
+                  name: s3-credentials
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_ACCESS_KEY_ID
+                  name: s3-credentials
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_SECRET_ACCESS_KEY
+                  name: s3-credentials
+            - name: AWS_BUCKET
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_BUCKET
+                  name: s3-credentials
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
