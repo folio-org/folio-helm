@@ -67,27 +67,27 @@ spec:
                   name: db-connect-modules
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
-            - name: AWS_URL
+            - name: aws.url
               valueFrom:
                 secretKeyRef:
                   key: AWS_URL
                   name: s3-credentials-data-export
-            - name: AWS_REGION
+            - name: aws.region
               valueFrom:
                 secretKeyRef:
                   key: AWS_REGION
                   name: s3-credentials-data-export
-            - name: AWS_ACCESS_KEY_ID
+            - name: aws.accessKeyId
               valueFrom:
                 secretKeyRef:
                   key: AWS_ACCESS_KEY_ID
                   name: s3-credentials-data-export
-            - name: AWS_SECRET_ACCESS_KEY
+            - name: aws.secretKey
               valueFrom:
                 secretKeyRef:
                   key: AWS_SECRET_ACCESS_KEY
                   name: s3-credentials-data-export
-            - name: AWS_BUCKET
+            - name: bucket.name
               valueFrom:
                 secretKeyRef:
                   key: AWS_BUCKET
