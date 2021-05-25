@@ -41,16 +41,16 @@ spec:
             httpGet:
               path: /admin/health
               port: {{ .Values.service.containerPort }}
-              successThreshold: 2
-              failureThreshold: 2
-              periodSeconds: 30
-              timeoutSeconds: 10
+            successThreshold: 2
+            failureThreshold: 2
+            periodSeconds: 30
+            timeoutSeconds: 10
           readinessProbe:
             httpGet:
               path: /admin/health
               port: {{ .Values.service.containerPort }}
-              periodSeconds: 60
-              timeoutSeconds: 10
+            periodSeconds: 60
+            timeoutSeconds: 10
           env:
             - name: DB_DATABASE
               valueFrom:
