@@ -41,7 +41,7 @@ spec:
             httpGet:
               path: /admin/health
               port: {{ .Values.service.containerPort }}
-            periodSeconds: 30
+            periodSeconds: 60
             timeoutSeconds: 10
           readinessProbe:
             httpGet:
