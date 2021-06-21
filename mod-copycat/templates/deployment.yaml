@@ -37,14 +37,6 @@ spec:
             - name: http
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /admin/health
-              port: http
           env:
             - name: DB_DATABASE
               valueFrom:
