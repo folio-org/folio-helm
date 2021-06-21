@@ -37,18 +37,6 @@ spec:
             - name: http
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /admin/health
-              port: {{ .Values.service.containerPort }}
-            periodSeconds: 60
-            timeoutSeconds: 5
-          readinessProbe:
-            httpGet:
-              path: /admin/health
-              port: {{ .Values.service.containerPort }}
-            periodSeconds: 60
-            timeoutSeconds: 5
           env:
             - name: DB_DATABASE
               valueFrom:
