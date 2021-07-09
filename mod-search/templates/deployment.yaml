@@ -80,6 +80,16 @@ spec:
                 secretKeyRef:
                   key: ELASTICSEARCH_HOST
                   name: db-connect-modules
+            - name: OKAPI_URL
+              valueFrom:
+                secretKeyRef:
+                  key: OKAPI_URL
+                  name: db-connect-modules
+            - name: ELASTICSEARCH_URL
+              valueFrom:
+                secretKeyRef:
+                  key: ELASTICSEARCH_URL
+                  name: db-connect-modules
             - name: ELASTICSEARCH_PORT
               valueFrom:
                 secretKeyRef:
