@@ -65,7 +65,7 @@ spec:
                 secretKeyRef:
                   key: DB_USERNAME
                   name: db-connect-modules
-             - name: KAFKA_HOST
+            - name: KAFKA_HOST
               valueFrom:
                 secretKeyRef:
                   key: KAFKA_HOST
