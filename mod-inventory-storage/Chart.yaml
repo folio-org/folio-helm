@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v2
 name: mod-inventory-storage
 description: A Helm chart mod-inventory-storage for Kubernetes
 

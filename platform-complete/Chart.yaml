@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v2
 name: platform-complete
 description: A Helm chart Stripes Platform-complete for Kubernetes
 

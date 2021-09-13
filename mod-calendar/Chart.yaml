@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v2
 name: mod-calendar
 description: A Helm chart mod-calendar for Kubernetes
 
