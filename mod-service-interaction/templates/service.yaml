@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "mod-service-interaction.fullname" . }}
+  labels:
+    {{- include "mod-service-interaction.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.containerPort }}
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "mod-service-interaction.selectorLabels" . | nindent 4 }}
