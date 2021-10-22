@@ -49,7 +49,7 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-read-timeout: "900"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "900"
   hosts:
-    - host: chart-example.local
+    - host: 
       paths: []
   tls: []
   #  - secretName: chart-example-tls
