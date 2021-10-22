@@ -41,9 +41,12 @@ spec:
             - name: secure-store-props
               mountPath: "/etc/edge"
               readOnly: true
+          env:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
+        - name: JAVA_OPTIONS
+          value: {{ .Values.javaOptions | quote }}
       - name: secure-store-props
         secret:
           secretName: ephemeral-properties
