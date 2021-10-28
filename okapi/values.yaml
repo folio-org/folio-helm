@@ -82,9 +82,46 @@ tolerations: []
 
 affinity: {}
 
+# Whether to enable hazelcast kubernetes negotiation for high-availability
+# memory sharing, and arguments and java options to add to the regular args
+# and javaOptions if so.
+hazelcast:
+  enabled: false
+  # You'll need to set a clusterrole for hazelcast to access node status, but
+  # users may not have access to do so without a cluster admin.
+  clusterRole: true
+  args:
+    - -cluster-host
+    - $(OKAPI_POD_IP)
+    - -cluster-port
+    - 5702
+    - -hazelcast-config-file
+    - /hazelcast/hazelcast.xml
+  javaOptions: >-
+    -Dhazelcast.ip=$(OKAPI_SERVICE_HOST)
+    -Dhazelcast.port=5701
+    -Dnodename=$(OKAPI_POD_NAME)
+    --add-modules java.se
+    --add-exports java.base/jdk.internal.ref=ALL-UNNAMED
+    --add-opens java.base/java.lang=ALL-UNNAMED
+    --add-opens java.base/java.nio=ALL-UNNAMED
+    --add-opens java.base/sun.nio.ch=ALL-UNNAMED
+    --add-opens java.management/sun.management=ALL-UNNAMED 
+    --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED
+
 # Folio specific
 args: dev
-javaOptions: -Djava.awt.headless=true -Dstorage=postgres -Dpostgres_host=$(OKAPI_HOST) -Dpostgres_port=5432 -Dpostgres_username=$(OKAPI_DB_USER) -Dpostgres_password=$(OKAPI_DB_PASSWORD) -Dpostgres_database=$(OKAPI_DB) -Dlog4j.configurationFile=/etc/log4j2.xml -Dhost=okapi -Dokapiurl=http://okapi:9130
+javaOptions: >-
+  -Djava.awt.headless=true
+  -Dstorage=postgres
+  -Dpostgres_host=$(OKAPI_HOST)
+  -Dpostgres_port=5432
+  -Dpostgres_username=$(OKAPI_DB_USER)
+  -Dpostgres_password=$(OKAPI_DB_PASSWORD)
+  -Dpostgres_database=$(OKAPI_DB)
+  -Dlog4j.configurationFile=/etc/log4j2.xml
+  -Dhost=okapi
+  -Dokapiurl=http://okapi:9130
 
 postJob:
   enabled: false

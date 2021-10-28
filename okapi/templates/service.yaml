@@ -15,5 +15,16 @@ spec:
       targetPort: {{ .Values.service.containerPort }}
       protocol: TCP
       name: http
+    {{- if .Values.hazelcast.enabled }}
+    - port: 5701
+      name: hazelcast-5701
+      protocol: TCP
+    - port: 5704
+      name: hazelcast-5704
+      protocol: TCP
+    - port: 54327
+      name: multicast
+      protocol: TCP
+    {{- end }}
   selector:
     {{- include "okapi.selectorLabels" . | nindent 4 }}
