@@ -37,6 +37,10 @@ spec:
             - name: http
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
+          volumeMounts:
+            - name: secure-store-props
+              mountPath: "/etc/edge"
+              readOnly: true
           env:
             - name: DB_DATABASE
               valueFrom:
@@ -69,6 +73,10 @@ spec:
               value: {{ .Values.javaOptions | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+      - name: secure-store-props
+        secret:
+          secretName: ephemeral-properties      
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
