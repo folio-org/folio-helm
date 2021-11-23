@@ -38,6 +38,11 @@ spec:
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
           env:
+            - name: ENV
+              valueFrom:
+                secretKeyRef:
+                  key: ENV
+                  name: db-connect-modules
             - name: DB_DATABASE
               valueFrom:
                 secretKeyRef:
