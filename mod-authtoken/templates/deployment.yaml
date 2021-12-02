@@ -65,6 +65,11 @@ spec:
                 secretKeyRef:
                   key: DB_USERNAME
                   name: db-connect-modules
+            - name: JWT_SIGNING_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: JWT_SIGNING_KEY
+                  name: db-connect-modules
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
           resources:
