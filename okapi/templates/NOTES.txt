@@ -19,3 +19,40 @@
   echo "Visit http://127.0.0.1:8080 to use your application"
   kubectl --namespace {{ .Release.Namespace }} port-forward $POD_NAME 8080:80
 {{- end }}
+{{- if .Values.hazelcast.enabled }}
+{{- if not .Values.hazelcast.clusterRole }}
+
+You requested hazelcast configuration but not to create the hazelcast
+ClusterRole.  You'll need to have a kubernetes system administrator manually do
+so if you haven't yet.  Here is what would have been applied, to send to them:
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: hazelcast-view-nodes
+rules:
+- apiGroups:
+  - ""
+  resources: ["nodes"]
+  verbs:
+  - get
+  - list
+  - watch
+---
+{{- if semverCompare ">=1.17-0" .Capabilities.KubeVersion.GitVersion }}
+apiVersion: rbac.authorization.k8s.io/v1
+{{- else }}
+apiVersion: rbac.authorization.k8s.io/v1beta1
+{{- end }}
+kind: ClusterRoleBinding
+metadata:
+  name: hazelcast-view-nodes-binding
+roleRef:
+  kind: ClusterRole
+  name: hazelcast-view-nodes
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+- kind: ServiceAccount
+  name: {{ include "okapi.serviceAccountName" . }}
+{{- end }}
+{{- end }}

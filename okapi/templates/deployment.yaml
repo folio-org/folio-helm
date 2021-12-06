@@ -35,7 +35,20 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
             - {{ .Values.args }}
+            {{- if .Values.hazelcast.enabled }}
+            {{- range .Values.hazelcast.args }}
+            - {{ . | quote }}
+            {{- end }}
+            {{- end }}
           env:
+            - name: OKAPI_POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OKAPI_POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
             - name: OKAPI_HOST
               valueFrom:
                 secretKeyRef:
@@ -57,7 +70,11 @@ spec:
                   name: db-connect-modules
                   key: DB_PASSWORD
             - name: JAVA_OPTIONS
+              {{- if .Values.hazelcast.enabled }}
+              value: {{ cat .Values.javaOptions .Values.hazelcast.javaOptions | quote }}
+              {{- else }}
               value: {{ .Values.javaOptions | quote }}
+              {{- end }}
           ports:
             - name: http
               containerPort: 9130
@@ -67,12 +84,25 @@ spec:
             readOnly: true
             mountPath: "/etc/log4j2.xml"
             subPath: "log4j2.xml"
+          {{- if .Values.hazelcast.enabled }}
+          - name: "hazelcast"
+            readOnly: true
+            mountPath: "/hazelcast/hazelcast.xml"
+            subPath: hazelcast.xml
+          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
       - name: "log4j2-xml"
         configMap:
           name: okapi-log4j2-configmap
+      {{- if .Values.hazelcast.enabled }}
+      - name: "hazelcast"
+        configMap:
+          defaultMode: 420
+          name: {{ include "okapi.fullname" . }}-hazelcast-configmap
+          optional: false
+      {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
