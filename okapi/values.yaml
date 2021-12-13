@@ -97,7 +97,7 @@ hazelcast:
     - 5702
     - -hazelcast-config-file
     - /hazelcast/hazelcast.xml
-  javaOptions: -Dlog4j2.formatMsgNoLookups=true  >-
+  javaOptions: >-
     -Dhazelcast.ip=$(OKAPI_SERVICE_HOST)
     -Dhazelcast.port=5701
     -Dnodename=$(OKAPI_POD_NAME)
