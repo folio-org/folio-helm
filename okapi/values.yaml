@@ -106,7 +106,7 @@ hazelcast:
     --add-opens java.base/java.lang=ALL-UNNAMED
     --add-opens java.base/java.nio=ALL-UNNAMED
     --add-opens java.base/sun.nio.ch=ALL-UNNAMED
-    --add-opens java.management/sun.management=ALL-UNNAMED 
+    --add-opens java.management/sun.management=ALL-UNNAMED
     --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED
 
 # Folio specific
@@ -120,6 +120,7 @@ javaOptions: >-
   -Dpostgres_password=$(OKAPI_DB_PASSWORD)
   -Dpostgres_database=$(OKAPI_DB)
   -Dlog4j.configurationFile=/etc/log4j2.xml
+  -Dlog4j2.formatMsgNoLookups=true
   -Dhost=okapi
   -Dokapiurl=http://okapi:9130
 

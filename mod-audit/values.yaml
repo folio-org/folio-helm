@@ -39,7 +39,7 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
-  containerPort: 8081  
+  containerPort: 8081
 
 ingress:
   enabled: false
@@ -80,7 +80,7 @@ tolerations: []
 affinity: {}
 
 # Folio specific
-javaOptions: -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC
+javaOptions: -Dlog4j2.formatMsgNoLookups=true  -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC
 dbMaxPoolSize: 5
 
 postJob:

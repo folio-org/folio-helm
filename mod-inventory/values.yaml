@@ -80,7 +80,7 @@ tolerations: []
 affinity: {}
 
 # Folio specific
-javaOptions: -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC -Dorg.folio.metadata.inventory.storage.type=okapi
+javaOptions: -Dlog4j2.formatMsgNoLookups=true  -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC -Dorg.folio.metadata.inventory.storage.type=okapi
 dbMaxPoolSize: 5
 
 postJob:

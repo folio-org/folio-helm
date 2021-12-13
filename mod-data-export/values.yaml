@@ -80,7 +80,7 @@ tolerations: []
 affinity: {}
 
 # Folio specific
-javaOptions: -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC -Daws.region=$(AWS_REGION) -Daws.accessKeyId=$(AWS_ACCESS_KEY_ID) -Daws.secretKey=$(AWS_SECRET_ACCESS_KEY) -Dbucket.name=$(AWS_BUCKET)
+javaOptions: -Dlog4j2.formatMsgNoLookups=true  -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC -Daws.region=$(AWS_REGION) -Daws.accessKeyId=$(AWS_ACCESS_KEY_ID) -Daws.secretKey=$(AWS_SECRET_ACCESS_KEY) -Dbucket.name=$(AWS_BUCKET)
 dbMaxPoolSize: 5
 
 postJob:
