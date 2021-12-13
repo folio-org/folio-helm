@@ -79,5 +79,5 @@ tolerations: []
 
 affinity: {}
 
-javaOptions: -XX:MaxRAMPercentage=80.0 -XX:+UseG1GC
+javaOptions: -Dlog4j2.formatMsgNoLookups=true  -XX:MaxRAMPercentage=80.0 -XX:+UseG1GC
 dbMaxPoolSize: 5

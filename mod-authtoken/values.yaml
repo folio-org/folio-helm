@@ -80,7 +80,7 @@ tolerations: []
 affinity: {}
 
 # Folio specific
-javaOptions: -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC -Dcache.permissions=true -Djwt.signing.key=$(JWT_SIGNING_KEY)
+javaOptions: -Dlog4j2.formatMsgNoLookups=true  -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC -Dcache.permissions=true -Djwt.signing.key=$(JWT_SIGNING_KEY)
 dbMaxPoolSize: 5
 
 postJob:

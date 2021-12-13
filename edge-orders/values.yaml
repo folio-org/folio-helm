@@ -79,5 +79,5 @@ tolerations: []
 
 affinity: {}
 
-javaOptions: -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC -Dokapi_url=http://okapi:9130 -Dsecure_store_props=/etc/edge/ephemeral/ephemeral.properties -Dapi_config=/etc/edge/api/api_configuration.json
+javaOptions: -Dlog4j2.formatMsgNoLookups=true  -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC -Dokapi_url=http://okapi:9130 -Dsecure_store_props=/etc/edge/ephemeral/ephemeral.properties -Dapi_config=/etc/edge/api/api_configuration.json
 dbMaxPoolSize: 5
