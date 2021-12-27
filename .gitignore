@@ -1,0 +1,10 @@
+#IntelliJ
+.idea/
+*.iml
+#netbeans
+nbproject/
+#eclipse
+.project
+.settings/
+.classpath
+/bin/
