@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.config.name }}
+  labels:
+    {{- include "edge-sftp.labels" . | nindent 4 }}
+data:
+  users.conf: |
+    user::Test12345:1001::uploads
