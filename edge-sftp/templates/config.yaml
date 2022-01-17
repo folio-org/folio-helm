@@ -6,4 +6,4 @@ metadata:
     {{- include "edge-sftp.labels" . | nindent 4 }}
 data:
   users.conf: |
-    user:Test12345:1001
+    user::Test12345:1001::uploads

@@ -37,8 +37,8 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: NodePort
-  port: 5022
+  type: LoadBalancer
+  port: 50022
   containerPort: 22
 
 ingress:
