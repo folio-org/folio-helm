@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: folioci/mod-oa
+  repository: folioci/mod-oai-pmh
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"

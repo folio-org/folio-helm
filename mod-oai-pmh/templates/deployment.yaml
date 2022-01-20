@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "mod-oa.fullname" . }}
+  name: {{ include "mod-oai-pmh.fullname" . }}
   labels:
-    {{- include "mod-oa.labels" . | nindent 4 }}
+    {{- include "mod-oai-pmh.labels" . | nindent 4 }}
 spec:
 {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
   selector:
     matchLabels:
-      {{- include "mod-oa.selectorLabels" . | nindent 6 }}
+      {{- include "mod-oai-pmh.selectorLabels" . | nindent 6 }}
   template:
     metadata:
     {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       labels:
-        {{- include "mod-oa.selectorLabels" . | nindent 8 }}
+        {{- include "mod-oai-pmh.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "mod-oa.serviceAccountName" . }}
+      serviceAccountName: {{ include "mod-oai-pmh.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
