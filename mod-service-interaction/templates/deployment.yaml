@@ -74,8 +74,8 @@ spec:
                 key: DB_USERNAME
                 name: db-connect-modules
           - name: ENV
-              valueFrom:
-                secretKeyRef:
+            valueFrom:
+              secretKeyRef:
                 key: ENV
                 name: db-connect-modules      
           - name: JAVA_OPTIONS
