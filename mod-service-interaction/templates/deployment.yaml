@@ -76,8 +76,8 @@ spec:
           - name: ENV
               valueFrom:
                 secretKeyRef:
-                  key: ENV
-                  name: db-connect-modules      
+                key: ENV
+                name: db-connect-modules      
           - name: JAVA_OPTIONS
             value: {{ .Values.javaOptions | quote }}
           resources:
