@@ -52,6 +52,11 @@ spec:
                 secretKeyRef:
                   key: DB_HOST
                   name: db-connect-modules
+            - name: ENV
+              valueFrom:
+                secretKeyRef:
+                  key: ENV
+                  name: db-connect-modules      
             - name: DB_MAXPOOLSIZE
               value: {{ .Values.dbMaxPoolSize | quote }}
             - name: DB_PASSWORD

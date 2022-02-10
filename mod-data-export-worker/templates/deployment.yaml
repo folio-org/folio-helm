@@ -75,6 +75,11 @@ spec:
                 secretKeyRef:
                   key: KAFKA_PORT
                   name: db-connect-modules
+            - name: ENV
+              valueFrom:
+                secretKeyRef:
+                  key: ENV
+                  name: db-connect-modules      
             - name: AWS_URL
               valueFrom:
                 secretKeyRef:

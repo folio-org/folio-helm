@@ -73,6 +73,11 @@ spec:
                 secretKeyRef:
                   key: DB_DATABASE
                   name: db-connect-modules
+            - name: ENV
+              valueFrom:
+                secretKeyRef:
+                  key: ENV
+                  name: db-connect-modules      
             - name: DB_MAXPOOLSIZE
               value: {{ .Values.dbMaxPoolSize | quote }}
             - name: JAVA_OPTIONS
