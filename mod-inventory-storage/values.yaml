@@ -60,11 +60,11 @@ resources:
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   limits:
-    #cpu: 128m
-    memory: 800Mi
+    cpu: 512m
+    memory: 1440Mi
   requests:
-    #cpu: 128m
-    memory: 800Mi
+    cpu: 256m
+    memory: 896Mi
 
 autoscaling:
   enabled: false
@@ -80,7 +80,7 @@ tolerations: []
 affinity: {}
 
 # Folio specific
-javaOptions: -XX:MaxRAMPercentage=85.0 -XX:+UseG1GC
+javaOptions: -XX:MaxRAMPercentage=66.0 -XX:+UseG1GC
 dbMaxPoolSize: 5
 
 postJob:

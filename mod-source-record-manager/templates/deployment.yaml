@@ -82,6 +82,10 @@ spec:
                   name: db-connect-modules
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
+            - name: DB_RECONNECTINTERVAL
+              value: {{ .Values.dbReconnectinterval | quote }}
+            - name: DB_RECONNECTATTEMPTS
+              value: {{ .Values.dbReconnectattempts | quote }}  
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
