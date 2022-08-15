@@ -109,6 +109,12 @@ spec:
               value: {{ .Values.javaOptions | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+          - mountPath: /dumps
+            name: dumps-volume
+      volumes:
+      - name: dumps-volume
+        emptyDir: {}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
