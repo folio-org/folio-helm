@@ -125,6 +125,11 @@ spec:
                 secretKeyRef:
                   key: LOCAL_FS_BUCKET
                   name: s3-credentials
+            - name: LOCAL_FS_REGION
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_REGION
+                  name: s3-credentials
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
           resources:
