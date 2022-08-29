@@ -105,6 +105,26 @@ spec:
                 secretKeyRef:
                   key: AWS_BUCKET
                   name: s3-credentials
+            - name: LOCAL_FS_URL
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_URL
+                  name: s3-credentials
+            - name: LOCAL_FS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_ACCESS_KEY_ID
+                  name: s3-credentials
+            - name: LOCAL_FS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: AWS_SECRET_ACCESS_KEY
+                  name: s3-credentials
+            - name: LOCAL_FS_BUCKET
+              valueFrom:
+                secretKeyRef:
+                  key: LOCAL_FS_BUCKET
+                  name: s3-credentials
             - name: JAVA_OPTIONS
               value: {{ .Values.javaOptions | quote }}
           resources:
