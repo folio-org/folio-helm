@@ -45,6 +45,16 @@ spec:
               mountPath: "/etc/edge/api"
               readOnly: true
           env:
+            - name: OKAPI_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: OKAPI_HOST
+                  name: db-connect-modules
+            - name: OKAPI_PORT
+              valueFrom:
+                secretKeyRef:
+                  key: OKAPI_PORT
+                  name: db-connect-modules
             - name: DB_DATABASE
               valueFrom:
                 secretKeyRef:

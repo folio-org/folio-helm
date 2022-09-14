@@ -50,6 +50,16 @@ spec:
             periodSeconds: 60
             timeoutSeconds: 5
           env:
+            - name: OKAPI_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: OKAPI_HOST
+                  name: db-connect-modules
+            - name: OKAPI_PORT
+              valueFrom:
+                secretKeyRef:
+                  key: OKAPI_PORT
+                  name: db-connect-modules
             - name: DB_DATABASE
               valueFrom:
                 secretKeyRef:
