@@ -1,7 +1,9 @@
-FROM alpine:3.11
+FROM alpine:3.16
 
 #Prerequisites
-RUN apk add --no-cache curl jq bash && rm -rf /var/cache/apk/*
+RUN apk upgrade \
+ && apk add curl jq bash \
+ && rm -rf /var/cache/apk/*
 
 #Create folders in container
 RUN mkdir -p /usr/local/bin/folio/install
