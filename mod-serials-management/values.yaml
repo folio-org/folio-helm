@@ -79,6 +79,7 @@ affinity: {}
 
 # Folio specific
 javaOptions: -server -XX:+UseContainerSupport -XX:MaxRAMPercentage=55.0 -XX:+PrintFlagsFinal
+dbMaxPoolSize: 5
 
 postJob:
   enabled: false
