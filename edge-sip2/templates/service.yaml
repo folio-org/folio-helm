@@ -4,6 +4,10 @@ metadata:
   name: {{ include "edge-sip2.fullname" . }}
   labels:
     {{- include "edge-sip2.labels" . | nindent 4 }}
+  {{- if .Values.service.annotations }}
+  annotations:
+{{ toYaml .Values.service.annotations | indent 4 }}
+  {{- end }}
 spec:
   type: {{ .Values.service.type }}
   ports:

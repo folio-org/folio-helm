@@ -33,6 +33,11 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args: [
+            {{- range $overrideArg := .Values.overrideArgs }}
+              "{{- tpl $overrideArg $ }}",
+            {{- end }}
+          ]
           ports:
             - name: http
               containerPort: {{ .Values.service.containerPort }}
@@ -74,6 +79,13 @@ spec:
               value: {{ .Values.javaOptions | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+          - mountPath: /etc/config/sip2.conf
+            name: sip2
+            subPath: sip2.conf
+          - mountPath: /etc/config/sip2-tenants.conf
+            name: sip2-tenants
+            subPath: sip2-tenants.conf
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -86,3 +98,10 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      volumes:
+      - name: sip2
+        configMap:
+          name: {{ include "edge-sip2.fullname" . }}
+      - name: sip2-tenants
+        configMap:
+          name: {{ include "edge-sip2.fullname" . }}-tenants

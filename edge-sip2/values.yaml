@@ -39,7 +39,8 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
-  containerPort: 8081
+  containerPort: 6443
+  annotations: {}
 
 ingress:
   enabled: false
@@ -81,3 +82,22 @@ affinity: {}
 
 javaOptions: -XX:MaxRAMPercentage=80.0 -XX:+UseG1GC
 dbMaxPoolSize: 5
+
+sip2TenantsConfig: |-
+  {
+    "scTenants": [
+      {
+        "scSubnet": "0.0.0.0/0",
+        "tenant": "diku",
+        "errorDetectionEnabled": false,
+        "messageDelimiter": "\r",
+        "charset": "ISO-8859-1"
+      }
+    ]
+  }
+
+okapiUrl: http://localhost:9300
+
+overrideArgs:
+  - -conf
+  - /etc/config/sip2.conf
