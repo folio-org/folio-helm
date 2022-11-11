@@ -75,6 +75,21 @@ spec:
                   name: db-connect-modules
             - name: DB_MAXPOOLSIZE
               value: {{ .Values.dbMaxPoolSize | quote }}
+            - name: KAFKA_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: KAFKA_HOST
+                  name: db-connect-modules
+            - name: KAFKA_PORT
+              valueFrom:
+                secretKeyRef:
+                  key: KAFKA_PORT
+                  name: db-connect-modules
+            - name: OKAPI_URL
+              valueFrom:
+                secretKeyRef:
+                  key: OKAPI_URL
+                  name: db-connect-modules
             - name: ENV
               valueFrom:
                 secretKeyRef:
