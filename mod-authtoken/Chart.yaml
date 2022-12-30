@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v2
 name: mod-authtoken
 description: A Helm chart for Folio mod-authtoken
 

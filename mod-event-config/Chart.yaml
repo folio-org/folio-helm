@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v2
 name: mod-event-config
 description: A Helm chart mod-event-config for Kubernetes
 

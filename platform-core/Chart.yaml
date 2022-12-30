@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v2
 name: platform-core
 description: A Helm chart Stripes Platform-core for Kubernetes
 
