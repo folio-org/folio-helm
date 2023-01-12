@@ -253,47 +253,6 @@ entries:
     urls:
     - https://folio-org.github.io/folio-helm/charts/edge-dematic-0.1.24.tgz
     version: 0.1.24
-  edge-ea-data-export:
-  - apiVersion: v1
-    appVersion: 1.16.0
-    created: "2022-12-08T15:37:14.554449+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 96cbb1fa5c577f700c41749e2a9f24727f883e8613471d839e7035886de44766
-    name: edge-ea-data-export
-    type: application
-    urls:
-    - https://folio-org.github.io/folio-helm/charts/edge-ea-data-export-0.1.3.tgz
-    version: 0.1.3
-  - apiVersion: v1
-    appVersion: 1.16.0
-    created: "2022-12-08T15:37:14.554021+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 816df9f8be389941964275d9a96dd95204347fe09cf569cf769a2d26e499be05
-    name: edge-ea-data-export
-    type: application
-    urls:
-    - https://folio-org.github.io/folio-helm/charts/edge-ea-data-export-0.1.2.tgz
-    version: 0.1.2
-  - apiVersion: v1
-    appVersion: 1.16.0
-    created: "2022-12-08T15:37:14.553628+02:00"
-    description: A Helm chart for Kubernetes
-    digest: f5c32a50a89d5ccc359d8600be8ac6577b3c2ddf4d016ff5fbf5f959ad4dcfbd
-    name: edge-ea-data-export
-    type: application
-    urls:
-    - https://folio-org.github.io/folio-helm/charts/edge-ea-data-export-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v1
-    appVersion: 1.16.0
-    created: "2022-12-08T15:37:14.553295+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 2437b803af264b0abc8ab35ef757e743b5c4971f014b497b552629be534b1d31
-    name: edge-ea-data-export
-    type: application
-    urls:
-    - https://folio-org.github.io/folio-helm/charts/edge-ea-data-export-0.1.0.tgz
-    version: 0.1.0
   edge-inn-reach:
   - apiVersion: v2
     appVersion: 1.16.0
