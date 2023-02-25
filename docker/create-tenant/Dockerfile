@@ -1,6 +1,7 @@
-FROM alpine:3.16
+FROM alpine:3.17
 
-#Prerequisites
+#Install latest patch versions of packages: https://pythonspeed.com/articles/security-updates-in-docker/
+#Install prerequisites
 RUN apk upgrade \
  && apk add curl jq bash \
  && rm -rf /var/cache/apk/*

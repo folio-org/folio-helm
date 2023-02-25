@@ -1,7 +1,11 @@
-FROM alpine:3.8
+FROM alpine:3.17
 
-#Prerequisites
-RUN apk add --no-cache make curl perl perl-app-cpanminus perl-json perl-libwww perl-lwp-protocol-https
+#Install latest patch versions of packages: https://pythonspeed.com/articles/security-updates-in-docker/
+#Install prerequisites
+RUN apk upgrade \
+ && apk add \
+      make curl perl perl-app-cpanminus perl-json perl-libwww perl-lwp-protocol-https \
+ && rm -rf /var/cache/apk/*
 RUN cpanm UUID::Tiny
 
 #Create working directory

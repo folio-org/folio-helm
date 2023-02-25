@@ -1,8 +1,13 @@
 FROM ubuntu:latest
 
-#Prerequisites
-RUN apt-get update
-RUN apt-get install curl postgresql-client -y
+#Install latest patch versions of packages: https://pythonspeed.com/articles/security-updates-in-docker/
+#Install prerequisites
+RUN apt-get update \
+ && apt-get upgrade -y \
+ && apt-get install -y \
+      curl \
+      postgresql-client \
+ && rm -rf /var/lib/apt/lists/*
 
 #Create folders in container
 RUN mkdir -p /usr/local/bin/folio/install
