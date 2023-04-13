@@ -344,11 +344,26 @@ EOF
 
 resource "aws_s3_bucket" "etcd_backups" {
   bucket = "${local.name}-rancher-etcd-backup"
-  acl    = "private"
+}
 
-  versioning {
-    enabled = true
+resource "aws_s3_bucket_versioning" "etcd_backups" {
+  bucket = aws_s3_bucket.etcd_backups.id
+  versioning_configuration {
+    status = "Enabled"
   }
+}
+
+resource "aws_s3_bucket_acl" "etcd_backups" {
+  depends_on = [aws_s3_bucket.etcd_backups.id]
+
+  bucket = aws_s3_bucket.etcd_backups.id
+  acl    = "private"
+}
+
+resource "aws_s3_bucket_public_access_block" "etcd_backups" {
+  bucket = aws_s3_bucket.etcd_backups.id
+
+  block_public_acls = true
 }
 
 resource "aws_iam_user" "etcd_backup_user" {
