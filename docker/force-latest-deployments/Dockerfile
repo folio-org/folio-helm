@@ -1,13 +1,10 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
 #Install latest patch versions of packages: https://pythonspeed.com/articles/security-updates-in-docker/
-#Install prerequisites
-RUN apt-get update \
- && apt-get upgrade -y \
- && apt-get install -y \
-      curl \
-      postgresql-client \
- && rm -rf /var/lib/apt/lists/*
+#Install psql
+RUN apk upgrade \
+ && apk add postgresql18-client \
+ && rm -rf /var/cache/apk/*
 
 #Create folders in container
 RUN mkdir -p /usr/local/bin/folio/install
