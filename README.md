@@ -1,5 +1,11 @@
 # folio-helm - Helm charts modules repository
 
+## DEPRECATED
+
+This repository is deprecated and unmaintained.
+
+Use https://github.com/folio-org/folio-helm-v2 instead.
+
 ## Introduction
 
 FOLIO Helm charts modules repository.
